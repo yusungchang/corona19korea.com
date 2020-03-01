@@ -1,9 +1,14 @@
 <html>
     <meta charset="UTF-8">
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat::200,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean" rel="stylesheet">
         <style>
+            a {
+                color: midnightblue;
+                text-decoration: solid;
+            }
+
             body{
                 background-color: rgb(251,251,251);
                 margin: 0;
@@ -57,22 +62,21 @@
                 bottom: 0;
                 left: 0;
                 font-family: 'Montserrat';
-                font-size: 12px;
+                font-weight: 200;
+                font-size: 1rem;
                 width: 100%;
-                height: 18px;
                 background-color: rgba(255,255,255,0.8);
                 box-shadow: 0px -1px 2px rgba(128,128,128,0.5);
-                padding: 6px 50px 6px 50px;
+                padding: 1rem;
                 margin: 0;
             }
 
             .footer > .left {
                 position: absolute;
-                top: 6px;
-                right: 0;
-                width: 50%;
+                top: 1rem;
+                right: 3rem;
                 text-align: center;
-                font-size: 12px;
+                font-size: 1rem;
                 padding: 0;
                 margin: 0;
             }
@@ -94,7 +98,7 @@
             <div><img src="output/seoul-corona19-by-gender.svg" style="width:100%;"></div>
         </div>
         <div class="footer">
-            Powered by <a href="https://wolfram.com"><i>Mathematica</i></a>
+            <div>Powered by <a href="https://wolfram.com">Mathematica</a></div>
             <div class="left">Yu-Sung Chang, CTO, <a href="https://ssg.com" style="font-weight:700;">SSG.COM</a>: <a href="https://github.com/yusungchang/corona19korea.com">Github</a></div>
         </div>
     </body>
