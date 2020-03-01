@@ -2,3 +2,4 @@
 config/
 src/output/
 scripts/publish
+scripts/sync
