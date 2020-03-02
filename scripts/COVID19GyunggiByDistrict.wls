@@ -3,13 +3,17 @@
 
 (* ::Title:: *)
 (*COVID-19 Data Analysis*)
-(*Seoul District*)
+(*\:acbd\:ae30\:b3c4  \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
 (* ::Subtitle:: *)
-(*Yu-Sung Chang*)
+(*\:c7a5\:c720\:c131 | Yu-Sung Chang*)
 (*CTO, Digital Innovation Group*)
 (*SSG.COM*)
+
+
+(* ::Section:: *)
+(*Note*)
 
 
 (* ::Section:: *)
@@ -23,7 +27,7 @@ outputDirectory=Directory[]<>"/../src/output/";
 (*Load Data*)
 
 
-table=Cases[Import[outputDirectory<>"seoul-corona19-data.csv"],Except[{}]];
+table=Cases[Import[outputDirectory<>"gyunggi-corona19-data.csv"],Except[{}]];
 
 
 table=Prepend[Rest[#],DateObject[First[#]]]&/@table;
@@ -33,16 +37,16 @@ table=Prepend[Rest[#],DateObject[First[#]]]&/@table;
 (*Data Functions*)
 
 
-seoulDistrictNames={"\:ac15\:b0a8\:ad6c","\:ac15\:b3d9\:ad6c","\:ac15\:bd81\:ad6c","\:ac15\:c11c\:ad6c","\:ad00\:c545\:ad6c","\:ad11\:c9c4\:ad6c","\:ad6c\:b85c\:ad6c","\:ae08\:cc9c\:ad6c","\:b178\:c6d0\:ad6c","\:b3c4\:bd09\:ad6c","\:b3d9\:b300\:bb38\:ad6c","\:b3d9\:c791\:ad6c","\:b9c8\:d3ec\:ad6c","\:c11c\:b300\:bb38\:ad6c","\:c11c\:cd08\:ad6c","\:c131\:b3d9\:ad6c","\:c131\:bd81\:ad6c","\:c1a1\:d30c\:ad6c","\:c591\:cc9c\:ad6c","\:c601\:b4f1\:d3ec\:ad6c","\:c6a9\:c0b0\:ad6c","\:c740\:d3c9\:ad6c","\:c885\:b85c\:ad6c","\:c911\:ad6c","\:c911\:b791\:ad6c"};
+ggDistrictNames={"\:ad70\:d3ec\:c2dc","\:ad6c\:b9ac\:c2dc","\:c591\:d3c9\:ad70","\:ace0\:c591\:c2dc","\:c624\:c0b0\:c2dc","\:d558\:b0a8\:c2dc","\:c2dc\:d765\:c2dc","\:c758\:c655\:c2dc","\:c548\:c591\:c2dc","\:c5ec\:c8fc\:c2dc","\:c548\:c131\:c2dc","\:c131\:b0a8\:c2dc","\:c548\:c0b0\:c2dc","\:c6a9\:c778\:c2dc","\:b0a8\:c591\:c8fc\:c2dc","\:ae40\:d3ec\:c2dc","\:c218\:c6d0\:c2dc","\:bd80\:cc9c\:c2dc","\:acfc\:cc9c\:c2dc","\:c758\:c815\:bd80\:c2dc","\:c774\:cc9c\:c2dc","\:d3c9\:d0dd\:c2dc","\:c5f0\:cc9c\:ad70","\:ac00\:d3c9\:ad70","\:ad11\:ba85\:c2dc","\:b3d9\:b450\:cc9c\:c2dc","\:c591\:c8fc\:c2dc","\:d3ec\:cc9c\:c2dc","\:d654\:c131\:c2dc","\:d30c\:c8fc\:c2dc","\:ad11\:c8fc\:c2dc"};
 
 
 (* ::Subsubsection:: *)
 (*Define Extract Functions*)
 
 
-seoulDataColMap={"\:d655\:c9c4\:c77c"->1,"\:b098\:c774"->2,"\:c131\:bcc4"->3,"\:ac70\:c8fc\:c9c0"->4};
-seoulDataColMapR=Reverse[seoulDataColMap,1];
-seoulGetData[col_,range_:All,t_:table]:=t[[range,col/.seoulDataColMap]];
+ggDataColMap={"\:d655\:c9c4\:c77c"->1,"\:b098\:c774"->2,"\:c131\:bcc4"->3,"\:ac70\:c8fc\:c9c0"->4};
+ggDataColMapR=Reverse[ggDataColMap,1];
+ggGetData[col_,range_:All,t_:table]:=t[[range,col/.ggDataColMap]];
 
 
 (* ::Section:: *)
@@ -60,7 +64,10 @@ vworldAPIURL="http://api.vworld.kr/req/data";
 vworldAPIParams={"service"->"data","request"->"GetFeature","data"->"LT_C_ADSIGG_INFO"};
 
 
-vworldAPICall[dist_]:=URLExecute[vworldAPIURL,Join[vworldAPICred,vworldAPIParams,{"attrFilter"->"sig_kor_nm:=:"<>dist}]];
+(* \:c774\:b984 \:b9e4\:ce6d \:bb38\:c81c\:b85c :=: \:b300\:c2e0 :like: \:c0ac\:c6a9 *)
+
+
+vworldAPICall[dist_]:=URLExecute[vworldAPIURL,Join[vworldAPICred,vworldAPIParams,{"attrFilter"->"sig_kor_nm:like:"<>dist}]];
 
 
 (* ::Subsection:: *)
@@ -77,6 +84,9 @@ districtCoords[dist_]:=districtCoords[dist]=Cases[vworldAPICall[dist],HoldPatter
 
 
 districtCenter[dist_]:=districtCenter[dist]=RegionCentroid[Polygon[districtCoords[dist]]]
+
+
+Graphics[{Line/@districtCoords/@ggDistrictNames,Red,Point/@districtCenter/@ggDistrictNames}]
 
 
 (* ::Subsection:: *)
@@ -104,7 +114,7 @@ imageDimensions={ImageSize->{imageWidth,Automatic},ImagePadding->{{Automatic,Aut
 
 
 Clear[districtHeatmap]
-districtHeatmap[districts_,data_,OptionsPattern[{ImageSize->480,LegendLabel->"Legend",LabelStyle->{FontSize->14,Bold},Min->-1,Max->-1}]]:=
+districtHeatmap[districts_,data_,OptionsPattern[{ImageSize->480,LegendLabel->"Legend",LabelStyle->{FontSize->12},Min->-1,Max->-1}]]:=
 Module[{
 min=OptionValue[Min],
 max=OptionValue[Max],
@@ -151,7 +161,7 @@ max},
 },Alignment->{Center,Center},BaseStyle->{"Text",FontSize->12}],
 RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
 ]
-},Alignment->{Left,Top}]
+},Alignment->{Right,Top}]
 ]
 
 
@@ -160,6 +170,8 @@ RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
 
 
 (* ::Input::Initialization:: *)
-Labeled[
-districtHeatmap[seoulDistrictNames,seoulGetData["\:ac70\:c8fc\:c9c0"],ImageSize->imageWidth,LegendLabel->Style["\:d655 \:c9c4 \:c790",14]],
-plotLabelFun["\:c11c\:c6b8\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0"],Top]
+ggCorona19ByDistricts=Labeled[
+Pane[
+districtHeatmap[ggDistrictNames,ggGetData["\:ac70\:c8fc\:c9c0"],ImageSize->imageWidth*.5,LegendLabel->Style["\:d655 \:c9c4 \:c790",14]],
+ImageSize->{imageWidth,Automatic},Alignment->Center],
+plotLabelFun["\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0"],Top]

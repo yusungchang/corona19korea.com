@@ -7,6 +7,7 @@ echo Generate Korea Corona19 breakdown map
 ./COVID19KoreaBreakdown.wls > ../src/output/korea-corona19-breakdown.svg
 echo Generate Korea Corona19 trend map
 ./COVID19KoreaTrend.wls > ../src/output/korea-corona19-trend.svg
+echo ------------------
 echo Read and parse data from Seoul site
 ./COVID19SeoulData.wls > ../src/output/seoul-corona19-data.csv
 echo Generate Seoul Corona19 growth map
@@ -19,4 +20,18 @@ echo Generate Seoul Corona19 gender chart
 ./COVID19SeoulByGender.wls > ../src/output/seoul-corona19-by-gender.svg
 echo Generate Seoul Corona19 district map
 ./COVID19SeoulByDistrict.wls > ../src/output/seoul-corona19-by-district.svg
+echo ------------------
+echo Read and parse data from Gyunggi site
+./COVID19GyunggiData.wls > ../src/output/gyunggi-corona19-data.csv
+echo Generate Gyunggi Corona19 growth map
+./COVID19GyunggiGrowth.wls > ../src/output/gyunggi-corona19-growth.svg   
+echo Generate Gyunggi Corona19 delta map   
+./COVID19GyunggiDelta.wls > ../src/output/gyunggi-corona19-delta.svg
+echo Generate Gyunggi Corona19 age histogram
+./COVID19GyunggiByAge.wls > ../src/output/gyunggi-corona19-by-age.svg
+echo Generate Gyunggi Corona19 gender chart
+./COVID19GyunggiByGender.wls > ../src/output/gyunggi-corona19-by-gender.svg
+echo Generate Gyunggi Corona19 district map
+./COVID19GyunggiByDistrict.wls > ../src/output/gyunggi-corona19-by-district.svg
+echo ------------------
 echo Done...
