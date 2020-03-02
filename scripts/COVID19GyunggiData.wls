@@ -3,7 +3,7 @@
 
 (* ::Title:: *)
 (*COVID-19 Data Analysis*)
-(*\:acbd\:ae30\:b3c4*)
+(*\:acbd\:ae30\:b3c4: Generate Data*)
 
 
 (* ::Subtitle:: *)
@@ -13,18 +13,10 @@
 
 
 (* ::Section:: *)
-(*Note*)
-
-
-(* ::Section:: *)
-(*Initialization*)
+(*Config*)
 
 
 ggPageURL="https://www.gg.go.kr/bbs/boardView.do?bsIdx=464&bIdx=2296956&menuId=1535";
-
-
-cacheDirectory=Directory[]<>"/../data/cache/";
-outputDirectory=Directory[]<>"/../src/output/";
 
 
 (* ::Section:: *)
@@ -34,17 +26,11 @@ outputDirectory=Directory[]<>"/../src/output/";
 raw=Import[ggPageURL,"Data"];
 
 
-tableHeader=raw[[4,2,2,1,2,1]];
-
-
 tableRaw=raw[[4,2,2,1,2,2]];
 
 
 (* ::Section:: *)
-(*Data Functions*)
-
-
-ggDistrictNames={"\:ad70\:d3ec\:c2dc","\:ad6c\:b9ac\:c2dc","\:c591\:d3c9\:ad70","\:ace0\:c591\:c2dc","\:c624\:c0b0\:c2dc","\:d558\:b0a8\:c2dc","\:c2dc\:d765\:c2dc","\:c758\:c655\:c2dc","\:c548\:c591\:c2dc","\:c5ec\:c8fc\:c2dc","\:c548\:c131\:c2dc","\:c131\:b0a8\:c2dc","\:c548\:c0b0\:c2dc","\:c6a9\:c778\:c2dc","\:b0a8\:c591\:c8fc\:c2dc","\:ae40\:d3ec\:c2dc","\:c218\:c6d0\:c2dc","\:bd80\:cc9c\:c2dc","\:acfc\:cc9c\:c2dc","\:c758\:c815\:bd80\:c2dc","\:c774\:cc9c\:c2dc","\:d3c9\:d0dd\:c2dc","\:c5f0\:cc9c\:ad70","\:ac00\:d3c9\:ad70","\:ad11\:ba85\:c2dc","\:b3d9\:b450\:cc9c\:c2dc","\:c591\:c8fc\:c2dc","\:d3ec\:cc9c\:c2dc","\:d654\:c131\:c2dc","\:d30c\:c8fc\:c2dc","\:ad11\:c8fc\:c2dc"};
+(*Parse Page*)
 
 
 ggDataProcess[body_,eventYear_]:=Module[{

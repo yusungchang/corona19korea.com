@@ -9,8 +9,8 @@
         <meta http-equiv="Expires" content="-1">
         <meta http-equiv="refresh" content="1800">
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat::200,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat::200,400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400&display=swap&subset=korean" rel="stylesheet">
         <style>
             a {
                 color: midnightblue;
@@ -23,9 +23,10 @@
                 margin-bottom: 4rem;
                 padding: 0;
             }
+
             .header {
                 position: sticky;
-                top: -5rem;
+                top: -4rem;
                 left: 0;
                 width: 100%;
                 background-color: rgba(255,255,255,0.8);
@@ -33,10 +34,11 @@
                 padding: 1rem 0 1rem 0;
                 margin: 0;
             }
+
             h1 {
                 font-family: 'Montserrat';
-                font-weight: 500;
-                font-size: 3rem;
+                font-weight: 400;
+                font-size: 2.5rem;
                 color: rgb(72,72,72);
                 text-align: center;
                 text-transform: uppercase;
@@ -48,12 +50,23 @@
             h2{
                 font-family: 'Montserrat';
                 font-weight: 700;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 text-align: center;
                 text-transform: uppercase;
                 padding: 0;
                 margin: 0;
             }
+
+            .header > .right {
+                position: absolute;
+                bottom: 0.5rem;
+                right: 1rem;
+                font-family: 'Montserrat';
+                font-weight: 200;
+                font-size: .7rem;
+                text-align: right;
+            }
+
             .grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
@@ -77,30 +90,35 @@
                 font-weight: 200;
                 font-size: 1rem;
                 width: 100%;
+                height: 3rem;
                 background-color: rgba(255,255,255,0.8);
                 box-shadow: 0px -1px 2px rgba(128,128,128,0.5);
-                padding: 1rem;
+                padding: 0;
                 margin: 0;
             }
 
             .footer > .left {
                 position: absolute;
                 top: 1rem;
-                right: 3rem;
-                text-align: center;
-                font-size: 1rem;
-                padding: 0;
-                margin: 0;
+                left: 0;
+                text-align: left;
+                padding-left: 1rem;
             }
 
-            .m-logo {
-                display:inline-block;
-                background: url("images/mathematica_logo.svg") no-repeat center;
-                background-size: cover;
-                width: 1rem;
-                height: 1rem;
-                padding: 0;
-                margin: 0;
+            .footer > .right {
+                position: absolute;
+                top: 1rem;
+                right: 0;
+                text-align: right;
+                padding-right: 1rem;
+            }
+
+            .footer > .center {
+                position: absolute;
+                top: 1rem;
+                left: 40%;
+                width: 20%;
+                text-align: center;
             }
 
             .seoul_logo {
@@ -119,7 +137,8 @@
     <body>
         <div class="header">
             <h1>Corona19 Korea Stats</h1>
-            <h2>Digital Innovation @ SSG.COM</div></h2>
+            <h2>Digital Innovation @ SSG.COM</h2>
+            <div class="right">Yu-Sung Chang &middot; CTO</div>
         </div>
         <div class="grid">
             <div><img src="output/korea-corona19-stat.svg" style="width:100%;"></div>
@@ -137,8 +156,9 @@
             <div class="gyunggi_logo"><img src="output/gyunggi-corona19-by-gender.svg" style="width:100%;"></div>
         </div>
         <div class="footer">
-            <div>Powered by <a href="https://wolfram.com"><div class="m-logo"></div></a></div>
-            <div class="left">Yu-Sung Chang, CTO, <a href="https://ssg.com" style="font-weight:700;">SSG.COM</a>: <a href="https://github.com/yusungchang/corona19korea.com">Github</a></div>
+            <div class="left">Powered by<a href="https://wolfram.com/mathematica" target="_blank"><img src="images/mathematica_logo.svg" style="vertical-align:text-bottom; height:1.2rem; padding-left:.4rem;"></a></div>
+            <div class="center">Data: <span style="font-family: 'Nanum Gothic';"><a href="output/korea-corona19-data.csv">전국</a> &middot; <a href="output/seoul-corona19-data.csv">서울</a> &middot; <a href="output/gyunggi-corona19-data.csv">경기</a></span></div>
+            <div class="right"><a href="https://github.com/yusungchang/corona19korea.com" target="_blank">Github</a> &middot; <a href="https://ssg.com" target="_blank" style="font-weight:700;">SSG.COM</a></div>
         </div>
     </body>
 </html>

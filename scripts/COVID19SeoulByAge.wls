@@ -3,11 +3,11 @@
 
 (* ::Title:: *)
 (*COVID-19 Data Analysis*)
-(*Seoul District*)
+(*\:c11c\:c6b8: \:d655\:c9c4\:c790 \:c5f0\:b839 \:bd84\:d3ec*)
 
 
 (* ::Subtitle:: *)
-(*Yu-Sung Chang*)
+(*\:c7a5\:c720\:c131 | Yu-Sung Chang*)
 (*CTO, Digital Innovation Group*)
 (*SSG.COM*)
 
@@ -16,33 +16,29 @@
 (*Initialization*)
 
 
-outputDirectory=Directory[]<>"/../src/output/";
+$outputDirectory=Directory[]<>"/../src/output/";
+
+
+$dataFile=$outputDirectory<>"seoul-corona19-data.csv";
 
 
 (* ::Section:: *)
 (*Load Data*)
 
 
-table=Cases[Import[outputDirectory<>"seoul-corona19-data.csv"],Except[{}]];
+table=Cases[Import[$dataFile],Except[{}]];
 
 
 table=Prepend[Rest[#],DateObject[First[#]]]&/@table;
 
 
-(* ::Section:: *)
-(*Data Functions*)
-
-
-seoulDistrictNames={"\:ac15\:b0a8\:ad6c","\:ac15\:b3d9\:ad6c","\:ac15\:bd81\:ad6c","\:ac15\:c11c\:ad6c","\:ad00\:c545\:ad6c","\:ad11\:c9c4\:ad6c","\:ad6c\:b85c\:ad6c","\:ae08\:cc9c\:ad6c","\:b178\:c6d0\:ad6c","\:b3c4\:bd09\:ad6c","\:b3d9\:b300\:bb38\:ad6c","\:b3d9\:c791\:ad6c","\:b9c8\:d3ec\:ad6c","\:c11c\:b300\:bb38\:ad6c","\:c11c\:cd08\:ad6c","\:c131\:b3d9\:ad6c","\:c131\:bd81\:ad6c","\:c1a1\:d30c\:ad6c","\:c591\:cc9c\:ad6c","\:c601\:b4f1\:d3ec\:ad6c","\:c6a9\:c0b0\:ad6c","\:c740\:d3c9\:ad6c","\:c885\:b85c\:ad6c","\:c911\:ad6c","\:c911\:b791\:ad6c"};
-
-
 (* ::Subsubsection:: *)
-(*Define Extract Functions*)
+(*Extract Functions*)
 
 
-seoulDataColMap={"\:d655\:c9c4\:c77c"->1,"\:b098\:c774"->2,"\:c131\:bcc4"->3,"\:ac70\:c8fc\:c9c0"->4};
-seoulDataColMapR=Reverse[seoulDataColMap,1];
-seoulGetData[col_,range_:All,t_:table]:=t[[range,col/.seoulDataColMap]];
+dataColMap={"\:d655\:c9c4\:c77c"->1,"\:b098\:c774"->2,"\:c131\:bcc4"->3,"\:ac70\:c8fc\:c9c0"->4};
+dataColMapR=Reverse[dataColMap,1];
+getData[col_,range_:All,t_:table]:=t[[range,col/.dataColMap]];
 
 
 (* ::Section:: *)
@@ -63,10 +59,13 @@ placedLegendFrame=(Placed[#,{Left,Top},legendFrame]&);
 plotLabelFun[title_]:=Column[{
 Style[title,32,GrayLevel[.4]],
 Style[
-StringReplace[DateString[{"MonthShort","/","DayShort"," (","DayNameShort",") ","Hour24Short","\:c2dc \:d604\:c7ac"}],{"Mon"->"\:c6d4","Tue"->"\:d654","Wed"->"\:c218","Thu"->"\:baa9","Fri"->"\:ae08","Sat"->"\:d1a0","Sun"->"\:c77c"}],
-20,GrayLevel[.6]]
+StringReplace[DateString[{"MonthShort","/","DayShort"," (","DayNameShort",") ","Hour24Short","\:c2dc \:c5c5\:b370\:c774\:d2b8"}],{"Mon"->"\:c6d4","Tue"->"\:d654","Wed"->"\:c218","Thu"->"\:baa9","Fri"->"\:ae08","Sat"->"\:d1a0","Sun"->"\:c77c"}],
+20,GrayLevel[.6]],
+Spacer[{0,16}]
 },Alignment->Center,Spacings->{0,2},BaseStyle->"Label"];
-imageDimensions={ImageSize->{imageWidth,Automatic},ImagePadding->{{Automatic,Automatic},{Automatic,20}},AspectRatio->1/2};
+
+
+imageDimensions={ImageSize->{imageWidth,Automatic},AspectRatio->1/2};
 
 
 (* ::Section:: *)
@@ -75,11 +74,11 @@ imageDimensions={ImageSize->{imageWidth,Automatic},ImagePadding->{{Automatic,Aut
 
 (* ::Input::Initialization:: *)
 Labeled[
-Histogram[seoulGetData["\:b098\:c774"],{0,100,5},
+Histogram[getData["\:b098\:c774"],{0,100,5},
 imageDimensions,
 Frame->True,
-FrameTicksStyle->12,
-FrameLabel->{Style["\:c5f0 \:b839",12]},
+FrameTicksStyle->Directive[FontSize->14],
+FrameLabel->{Style["\:c5f0 \:b839",14]},
 LabelingFunction->(Placed[Style[#,14,RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}],Bold],Above]&),
 ChartStyle->Directive[{RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}],EdgeForm[{White,Thick}]}],
 GridLines->Automatic],

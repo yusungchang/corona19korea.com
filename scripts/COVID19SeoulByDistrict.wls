@@ -3,7 +3,7 @@
 
 (* ::Title:: *)
 (*COVID-19 Data Analysis*)
-(*\:c11c\:c6b8 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
+(*\:c11c\:c6b8: \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
 (* ::Subtitle:: *)
@@ -110,10 +110,6 @@ districtCenter[dist_]:=dist/.centerRules;
 (*Plot Styles*)
 
 
-legendFrame=(Framed[Style[#,14],Background->GrayLevel[1,.9],FrameStyle->LightGray,RoundingRadius->3]&);
-placedLegendFrame=(Placed[#,{Left,Top},legendFrame]&);
-
-
 plotLabelFun[title_]:=Column[{
 Style[title,32,GrayLevel[.4]],
 Style[
@@ -121,9 +117,6 @@ StringReplace[DateString[{"MonthShort","/","DayShort"," (","DayNameShort",") ","
 20,GrayLevel[.6]],
 Spacer[{0,16}]
 },Alignment->Center,Spacings->{0,2},BaseStyle->"Label"];
-
-
-imageDimensions={ImageSize->{$imageWidth,Automatic},ImagePadding->{{Automatic,Automatic},{Automatic,20}},AspectRatio->1/2};
 
 
 (* ::Subsection:: *)
@@ -194,4 +187,4 @@ ImageSize->$imageWidth,
 LabelStyle->{FontSize->14,Bold},
 LegendLabel->Style["\:d655 \:c9c4 \:c790",14]
 ],
-plotLabelFun[$districtMain<>" \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0"],Top,Background->None],2]
+plotLabelFun[$districtMain<>" \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0"],Top],2]

@@ -3,42 +3,45 @@
 
 (* ::Title:: *)
 (*COVID-19 Data Analysis*)
-(*South Korea*)
+(*South Korea: Breakdown*)
 
 
 (* ::Subtitle:: *)
-(*Yu-Sung Chang*)
+(*\:c7a5\:c720\:c131 | Yu-Sung Chang*)
 (*CTO, Digital Innovation Group*)
 (*SSG.COM*)
+
+
+(* ::Section:: *)
+(*Config*)
+
+
+$outputDirectory=Directory[]<>"/../src/output/";
+
+
+$dataFile=$outputDirectory<>"korea-corona19-data.csv";
 
 
 (* ::Section:: *)
 (*Initialization*)
 
 
-outputDirectory=Directory[]<>"/../src/output/";
-
-
-(* ::Section:: *)
-(*Parsing Caches*)
-
-
 (* ::Subsection:: *)
-(*Transform*)
+(*Data Handling*)
 
 
 (* ::Subsubsection:: *)
-(*Remove Duplicated Entries*)
+(*Read Data & Convert Dates to DateObject*)
 
 
-data=Cases[Import[outputDirectory<>"korea-corona19-data.csv"],Except[{}]];
+data=Cases[Import[$dataFile],Except[{}]];
 
 
 data=Prepend[Rest[#],DateObject[First[#]]]&/@data;
 
 
 (* ::Subsubsection:: *)
-(*Define Extract Functions*)
+(*Extract Functions*)
 
 
 colMap={"\:c2dc\:ac04"->1,"\:cd1d\:acc4"->2,"\:d655\:c9c4"->3,"\:aca9\:b9ac\:d574\:c81c"->4,"\:aca9\:b9ac\:c911"->5,"\:c0ac\:b9dd"->6,"\:ac80\:c0ac\:cd1d\:acc4"->7,"\:ac80\:c0ac\:c911"->8,"\:acb0\:acfc\:c74c\:c131"->9};
@@ -74,14 +77,21 @@ legendFrame=(Framed[Style[#,14],Background->GrayLevel[1,.9],FrameStyle->LightGra
 placedLegendFrame=(Placed[#,{Left,Top},legendFrame]&);
 
 
-plotLabelFun[title_]:=Column[{
+plotLabelFun[title_,time_:CurrentTime[]]:=Column[{
 Style[title,32,GrayLevel[.4]],
 Style[
-StringReplace[DateString[{"MonthShort","/","DayShort"," (","DayNameShort",") ","Hour24Short","\:c2dc \:d604\:c7ac"}],{"Mon"->"\:c6d4","Tue"->"\:d654","Wed"->"\:c218","Thu"->"\:baa9","Fri"->"\:ae08","Sat"->"\:d1a0","Sun"->"\:c77c"}],
-20,GrayLevel[.6]]
+StringReplace[DateString[time,{"MonthShort","/","DayShort"," (","DayNameShort",") ","Hour24Short","\:c2dc \:c5c5\:b370\:c774\:d2b8"}],{"Mon"->"\:c6d4","Tue"->"\:d654","Wed"->"\:c218","Thu"->"\:baa9","Fri"->"\:ae08","Sat"->"\:d1a0","Sun"->"\:c77c"}],
+20,GrayLevel[.6]],
+Spacer[{0,16}]
 },Alignment->Center,Spacings->{0,2},BaseStyle->"Label"];
-imageDimensions={ImageSize->{imageWidth,Automatic},ImagePadding->{{Automatic,Automatic},{Automatic,20}},AspectRatio->1/2};
-frameTickStyle={FontSize->12};
+
+
+imageDimensions={ImageSize->{imageWidth,Automatic},AspectRatio->1/2};
+
+
+frameTickStyle=Directive[FontSize->14];
+
+
 barLabelStyle={FontSize->12};
 barLabelStyleSmall={FontSize->10};
 
@@ -97,7 +107,7 @@ barLabelStyleSmall={FontSize->10};
 (* ::Input::Initialization:: *)
 Labeled[
 Module[{
-range9=Flatten[Position[#["Hour"]&/@getData["\:c2dc\:ac04"],9]],(* 9\:c2dc \:c77c\:c77c \:d604\:d669 \:b9cc \:cd94\:cd9c *)
+range9=Flatten[Position[#["Hour"]&/@getData["\:c2dc\:ac04"],x_/;x<12]],(* \:c624\:c804 \:c77c\:c77c \:d604\:d669 \:b9cc \:cd94\:cd9c *)
 legends={"\:c0ac\:b9dd","\:aca9\:b9ac\:c911","\:aca9\:b9ac\:d574\:c81c"},
 dateTicks,
 legendInset,
@@ -127,4 +137,4 @@ GridLines->Automatic,
 Epilog->Inset[legendInset,Scaled[{0.025,0.975}],{Left,Top}]
 ]
 ]
-,plotLabelFun["\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:d604\:d669"],Top]
+,plotLabelFun["\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:d604\:d669",Last@getData["\:c2dc\:ac04"]],Top]

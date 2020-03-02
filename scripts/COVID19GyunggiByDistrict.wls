@@ -3,7 +3,7 @@
 
 (* ::Title:: *)
 (*COVID-19 Data Analysis*)
-(*\:acbd\:ae30\:b3c4  \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
+(*\:acbd\:ae30\:b3c4: \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
 (* ::Subtitle:: *)
@@ -19,7 +19,7 @@
 $outputDirectory=Directory[]<>"/../src/output/";
 
 
-$vworldAPICred=Import[Directory[]<>"/../config/config.vworld.key.json","JSON"];
+$vworldAPICred=Import[Directory[]<>"/../config/vworld.key.json","JSON"];
 
 
 $districtMain="\:acbd\:ae30\:b3c4";
@@ -110,10 +110,6 @@ districtCenter[dist_]:=dist/.centerRules;
 (*Plot Styles*)
 
 
-legendFrame=(Framed[Style[#,14],Background->GrayLevel[1,.9],FrameStyle->LightGray,RoundingRadius->3]&);
-placedLegendFrame=(Placed[#,{Left,Top},legendFrame]&);
-
-
 plotLabelFun[title_]:=Column[{
 Style[title,32,GrayLevel[.4]],
 Style[
@@ -121,9 +117,6 @@ StringReplace[DateString[{"MonthShort","/","DayShort"," (","DayNameShort",") ","
 20,GrayLevel[.6]],
 Spacer[{0,16}]
 },Alignment->Center,Spacings->{0,2},BaseStyle->"Label"];
-
-
-imageDimensions={ImageSize->{$imageWidth,Automatic},ImagePadding->{{Automatic,Automatic},{Automatic,20}},AspectRatio->1/2};
 
 
 (* ::Subsection:: *)

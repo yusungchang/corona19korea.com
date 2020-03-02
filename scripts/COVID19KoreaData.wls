@@ -3,17 +3,33 @@
 
 (* ::Title:: *)
 (*COVID-19 Data Analysis*)
-(*South Korea*)
+(*South Korea: Generate Data*)
 
 
 (* ::Subtitle:: *)
-(*Yu-Sung Chang*)
+(*\:c7a5\:c720\:c131 | Yu-Sung Chang*)
 (*CTO, Digital Innovation Group*)
 (*SSG.COM*)
 
 
 (* ::Section:: *)
-(*Initialization*)
+(*Config*)
+
+
+$cacheDirectory=Directory[]<>"/../data/cache/";
+
+
+$outputDirectory=Directory[]<>"/../src/output/";
+
+
+(* Output\:c740 $outputDirectory<>"korea-corona19-data.csv"\:b85c redirect *)
+
+
+(* ::Section:: *)
+(*Source Config*)
+
+
+(* \:c9c8\:bcd1\:ad00\:b9ac\:bcf8\:bd80 (KCDC) \:ac8c\:c2dc\:d310 *)
 
 
 apiKCDCURLBase="https://www.cdc.go.kr";
@@ -25,12 +41,8 @@ apiKCDCParamPage[n_]:={"nPage"->n};
 apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 
 
-cacheDirectory=Directory[]<>"/../data/cache/";
-outputDirectory=Directory[]<>"/../src/output/";
-
-
 (* ::Section:: *)
-(*Post to Cache*)
+(*Cache Posts*)
 
 
 raw=URLExecute[apiKCDCURL,Join[apiKCDCParamsCommon,apiKCDCParamKeyWord,apiKCDCParamPage[#]],"Source"]&/@Range[5];
@@ -40,16 +52,16 @@ postList=Flatten[Flatten[StringCases[Quiet@Flatten[StringCases[ImportString[#,"H
 
 
 crawlPosts[x_]:=Module[{html},
-If[!FileExistsQ[cacheDirectory<>#<>".html"],
+If[!FileExistsQ[$cacheDirectory<>#<>".html"],
 html=URLExecute[apiKCDCURL,Join[apiKCDCParamsCommon,apiKCDCParamsPost[#]],"Source"];
-Export[cacheDirectory<>#<>".html",html,"Text",CharacterEncoding-> "UTF8"]]&/@x];
+Export[$cacheDirectory<>#<>".html",html,"Text",CharacterEncoding-> "UTF8"]]&/@x];
 
 
 crawlPosts[postList];
 
 
 (* ::Section:: *)
-(*Parsing Caches*)
+(*Parse Caches*)
 
 
 (* ::Subsection:: *)
@@ -57,7 +69,7 @@ crawlPosts[postList];
 
 
 (* ::Subsubsection:: *)
-(*HTML to Data Function*)
+(*Extract and Process Table Rows*)
 
 
 dataRow[name_]:=
@@ -82,11 +94,7 @@ Most[rows] (* \:c0ac\:b9dd\:c790 \:d6c4 \:d3ec\:ba67 *)
 ];
 
 
-(* ::Subsubsection:: *)
-(*Convert Cached HTMLs*)
-
-
-dataPre1=Flatten[dataRow/@FileNames[cacheDirectory<>"*.html"],1];
+dataPre1=Flatten[dataRow/@FileNames[$cacheDirectory<>"*.html"],1];
 
 
 (* ::Subsubsection:: *)
