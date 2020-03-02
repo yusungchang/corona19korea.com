@@ -1,4 +1,6 @@
 #! /bin/bash
+echo Collecting and generating outputs...
+echo ------------------
 echo Read and parse data from KCDC site
 ./COVID19KoreaData.wls > ../src/output/korea-corona19-data.csv
 echo Generate Korea Corona19 status
@@ -23,15 +25,15 @@ echo Generate Seoul Corona19 district map PNG
 echo ------------------
 echo Read and parse data from Gyunggi site
 ./COVID19GyunggiData.wls > ../src/output/gyunggi-corona19-data.csv
-echo Generate Gyunggi Corona19 growth map
+echo Generate Gyunggi Corona19 growth map SVG
 ./COVID19GyunggiGrowth.wls > ../src/output/gyunggi-corona19-growth.svg   
-echo Generate Gyunggi Corona19 delta map   
+echo Generate Gyunggi Corona19 delta map SVG
 ./COVID19GyunggiDelta.wls > ../src/output/gyunggi-corona19-delta.svg
-echo Generate Gyunggi Corona19 age histogram
+echo Generate Gyunggi Corona19 age histogram SVG
 ./COVID19GyunggiByAge.wls > ../src/output/gyunggi-corona19-by-age.svg
-echo Generate Gyunggi Corona19 gender chart
+echo Generate Gyunggi Corona19 gender chart SVG
 ./COVID19GyunggiByGender.wls > ../src/output/gyunggi-corona19-by-gender.svg
 echo Generate Gyunggi Corona19 district map PNG
 ./COVID19GyunggiByDistrict.wls > ../src/output/gyunggi-corona19-by-district.png
 echo ------------------
-echo Done...
+echo Done.

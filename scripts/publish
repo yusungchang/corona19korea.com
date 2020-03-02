@@ -1,0 +1,12 @@
+#! /bin/bash
+. ../config/webhost.config # config file with addr=, user=, port=, and path=
+echo Publishing...
+echo ------------------
+echo address=$addr
+echo user=$user
+echo port=$port
+echo path=$path
+echo ------------------
+rsync -arvz -e "ssh -p ${port}" --progress --delete ../src/. $user@$addr:$path
+echo ------------------
+echo Done.

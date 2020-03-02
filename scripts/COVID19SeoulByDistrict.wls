@@ -19,7 +19,7 @@
 $outputDirectory=Directory[]<>"/../src/output/";
 
 
-$vworldAPICred=Import[Directory[]<>"/../config/config.vworld.key.json","JSON"];
+$vworldAPICred=Import[Directory[]<>"/../config/vworld.key.json","JSON"];
 
 
 $districtMain="\:c11c\:c6b8\:d2b9\:bcc4\:c2dc";
