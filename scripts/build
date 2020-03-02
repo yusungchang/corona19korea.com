@@ -18,8 +18,8 @@ echo Generate Seoul Corona19 age histogram
 ./COVID19SeoulByAge.wls > ../src/output/seoul-corona19-by-age.svg
 echo Generate Seoul Corona19 gender chart
 ./COVID19SeoulByGender.wls > ../src/output/seoul-corona19-by-gender.svg
-echo Generate Seoul Corona19 district map
-./COVID19SeoulByDistrict.wls > ../src/output/seoul-corona19-by-district.svg
+echo Generate Seoul Corona19 district map PNG
+./COVID19SeoulByDistrict.wls > ../src/output/seoul-corona19-by-district.png
 echo ------------------
 echo Read and parse data from Gyunggi site
 ./COVID19GyunggiData.wls > ../src/output/gyunggi-corona19-data.csv
@@ -31,7 +31,7 @@ echo Generate Gyunggi Corona19 age histogram
 ./COVID19GyunggiByAge.wls > ../src/output/gyunggi-corona19-by-age.svg
 echo Generate Gyunggi Corona19 gender chart
 ./COVID19GyunggiByGender.wls > ../src/output/gyunggi-corona19-by-gender.svg
-echo Generate Gyunggi Corona19 district map
-./COVID19GyunggiByDistrict.wls > ../src/output/gyunggi-corona19-by-district.svg
+echo Generate Gyunggi Corona19 district map PNG
+./COVID19GyunggiByDistrict.wls > ../src/output/gyunggi-corona19-by-district.png
 echo ------------------
 echo Done...
