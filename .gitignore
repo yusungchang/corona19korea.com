@@ -3,3 +3,5 @@ config/*.json
 config/*.config
 src/output/*.svg
 src/output/*.png
+scripts/test
+scripts/Test.nb
