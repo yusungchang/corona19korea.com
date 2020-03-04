@@ -75,11 +75,11 @@ imageDimensions={ImageSize->{imageWidth,Automatic},AspectRatio->1/2};
 (* ::Input::Initialization:: *)
 Labeled[
 Pane[
-PieChart[Association[Rule@@#&/@Tally[getData["\:c131\:bcc4"]]],
+PieChart[Association[Rule@@#&/@(Sort@Tally[getData["\:c131\:bcc4"]])],
 ImageSize->{Automatic,400},
 LabelingFunction->(Placed[Style[#,20,Bold,White],"RadialCenter"]&),
-ChartStyle->{RGBColor[{0.9647058823529412, 0.7490196078431373, 0.15294117647058825`, 1.}],RGBColor[{0.2627450980392157, 0.5215686274509804, 0.9607843137254902, 1.}]},
-ChartLegends->Placed[{"\:c5ec","\:b0a8"},Right,Style[#,16,GrayLevel[.3]]&]],
+ChartStyle->{RGBColor[{0.2627450980392157, 0.5215686274509804, 0.9607843137254902, 1.}],RGBColor[{0.9647058823529412, 0.7490196078431373, 0.15294117647058825`, 1.}]},
+ChartLegends->Placed[{"\:b0a8","\:c5ec"},Right,Style[#,16,GrayLevel[.3]]&]],
 imageDimensions,Alignment->Center
 ],
 plotLabelFun["\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c131\:bcc4"],Top]
