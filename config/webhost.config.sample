@@ -1,0 +1,4 @@
+addr=web_host_ssh_ip_address
+user=user_name
+port=ssh_port
+path='web_site_directory'
