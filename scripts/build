@@ -1,5 +1,5 @@
 #! /bin/bash
-echo 'Collecting data and generating output for corona19korea.com'
+echo 'Collect data and Generate output for corona19korea.com'
 if [[ $1 == all || $1 == 'korea' ]]; then
     echo '------------------'
     echo 'Read and parse data from KCDC site'
@@ -41,5 +41,9 @@ if [[ $1 == all || $1 == 'gyunggi' ]]; then
     echo 'Generate Gyunggi Corona19 district map PNG'
     ./COVID19GyunggiByDistrict.wls > ../src/output/gyunggi-corona19-by-district.png
 fi
-echo '------------------'
-echo 'Done.'
+if [[ -z $1 ]]; then
+    echo 'Usage: build (all | seoul | gyunggi)'
+else
+    echo '------------------'
+    echo 'Done.'
+fi
