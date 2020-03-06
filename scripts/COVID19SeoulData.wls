@@ -26,7 +26,7 @@ seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do?tab=1";
 raw=Import[seoulPageURL,"Data"];
 
 
-tableRaw=raw[[2,2,1,3]];
+tableRaw=raw[[2,2,1,2,3]];
 
 
 (* ::Section:: *)
