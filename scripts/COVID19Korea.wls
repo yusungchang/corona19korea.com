@@ -301,7 +301,7 @@ Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue
 
 
 Clear[out2];
-out2=Labeled[
+out2:=Labeled[
 Module[{
 range=Span[10,-1],
 legends={"\:d655\:c9c4","\:c0ac\:b9dd"},
