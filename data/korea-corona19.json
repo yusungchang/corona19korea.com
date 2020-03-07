@@ -1,0 +1,26 @@
+{
+    "data": {
+		"filename": "korea-corona19-data.json",
+        "type": "JSON"
+    },
+	"1": {
+		"filename": "korea-corona19-snapshot.svg",
+		"type": "SVG",
+		"label": "전국 코로나19 상황"
+    },
+	"2": {
+		"filename": "korea-corona19-trend.svg",
+		"type": "SVG",
+		"label": "전국 코로나19 확진자 추이"
+    },
+	"3": {
+		"filename": "korea-corona19-breakdown.svg",
+		"type": "SVG",
+		"label": "전국 코로나19 확진자 분석"
+	},
+	"4": {
+		"filename": "korea-corona19-growth.svg",
+		"type": "SVG",
+		"label": "전국 코로나19 확진자 증가수"
+    }
+}

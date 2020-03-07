@@ -1,7 +1,9 @@
 .DS_Store
 config/*.json
 config/*.config
-src/output/*.svg
-src/output/*.png
+src/output/en/*.svg
+src/output/kr/*.svg
+src/output/en/*.png
+src/output/kr/*.png
 scripts/test
 scripts/Test.nb

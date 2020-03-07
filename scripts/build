@@ -2,44 +2,15 @@
 echo 'Collect data and Generate output for corona19korea.com'
 if [[ $1 == all || $1 == 'korea' ]]; then
     echo '------------------'
-    echo 'Read and parse data from KCDC site'
-    ./COVID19KoreaData.wls > ../src/output/korea-corona19-data.csv
-    echo 'Generate Korea Corona19 status'
-    ./COVID19KoreaStat.wls > ../src/output/korea-corona19-stat.svg
-    echo 'Generate Korea Corona19 breakdown map'
-    ./COVID19KoreaBreakdown.wls > ../src/output/korea-corona19-breakdown.svg
-    echo 'Generate Korea Corona19 trend map'
-    ./COVID19KoreaTrend.wls > ../src/output/korea-corona19-trend.svg
+    ./COVID19Korea.wls
 fi
 if [[ $1 == all || $1 == 'seoul' ]]; then
     echo '------------------'
-    echo 'Read and parse data from Seoul site'
-    ./COVID19SeoulData.wls > ../src/output/seoul-corona19-data.csv
-    echo 'Generate Seoul Corona19 growth map'
-    ./COVID19SeoulGrowth.wls > ../src/output/seoul-corona19-growth.svg   
-    echo 'Generate Seoul Corona19 delta map'
-    ./COVID19SeoulDelta.wls > ../src/output/seoul-corona19-delta.svg
-    echo 'Generate Seoul Corona19 age histogram'
-    ./COVID19SeoulByAge.wls > ../src/output/seoul-corona19-by-age.svg
-    echo 'Generate Seoul Corona19 gender chart'
-    ./COVID19SeoulByGender.wls > ../src/output/seoul-corona19-by-gender.svg
-    echo 'Generate Seoul Corona19 district map PNG'
-    ./COVID19SeoulByDistrict.wls > ../src/output/seoul-corona19-by-district.png
+    ./COVID19Seoul.wls
 fi
 if [[ $1 == all || $1 == 'gyunggi' ]]; then
     echo '------------------'
-    echo 'Read and parse data from Gyunggi site'
-    ./COVID19GyunggiData.wls > ../src/output/gyunggi-corona19-data.csv
-    echo 'Generate Gyunggi Corona19 growth map SVG'
-    ./COVID19GyunggiGrowth.wls > ../src/output/gyunggi-corona19-growth.svg   
-    echo 'Generate Gyunggi Corona19 delta map SVG'
-    ./COVID19GyunggiDelta.wls > ../src/output/gyunggi-corona19-delta.svg
-    echo 'Generate Gyunggi Corona19 age histogram SVG'
-    ./COVID19GyunggiByAge.wls > ../src/output/gyunggi-corona19-by-age.svg
-    echo 'Generate Gyunggi Corona19 gender chart SVG'
-    ./COVID19GyunggiByGender.wls > ../src/output/gyunggi-corona19-by-gender.svg
-    echo 'Generate Gyunggi Corona19 district map PNG'
-    ./COVID19GyunggiByDistrict.wls > ../src/output/gyunggi-corona19-by-district.png
+    ./COVID19Gyunggi.wls
 fi
 if [[ -z $1 ]]; then
     echo 'Usage: build (all | seoul | gyunggi)'

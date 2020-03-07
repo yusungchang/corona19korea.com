@@ -1,0 +1,246 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10554,        238]
+NotebookOptionsPosition[      9286,        208]
+NotebookOutlinePosition[      9623,        223]
+CellTagsIndexPosition[      9580,        220]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"Source", ":", " ", "https", ":"}], "//", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"en", ".", "wikipedia", ".", "org"}], "/", "wiki"}], "/", 
+    "Seoul"}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.792572661574082*^9, 
+  3.7925726783270063`*^9}},ExpressionUUID->"3135f968-a7ac-4d79-bc7a-\
+240c1687b6d2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{
+    "\"\<Dobong District (\:b3c4\:bd09\:ad6c; \:9053\:5cf0\:5340)\nDongdaemun \
+District (\:b3d9\:b300\:bb38\:ad6c; \:6771\:5927\:9580\:5340)\nDongjak \
+District (\:b3d9\:c791\:ad6c; \:9285\:96c0\:5340)\nEunpyeong District (\:c740\
+\:d3c9\:ad6c; \:6069\:5e73\:5340)\nGangbuk District (\:ac15\:bd81\:ad6c; \
+\:6c5f\:5317\:5340)\nGangdong District (\:ac15\:b3d9\:ad6c; \
+\:6c5f\:6771\:5340)\nGangnam District (\:ac15\:b0a8\:ad6c; \
+\:6c5f\:5357\:5340)\nGangseo District (\:ac15\:c11c\:ad6c; \
+\:6c5f\:897f\:5340)\nGeumcheon District (\:ae08\:cc9c\:ad6c; \:887f\:5ddd\
+\:5340)\nGuro District (\:ad6c\:b85c\:ad6c; \:4e5d\:8001\:5340)\nGwanak \
+District (\:ad00\:c545\:ad6c; \:51a0\:5cb3\:5340)\nGwangjin District (\:ad11\
+\:c9c4\:ad6c; \:5ee3\:6d25\:5340)\nJongno District (\:c885\:b85c\:ad6c; \
+\:937e\:8def\:5340)\nJung District (\:c911\:ad6c; \:4e2d\:5340)\nJungnang \
+District (\:c911\:b791\:ad6c; \:4e2d\:6d6a\:5340)\nMapo District \
+(\:b9c8\:d3ec\:ad6c; \:9ebb\:6d66\:5340)\nNowon District (\:b178\:c6d0\:ad6c; \
+\:8606\:539f\:5340)\nSeocho District (\:c11c\:cd08\:ad6c; \:745e\:8349\:5340)\
+\nSeodaemun District (\:c11c\:b300\:bb38\:ad6c; \:897f\:5927\:9580\:5340)\n\
+Seongbuk District (\:c131\:bd81\:ad6c; \:57ce\:5317\:5340)\nSeongdong \
+District (\:c131\:b3d9\:ad6c; \:57ce\:6771\:5340)\nSongpa District (\:c1a1\
+\:d30c\:ad6c; \:677e\:5761\:5340)\nYangcheon District (\:c591\:cc9c\:ad6c; \
+\:967d\:5ddd\:5340)\nYeongdeungpo District (\:c601\:b4f1\:d3ec\:ad6c; \:6c38\
+\:767b\:6d66\:5340)\nYongsan District (\:c6a9\:c0b0\:ad6c; \
+\:9f8d\:5c71\:5340)\>\"", ",", "\"\<\\n\>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.792572249708563*^9, 3.792572268326214*^9}, {
+   3.792572315609353*^9, 3.79257231611906*^9}, 3.7925724834635487`*^9},
+ CellLabel->"In[82]:=",ExpressionUUID->"67ccb22f-c614-4d99-91c8-9059ab5a2262"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eng", "=", 
+  RowBox[{"Quiet", "@", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"x__", "<>", "\"\< District\>\""}], ")"}], 
+          "\[RuleDelayed]", "x"}]}], "]"}], "&"}], "/@", "a"}], 
+     ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.792572284855633*^9, 3.792572337910386*^9}, {
+  3.792572489214943*^9, 3.7925725200993423`*^9}},
+ CellLabel->"In[86]:=",ExpressionUUID->"38d8a9a0-5273-4af2-945c-3fed87a12e65"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Dobong\"\>", ",", "\<\"Dongdaemun\"\>", ",", "\<\"Dongjak\"\>",
+    ",", "\<\"Eunpyeong\"\>", ",", "\<\"Gangbuk\"\>", ",", "\<\"Gangdong\"\>",
+    ",", "\<\"Gangnam\"\>", ",", "\<\"Gangseo\"\>", ",", "\<\"Geumcheon\"\>", 
+   ",", "\<\"Guro\"\>", ",", "\<\"Gwanak\"\>", ",", "\<\"Gwangjin\"\>", 
+   ",", "\<\"Jongno\"\>", ",", "\<\"Jung\"\>", ",", "\<\"Jungnang\"\>", 
+   ",", "\<\"Mapo\"\>", ",", "\<\"Nowon\"\>", ",", "\<\"Seocho\"\>", 
+   ",", "\<\"Seodaemun\"\>", ",", "\<\"Seongbuk\"\>", 
+   ",", "\<\"Seongdong\"\>", ",", "\<\"Songpa\"\>", ",", "\<\"Yangcheon\"\>", 
+   ",", "\<\"Yeongdeungpo\"\>", ",", "\<\"Yongsan\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.792572318682266*^9, 3.79257233825637*^9}, {
+  3.792572491435162*^9, 3.7925725203344584`*^9}},
+ CellLabel->"Out[86]=",ExpressionUUID->"dce51180-d4a7-45a1-9432-43ea73c0be36"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"kor", "=", 
+  RowBox[{"Quiet", "@", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"\"\<(\>\"", "<>", "x__", "<>", "\"\<;\>\""}], ")"}], 
+          "\[RuleDelayed]", "x"}]}], "]"}], "&"}], "/@", "a"}], 
+     ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.792572344495101*^9, 3.792572357518564*^9}, {
+  3.792572523254932*^9, 3.7925725323891068`*^9}},
+ CellLabel->"In[88]:=",ExpressionUUID->"42c86f6a-73b2-4c59-8f8e-472bed9453e6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"\:b3c4\:bd09\:ad6c\"\>", 
+   ",", "\<\"\:b3d9\:b300\:bb38\:ad6c\"\>", ",", "\<\"\:b3d9\:c791\:ad6c\"\>",
+    ",", "\<\"\:c740\:d3c9\:ad6c\"\>", ",", "\<\"\:ac15\:bd81\:ad6c\"\>", 
+   ",", "\<\"\:ac15\:b3d9\:ad6c\"\>", ",", "\<\"\:ac15\:b0a8\:ad6c\"\>", 
+   ",", "\<\"\:ac15\:c11c\:ad6c\"\>", ",", "\<\"\:ae08\:cc9c\:ad6c\"\>", 
+   ",", "\<\"\:ad6c\:b85c\:ad6c\"\>", ",", "\<\"\:ad00\:c545\:ad6c\"\>", 
+   ",", "\<\"\:ad11\:c9c4\:ad6c\"\>", ",", "\<\"\:c885\:b85c\:ad6c\"\>", 
+   ",", "\<\"\:c911\:ad6c\"\>", ",", "\<\"\:c911\:b791\:ad6c\"\>", 
+   ",", "\<\"\:b9c8\:d3ec\:ad6c\"\>", ",", "\<\"\:b178\:c6d0\:ad6c\"\>", 
+   ",", "\<\"\:c11c\:cd08\:ad6c\"\>", ",", "\<\"\:c11c\:b300\:bb38\:ad6c\"\>",
+    ",", "\<\"\:c131\:bd81\:ad6c\"\>", ",", "\<\"\:c131\:b3d9\:ad6c\"\>", 
+   ",", "\<\"\:c1a1\:d30c\:ad6c\"\>", ",", "\<\"\:c591\:cc9c\:ad6c\"\>", 
+   ",", "\<\"\:c601\:b4f1\:d3ec\:ad6c\"\>", 
+   ",", "\<\"\:c6a9\:c0b0\:ad6c\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.792572359858266*^9, {3.792572525421989*^9, 3.792572532725781*^9}},
+ CellLabel->"Out[88]=",ExpressionUUID->"147a1fce-53b1-4217-8ae8-32ff1462be9f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AssociationThread", "[", 
+  RowBox[{"kor", "\[Rule]", "eng"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7925723732146482`*^9, 3.792572378350336*^9}, {
+  3.792572583326481*^9, 3.7925725993078403`*^9}},
+ CellLabel->"In[90]:=",ExpressionUUID->"390047a0-0ea1-44f2-b790-7a0717e31a76"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"\:b3c4\:bd09\:ad6c\"\>", "\[Rule]", "\<\"Dobong\"\>"}], ",", 
+   RowBox[{"\<\"\:b3d9\:b300\:bb38\:ad6c\"\>", 
+    "\[Rule]", "\<\"Dongdaemun\"\>"}], ",", 
+   RowBox[{"\<\"\:b3d9\:c791\:ad6c\"\>", "\[Rule]", "\<\"Dongjak\"\>"}], ",", 
+   
+   RowBox[{"\<\"\:c740\:d3c9\:ad6c\"\>", "\[Rule]", "\<\"Eunpyeong\"\>"}], 
+   ",", 
+   RowBox[{"\<\"\:ac15\:bd81\:ad6c\"\>", "\[Rule]", "\<\"Gangbuk\"\>"}], ",", 
+   
+   RowBox[{"\<\"\:ac15\:b3d9\:ad6c\"\>", "\[Rule]", "\<\"Gangdong\"\>"}], ",", 
+   RowBox[{"\<\"\:ac15\:b0a8\:ad6c\"\>", "\[Rule]", "\<\"Gangnam\"\>"}], ",", 
+   
+   RowBox[{"\<\"\:ac15\:c11c\:ad6c\"\>", "\[Rule]", "\<\"Gangseo\"\>"}], ",", 
+   
+   RowBox[{"\<\"\:ae08\:cc9c\:ad6c\"\>", "\[Rule]", "\<\"Geumcheon\"\>"}], 
+   ",", 
+   RowBox[{"\<\"\:ad6c\:b85c\:ad6c\"\>", "\[Rule]", "\<\"Guro\"\>"}], ",", 
+   RowBox[{"\<\"\:ad00\:c545\:ad6c\"\>", "\[Rule]", "\<\"Gwanak\"\>"}], ",", 
+   RowBox[{"\<\"\:ad11\:c9c4\:ad6c\"\>", "\[Rule]", "\<\"Gwangjin\"\>"}], ",", 
+   RowBox[{"\<\"\:c885\:b85c\:ad6c\"\>", "\[Rule]", "\<\"Jongno\"\>"}], ",", 
+   RowBox[{"\<\"\:c911\:ad6c\"\>", "\[Rule]", "\<\"Jung\"\>"}], ",", 
+   RowBox[{"\<\"\:c911\:b791\:ad6c\"\>", "\[Rule]", "\<\"Jungnang\"\>"}], ",", 
+   RowBox[{"\<\"\:b9c8\:d3ec\:ad6c\"\>", "\[Rule]", "\<\"Mapo\"\>"}], ",", 
+   RowBox[{"\<\"\:b178\:c6d0\:ad6c\"\>", "\[Rule]", "\<\"Nowon\"\>"}], ",", 
+   RowBox[{"\<\"\:c11c\:cd08\:ad6c\"\>", "\[Rule]", "\<\"Seocho\"\>"}], ",", 
+   RowBox[{"\<\"\:c11c\:b300\:bb38\:ad6c\"\>", 
+    "\[Rule]", "\<\"Seodaemun\"\>"}], ",", 
+   RowBox[{"\<\"\:c131\:bd81\:ad6c\"\>", "\[Rule]", "\<\"Seongbuk\"\>"}], ",", 
+   RowBox[{"\<\"\:c131\:b3d9\:ad6c\"\>", "\[Rule]", "\<\"Seongdong\"\>"}], 
+   ",", 
+   RowBox[{"\<\"\:c1a1\:d30c\:ad6c\"\>", "\[Rule]", "\<\"Songpa\"\>"}], ",", 
+   RowBox[{"\<\"\:c591\:cc9c\:ad6c\"\>", "\[Rule]", "\<\"Yangcheon\"\>"}], 
+   ",", 
+   RowBox[{"\<\"\:c601\:b4f1\:d3ec\:ad6c\"\>", 
+    "\[Rule]", "\<\"Yeongdeungpo\"\>"}], ",", 
+   RowBox[{"\<\"\:c6a9\:c0b0\:ad6c\"\>", "\[Rule]", "\<\"Yongsan\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.7925723786313467`*^9, {3.792572584753763*^9, 3.792572599600819*^9}},
+ CellLabel->"Out[90]=",ExpressionUUID->"4ee0f979-2574-4fed-90f6-ff4c207ebaec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<temp.json\>\"", ",", "%", ",", "\"\<JSON\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.792572601349453*^9, 3.792572614215218*^9}},
+ CellLabel->"In[91]:=",ExpressionUUID->"d93667c4-3729-461a-aa1b-53f2d955bac6"],
+
+Cell[BoxData["\<\"temp.json\"\>"], "Output",
+ CellChangeTimes->{3.7925726146155453`*^9},
+ CellLabel->"Out[91]=",ExpressionUUID->"c1173b0e-654e-4782-bc80-e16d657d830e"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 364, 10, 30, "Input",ExpressionUUID->"3135f968-a7ac-4d79-bc7a-240c1687b6d2"],
+Cell[925, 32, 1916, 29, 539, "Input",ExpressionUUID->"67ccb22f-c614-4d99-91c8-9059ab5a2262"],
+Cell[CellGroupData[{
+Cell[2866, 65, 592, 16, 30, "Input",ExpressionUUID->"38d8a9a0-5273-4af2-945c-3fed87a12e65"],
+Cell[3461, 83, 886, 13, 77, "Output",ExpressionUUID->"dce51180-d4a7-45a1-9432-43ea73c0be36"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4384, 101, 603, 16, 30, "Input",ExpressionUUID->"42c86f6a-73b2-4c59-8f8e-472bed9453e6"],
+Cell[4990, 119, 1162, 18, 60, "Output",ExpressionUUID->"147a1fce-53b1-4217-8ae8-32ff1462be9f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6189, 142, 301, 5, 30, "Input",ExpressionUUID->"390047a0-0ea1-44f2-b790-7a0717e31a76"],
+Cell[6493, 149, 2303, 42, 122, "Output",ExpressionUUID->"4ee0f979-2574-4fed-90f6-ff4c207ebaec"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8833, 196, 267, 5, 30, "Input",ExpressionUUID->"d93667c4-3729-461a-aa1b-53f2d955bac6"],
+Cell[9103, 203, 167, 2, 34, "Output",ExpressionUUID->"c1173b0e-654e-4782-bc80-e16d657d830e"]
+}, Open  ]]
+}
+]
+*)
+

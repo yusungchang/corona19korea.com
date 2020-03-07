@@ -1,0 +1,31 @@
+{
+    "data": {
+		"filename": "gyunggi-corona19-data.json",
+        "type": "JSON"
+    },
+	"1": {
+		"filename": "gyunggi-corona19-by-district.png",
+		"type": "PNG",
+		"label": "경기도 코로나19 확진자 거주지"
+    },
+	"2": {
+		"filename": "gyunggi-corona19-trend.svg",
+		"type": "SVG",
+		"label": "경기도 코로나19 확진자 추이"
+    },
+	"3": {
+		"filename": "gyunggi-corona19-growth.svg",
+		"type": "SVG",
+		"label": "경기도 코로나19 확진자 증가수"
+	},
+	"4": {
+		"filename": "gyunggi-corona19-by-age.svg",
+		"type": "SVG",
+		"label": "경기도 코로나19 확진자 연령 분포"
+	},
+	"5": {
+		"filename": "gyunggi-corona19-by-gender.svg",
+		"type": "SVG",
+		"label": "경기도 코로나19 확진자 성별"
+    }
+}
