@@ -230,7 +230,7 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 		20,GrayLevel[.6]
 	],
 	Spacer[{0,16}]
-},Alignment->Center,Spacings->{0,2},BaseStyle->"Label"];
+},Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Nanum Gothic"}];
 
 
 (* ::Subsection::Closed:: *)
