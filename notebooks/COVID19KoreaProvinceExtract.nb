@@ -1,0 +1,469 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27240,        461]
+NotebookOptionsPosition[     25542,        428]
+NotebookOutlinePosition[     25879,        443]
+CellTagsIndexPosition[     25836,        440]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Config", "Section",ExpressionUUID->"57089523-ec27-46cf-8774-b09f8fd2fdbd"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$baseDirectory", "=", 
+   RowBox[{"If", "[", 
+    RowBox[{"$Notebooks", ",", " ", 
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", " ", 
+     RowBox[{
+      RowBox[{"Directory", "[", "]"}], "<>", "\"\</\>\""}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"604d15c1-cb4a-4353-a5e5-7822e6da7dbf"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$configDirectory", "=", 
+   RowBox[{"$baseDirectory", "<>", "\"\<../config/\>\""}]}], ";"}]], "Input",
+ CellLabel->"In[2]:=",ExpressionUUID->"746503e2-4089-4981-a45d-c69589a28a3d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$dataDirectory", "=", 
+   RowBox[{"$baseDirectory", "<>", "\"\<../data/\>\""}]}], ";"}]], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"8bc36450-7f93-4884-945b-b369caa1a5cf"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$cacheDirectory", "=", 
+   RowBox[{"$baseDirectory", "<>", "\"\<../data/cache/\>\""}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[4]:=",ExpressionUUID->"077e4ee5-3c5b-44e2-b19e-2a02781de4c6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$outputDirectory", "=", 
+   RowBox[{"$baseDirectory", "<>", "\"\<../src/output/\>\""}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[5]:=",ExpressionUUID->"0aa503e3-1b5a-4bc1-bd7d-e29310d4eadf"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"$cacheDirectory", "<>", "\"\<366469.html\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.792590462267601*^9, 3.792590477006537*^9}, {
+  3.7925905151159077`*^9, 3.792590520648057*^9}, {3.792613474852762*^9, 
+  3.792613476940853*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"8c073f54-eae9-4373-97d4-b47af44cb751"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["a"], "Input",
+ CellChangeTimes->{{3.79261352529617*^9, 3.792613529409873*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"34c2e199-7ae0-46a7-8c1f-9374d14cb4a7"],
+
+Cell[BoxData["\<\"\:bcf8\:bb38\:c73c\:b85c \:bc14\:b85c\:ac00\:ae30   \:c8fc\
+\:ba54\:b274 \:bc14\:b85c\:ac00\:ae30    \\n \\n \\n   \\n      \\n    \:d1b5\
+\:d569\:ac80\:c0c9      \:ac80\:c0c9         \\n1 \:cf54\:b85c\:b09819 2 \
+\:ba54\:b974\:c2a4 3 \:c778\:d50c\:b8e8\:c5d4\:c790 4 \
+\:c608\:bc29\:c811\:c885 5 \:c190\:c53b\:ae30 6 \
+\:c9c0\:ce74\:bc14\:c774\:b7ec\:c2a4 7 \:bc95\:c815\:ac10\:c5fc\:bcd1 8 \
+\:acb0\:d575 9 \:b178\:b85c\:bc14\:c774\:b7ec\:c2a4 10 A\:d615\:ac04\:c5fc   \
+\:c778\:ae30\:d0a4\:c6cc\:b4dc \:c804\:ccb4 \:bcf4\:ae30  \\n  \:c778\:ae30\
+\:d0a4\:c6cc\:b4dc  \\n1 \:cf54\:b85c\:b09819 2 \:ba54\:b974\:c2a4 3 \:c778\
+\:d50c\:b8e8\:c5d4\:c790 4 \:c608\:bc29\:c811\:c885 5 \:c190\:c53b\:ae30  \
+\\n6 \:c9c0\:ce74\:bc14\:c774\:b7ec\:c2a4 7 \:bc95\:c815\:ac10\:c5fc\:bcd1 8 \
+\:acb0\:d575 9 \:b178\:b85c\:bc14\:c774\:b7ec\:c2a4 10 A\:d615\:ac04\:c5fc   \
+\:b2eb\:ae30    \\n  ENG   \:ac80\:c0c9   \:c804\:ccb4\:ba54\:b274        \\n \
+ \:c804\:ccb4\:ba54\:b274  \\n  \:ac10\:c5fc\:bcd1  \\n \\n\:ac10\:c5fc\:bcd1\
+\:c815\:bcf4   \:d574\:c678\:ac10\:c5fc\:c815\:bcf4  \\n\:d574\:c678\:c9c8\
+\:bcd1 \:d574\:c678\:ac10\:c5fc\:bcd1NOW \:c608\:bc29\:c811\:c885\:c815\:bcf4 \
+\:ad6d\:ac00\:bcc4\:c694\:ad6c\:c0ac\:d56d   \:ac10\:c5fc\:bcd1\:c720\:d589\
+\:c815\:bcf4   \:acb0\:d575   \:c608\:bc29\:c811\:c885   \:ac10\:c5fc\:bcd1\
+\:ac04\:d589\:bb3c         \:ac74\:ac15\:c815\:bcf4  \\n \
+\\n\:c190\:c0c1\:c815\:bcf4  \\n\:ad50\:d1b5\:c0ac\:ace0 \:c5b4\:b9b0\:c774\
+\:c190\:c0c1 \:c775\:c218 \:c790\:d574/\:c790\:c0b4 \:c9c1\:c5c5\:c190\:c0c1 \
+\:c9c8\:c2dd \:cd94\:b77d/\:b099\:c0c1 \:d3ed\:b825/\:d0c0\:c0b4 \:d654\:c0c1 \
+  \:ad6d\:ac00\:ac74\:ac15\:c815\:bcf4\:d3ec\:d138   \:d76c\:adc0\:c9c8\:d658\
+\:c815\:bcf4   \:ad6d\:ac00\:ac74\:ac15\:c815\:bcf4\:d3ec\:d138 \:bc14\:b85c\
+\:ac00\:ae30         \:c815\:cc45\:c815\:bcf4  \\n \\n\:ac10\:c5fc\:bcd1  \\n\
+\:ac10\:c5fc\:bcd1\:c704\:ae30\:b300\:c751 \:c218\:c778\:c131\:c2dd\:d488\
+\:b9e4\:ac1c\:ac10\:c5fc\:bcd1\:ad00\:b9ac \:d638\:d761\:ae30\:ac10\:c5fc\
+\:bcd1\:ad00\:b9ac \:c778\:c218\:acf5\:d1b5\:ac10\:c5fc\:bcd1\:ad00\:b9ac \
+\:acb0\:d575\:ad00\:b9ac \:d6c4\:cc9c\:c131\:ba74\:c5ed\:acb0\:d54d\:c99d\
+\:ad00\:b9ac \:c758\:b8cc\:ac10\:c5fc\:ad00\:b9ac \:ac10\:c5fc\:bcd1\:c2e4\
+\:d5d8\:bd84\:c11d \:ac80\:c5ed\:ad00\:b9ac \:ac10\:c5fc\:bcd1\:ac10\:c2dc\
+\:ccb4\:acc4 \:ac10\:c5fc\:bcd1\:c815\:bcf4\:d654\:c0ac\:c5c5 \:c2dc\:b3c4\
+\:ac10\:c5fc\:bcd1\:ad00\:b9ac\:c9c0\:c6d0\:b2e8   \:c0dd\:bb3c\:c548\:c804  \
+\\n\:c0dd\:bb3c\:c548\:c804\:bc0f\:bcf4\:c548 \:ace0\:c704\:d5d8\:bcd1\:c6d0\
+\:ccb4\:ad6d\:ac00\:ad00\:b9ac \:c720\:c804\:c790\:bcc0\:d615\:c0dd\:bb3c\
+\:ccb4\:ad6d\:ac00\:c2b9\:c778 \:c0dd\:bb3c\:c548\:c804\:c5f0\:ad6c\:c2dc\
+\:c124\:ad6d\:ac00\:c548\:c804\:ad00\:b9ac \:bcd1\:c6d0\:ccb4\:c0dd\:bb3c\
+\:c548\:c804\:c815\:bcf4 \:c790\:b8cc\:c2e4   \:b9cc\:c131\:c9c8\:d658  \\n\
+\:ac74\:ac15\:c870\:c0ac \:b9cc\:c131\:c9c8\:d658\:c608\:bc29\:ad00\:b9ac \
+\:ae30\:c900\:ad00\:b9ac \:d76c\:adc0\:c9c8\:d658\:ad00\:b9ac   \:ae30\:d6c4\
+\:bcc0\:d654  \\n\:d3ed\:c5fc \:d55c\:d30c \:bbf8\:c138\:ba3c\:c9c0 \:ae30\
+\:d6c4\:bcc0\:d654\:ac74\:ac15\:c801\:c751\:b300\:cc45   \:c758\:b8cc\:bc29\
+\:c0ac\:c120\:c548\:c804\:ad00\:b9ac  \\n\:bc29\:c0ac\:c120\:d53c\:d3ed\:bc0f\
+\:bc29\:c5b4 \:c758\:b8cc\:bc29\:c0ac\:c120\:ac8c\:c2dc\:d310   \:c7a5\:ae30\
+\[CenterDot]\:c778\:ccb4\:c870\:c9c1\:c774\:c2dd\:ad00\:b9ac  \\n\:c7a5\:ae30\
+\[CenterDot]\:c778\:ccb4\:c870\:c9c1\:c774\:c2dd\:ad00\:b9ac \:d608\:c561\
+\:c548\:c804\:ac10\:c2dc         \:c5f0\:ad6c\:ac1c\:bc1c  \\n \
+\\n\:c9c8\:bcd1\:c5f0\:ad6c  \\n\:c9c8\:bcd1\:c5f0\:ad6c \:bc94\:bd80\:cc98\
+\:ac10\:c5fc\:bcd1\:b300\:c751R&D \:c218\:c2dc\:ae30\:c220\:c218\:c694\:c870\
+\:c0ac   \:c5f0\:ad6c\:c131\:acfc   \
+\:c5f0\:ad6c\:c790\:c6d0\:c778\:d504\:b77c   \:c0dd\:ba85\:c724\:b9ac   \
+\:ad6d\:b9bd\:bcf4\:ac74\:c5f0\:ad6c\:c6d0 \:bc14\:b85c\:ac00\:ae30         \
+\:c54c\:b9bc\[CenterDot]\:c790\:b8cc  \\n \\n\:c774\:b2ec\:c758\:ac74\:ac15\
+\:c18c\:c2dd   \:bcf4\:b3c4\:c790\:b8cc   \:d3ec\:d1a0\:b274\:c2a4   \:d64d\
+\:bcf4\:c790\:b8cc  \\n\:ce74\:b4dc\:b274\:c2a4 \:d64d\:bcf4\:c9c0 \:c601\
+\:c0c1\:c790\:b8cc \:b77c\:b514\:c624\:c74c\:c6d0 \:ad50\:c721\:c790\:b8cc   \
+\:acf5\:c9c0\:c0ac\:d56d   \:acf5\:ace0/\:acf5\:c2dc   \:cc44\:c6a9\:acf5\
+\:ace0   \:bc95\:b839\[CenterDot]\:c9c0\:ce68\[CenterDot]\:c11c\:c2dd  \\n\
+\:bc95\:b839 \:c9c0\:ce68 \:c11c\:c2dd   \:acf5\:bb34\:ad6d\:c678\:c5ec\:d589\
+\:bcf4\:ace0\:c11c         \:ac04\:d589\:bb3c\[CenterDot]\:d1b5\:acc4  \\n \
+\\n\:ac04\:d589\:bb3c  \\n\:c8fc\:ac04\:ac74\:ac15\:acfc\:c9c8\:bcd1 \:ac10\
+\:c5fc\:bcd1\:b274\:c2a4\:b808\:d130 \:c9c0\:c5ed\:c0ac\:d68c\:ac74\:ac15\
+\:acfc\:c9c8\:bcd1 \:c190\:c0c1\:c608\:bc29\:acfc\:ac74\:ac15\:d55c\:c548\
+\:c804\:c0ac\:d68c \:d608\:c561\:c18c\:c2dd\:c9c0 \:c624\:c1a1 PHRP \:c9c8\
+\:bcd1\:ad00\:b9ac\:bc31\:c11c \:ad6d\:b9bd\:bcf4\:ac74\:c5f0\:ad6c\:c6d0\
+\:c5f0\:bcf4 NIH\:b9e4\:ac70\:c9c4   \:d1b5\:acc4  \
+\\n\:ac10\:c5fc\:bcd1\:bc1c\:c0dd\:c815\:bcf4 \:ac10\:c5fc\:bcd1\:c5f0\:bcf4 \
+\:ac74\:ac15\:d1b5\:acc4   \:c5f0\:ad6c\:c131\:acfc   \
+\:ac10\:c5fc\:bcd1\:d3ec\:d138 \:bc14\:b85c\:ac00\:ae30         \:bbfc\:c6d0\
+\[CenterDot]\:c815\:bcf4\:acf5\:ac1c  \\n \\n1339\:cf5c\:c13c\:d130   \:bbfc\
+\:c6d0\:c2e0\:ccad   \:b098\:c758\:bbfc\:c6d0\:d655\:c778   \
+\:c0dd\:ba85\:c724\:b9ac\:bc95\:ad00\:b828\:bbfc\:c6d0\:c548\:b0b4   \:c0ac\
+\:c804\:c815\:bcf4\:acf5\:d45c   \:c815\:bcf4\:acf5\:ac1c\:ccad\:ad6c   \
+\:acf5\:acf5\:b370\:c774\:d130   \:ae30\:ad00\:c7a5\:c5c5\:bb34\:cd94\:c9c4\
+\:be44         \:ae30\:ad00\:c18c\:ac1c  \\n \\n\:c18c\:ac1c  \\n\:c778\:c0ac\
+\:b9d0 \:c57d\:b825   \:be44\:c804\:acfc\:bbf8\:c158   \:d575\:c2ec\:c0ac\
+\:c5c5   \:c5f0\:d601   \:c870\:c9c1\[CenterDot]\:c9c1\:c6d0\:cc3e\:ae30   \
+\:b85c\:ace0   \:c624\:c2dc\:b294\:ae38   \:c2dc\:c124\:c548\:b0b4   \:d648\
+\:d398\:c774\:c9c0\:c774\:c6a9\:c548\:b0b4  \\n\:c774\:c6a9\:c548\:b0b4 \
+\:c0ac\:c774\:d2b8\:b9f5 \:ac1c\:c778\:c815\:bcf4\:cc98\:b9ac\:bc29\:ce68 \
+\:c6f9\:c811\:adfc\:c131\:bc0f\:c800\:c791\:ad8c\:c815\:cc45 \:ba54\:c778\
+\:bc30\:b108 \:c54c\:b9bc\:c874         \:c0ac\:c5c5\:bcc4\:d648\:d398\:c774\
+\:c9c0  \\n \\n\:ac10\:c5fc\:bcd1\:d3ec\:d138   \
+\:c608\:bc29\:c811\:c885\:b3c4\:c6b0\:bbf8   \:ad6d\:b9bd\:ac80\:c5ed\:c18c   \
+\:acb0\:d575\:c81c\:b85c   \:ad6d\:ac00\:ac74\:ac15\:c815\:bcf4\:d3ec\:d138   \
+\:d76c\:adc0\:c9c8\:d658\:d5ec\:d504\:b77c\:c778   \:ad6d\:bbfc\:ac74\:ac15\
+\:c601\:c591\:c870\:c0ac   \:c9c0\:c5ed\:c0ac\:d68c\:ac74\:ac15\:c870\:c0ac   \
+\:ccad\:c18c\:b144\:ac74\:ac15\:d589\:d0dc\:c870\:c0ac   \:c7a5\:ae30\:c774\
+\:c2dd\:ad00\:b9ac\:c13c\:d130   \:ad6d\:b9bd\:c758\:acfc\:d559\:c9c0\:c2dd\
+\:c13c\:d130   \:c624\:c1a1PHRP   \:c784\:c0c1\:c5f0\:ad6c\:c815\:bcf4\:c11c\
+\:be44\:c2a4   \:c784\:c0c1\:c5f0\:ad6c\:ad00\:b9ac\:c2dc\:c2a4\:d15c   \
+\:c784\:c0c1\:c720\:c804\:ccb4\:c0dd\:ba85\:c815\:bcf4   \:c904\:ae30\:c138\
+\:d3ec\:c8fc\:b4f1\:b85d\:c815\:bcf4   One Health AMR \
+\:d3ec\:d138\:c2dc\:c2a4\:d15c   \:ad6d\:b9bd\:c911\:c559\:c778\:ccb4\:c790\
+\:c6d0\:c740\:d589   \:ad6d\:ac00\:bcd1\:c6d0\:ccb4\:c790\:c6d0\:c740\:d589   \
+        \:c804\:ccb4\:ba54\:b274 \:b2eb\:ae30     \:c0ac\:c6a9\:c790\:bcc4\\n\
+\:b9de\:cda4\:ba54\:b274  \\n\:c77c\:bc18 \:c778 \:c5f0\:ad6c \:c790 \:c5b8\
+\:b860 \:c778  \\n \\n  \:c0ac\:c6a9\:c790\:bcc4 \:b9de\:cda4\:ba54\:b274     \
+\\n  \:c77c\:bc18\:c778  \\n\:d64d\:bcf4\:c790\:b8cc \:ac10\:c5fc\:bcd1\:c815\
+\:bcf4 \:c608\:bc29\:c811\:c885\:c815\:bcf4 \:c18c\:c544\:ccad\:c18c\:b144\
+\:c131\:c7a5\:b3c4\:d45c \:c218\:c2dc\:ae30\:c220\:c218\:c694\:c870\:c0ac     \
+\:c5f0\:ad6c\:c790  \\n\:ac10\:c5fc\:bcd1 \:ac04\:d589\:bb3c \:ad6d\:bbfc\
+\:ac74\:ac15\:c601\:c591\:c870\:c0ac \:ccad\:c18c\:b144\:ac74\:ac15\:d589\
+\:d0dc\:c870\:c0ac \:c5f0\:ad6c\:c131\:acfc \:c218\:c2dc\:ae30\:c220\:c218\
+\:c694\:c870\:c0ac     \:c5b8\:b860\:c778  \\n\:bcf4\:b3c4\:c790\:b8cc \:c8fc\
+\:ac04\:ac74\:ac15\:acfc\:c9c8\:bcd1 \:ce74\:b4dc\:b274\:c2a4    \\n  \:c790\
+\:c8fc\:cc3e\:b294 \:ba54\:b274   \:cd94\:ac00\:d558\:ae30     \:b2eb\:ae30   \
+ \\n   \\n    \:c54c\:b9bc\[CenterDot]\:c790\:b8cc    \\n\:c774\:b2ec\:c758\
+\:ac74\:ac15\:c18c\:c2dd   \:bcf4\:b3c4\:c790\:b8cc   \
+\:d3ec\:d1a0\:b274\:c2a4   \:d64d\:bcf4\:c790\:b8cc  \\n\:ce74\:b4dc\:b274\
+\:c2a4 \:d64d\:bcf4\:c9c0 \:c601\:c0c1\:c790\:b8cc \:b77c\:b514\:c624\:c74c\
+\:c6d0 \:ad50\:c721\:c790\:b8cc   \:acf5\:c9c0\:c0ac\:d56d   \:acf5\:ace0/\
+\:acf5\:c2dc   \:cc44\:c6a9\:acf5\:ace0   \
+\:bc95\:b839\[CenterDot]\:c9c0\:ce68\[CenterDot]\:c11c\:c2dd  \\n\:bc95\:b839 \
+\:c9c0\:ce68 \:c11c\:c2dd   \:acf5\:bb34\:ad6d\:c678\:c5ec\:d589\:bcf4\:ace0\
+\:c11c       contents area     \:bcf4\:b3c4\:c790\:b8cc  \\n   \\nHome \:c54c\
+\:b9bc\[CenterDot]\:c790\:b8cc \:bcf4\:b3c4\:c790\:b8cc    \\n \\n  SNS\:acf5\
+\:c720 \:c5f4\:ae30  \\n \\n\:d398\:c774\:c2a4\:bd81 \:d2b8\:c704\:d130 \
+\:be14\:b85c\:adf8 \:ce74\:ce74\:c624\:c2a4\:d1a0\:b9ac               SNS\
+\:acf5\:c720\:b2eb\:ae30       \:d504\:b9b0\:d2b8\:d558\:ae30  \
+\\n\:ae00\:c790 \:d06c\:ac8c \:ae00\:c790 \:c791\:ac8c       detail content \
+area                                                            \\n \\n\:cf54\
+\:b85c\:b098\:bc14\:c774\:b7ec\:c2a4\:ac10\:c5fc\:c99d-19 \:ad6d\:b0b4 \:bc1c\
+\:c0dd \:d604\:d669(3\:c6d4 6\:c77c, 0\:c2dc \:ae30\:c900)  \\n\:c791\:c131\
+\:c77c 2020-03-06 \:cd5c\:c885\:c218\:c815\:c77c 2020-03-06 \
+\:b2f4\:b2f9\:bd80\:c11c \:c911\:c559\:bc29\:c5ed\:b300\:cc45\:bcf8\:bd80 \
+\:cd1d\:ad04\:d300 \:c5f0\:b77d\:cc98 043-719-9064 23,623  \\n \
+\\n\:cf54\:b85c\:b098\:bc14\:c774\:b7ec\:c2a4\:ac10\:c5fc\:c99d-19 \:ad6d\
+\:b0b4 \:bc1c\:c0dd \:d604\:d669(3\:c6d4 6\:c77c, 0\:c2dc \:ae30\:c900)  \
+\\n\\n \\n\[EmptySquare] \:c9c8\:bcd1\:ad00\:b9ac\:bcf8\:bd80 \:c911\:c559\
+\:bc29\:c5ed\:b300\:cc45\:bcf8\:bd80(\:bcf8\:bd80\:c7a5 \:c815\:c740\:acbd)\
+\:b294 3\:c6d4 6\:c77c 0\:c2dc \:d604\:c7ac, \:cd1d \:b204\:c801 \:d655\:c9c4\
+\:c790\:c218\:b294 6,284\:ba85\:c774\:ba70, \:c774 \:c911 108\:ba85\:c774 \
+\:aca9\:b9ac\:d574\:c81c \:b418\:c5c8\:b2e4\:ace0 \:bc1d\:d614\:b2e4.  \\n\\n \
+\\n< \:ad6d\:b0b4 \:c2e0\:ace0 \:bc0f \:ac80\:c0ac \:d604\:d669 ( 3.6\:c77c 0\
+\:c2dc \:ae30\:c900 , 1.3\:c77c \:c774\:d6c4 \:b204\:acc4) >  \\n\\n \\n \\n\
+\:ad6c\:bd84  \\n\:cd1d\:acc4  \\n\:d655\:c9c4\:d658\:c790\:d604\:d669  \\n\
+\:ac80\:c0ac\:d604\:d669\\n \\n\:acc4  \\n\:aca9\:b9ac\:d574\:c81c  \\n\:aca9\
+\:b9ac \:c911  \\n\:c0ac\:b9dd  \\n\:acc4  \\n\:ac80\:c0ac \:c911  \\n\:acb0\
+\:acfc \:c74c\:c131\\n \\n3. 5.( \:baa9 )  \\n0 \:c2dc \:ae30\:c900  \
+\\n146,541  \\n5,766  \\n88  \\n5,643  \\n35  \\n140,775  \\n21,810  \
+\\n118,965\\n \\n3. 6.( \:ae08 )  \\n0 \:c2dc \:ae30\:c900  \\n164,740  \
+\\n6,284  \\n108  \\n6,134  \\n42  \\n158,456  \\n21,832  \\n136,624\\n \\n\
+\:bcc0\:b3d9  \\n+18,199  \\n+518  \\n+20  \\n+491  \\n+7  \\n+17,681  \\n+22 \
+ \\n+17,659  \\n\\n \\n\[EmptyCircle] \:c9c0\:c5ed\:bcc4 \:d604\:d669\:c740 \
+\:b2e4\:c74c\:acfc \:ac19\:b2e4.  \\n\\n \\n< \:c9c0\:c5ed\:bcc4 \:d655\:c9c4\
+\:c790 \:d604\:d669 ( 3.6\:c77c 0\:c2dc \:ae30\:c900 , 1.3\:c77c \:c774\:d6c4 \
+\:b204\:acc4) >  \\n\\n \\n \\n\:ad6c\:bd84  \\n\:d569\:acc4  \\n\:c11c\:c6b8 \
+ \\n\:bd80\:c0b0  \\n\:b300  \\n\:ad6c  \\n\:c778\:cc9c  \\n\:ad11\:c8fc  \\n\
+\:b300\:c804  \\n\:c6b8\:c0b0  \\n\:c138\:c885  \\n\:acbd\:ae30  \\n\:ac15\
+\:c6d0  \\n\:cda9\:bd81  \\n\:cda9\:b0a8  \\n\:c804\:bd81  \\n\:c804\:b0a8  \
+\\n\:acbd  \\n\:bd81  \\n\:acbd\:b0a8  \\n\:c81c  \\n\:c8fc\\n \
+\\n\:aca9\:b9ac\:c911  \\n6,134  \\n80  \\n92  \\n4,648  \\n7  \\n10  \\n18  \
+\\n22  \\n1  \\n105  \\n22  \\n14  \\n90  \\n5  \\n5  \\n938  \\n73  \\n4\\n \
+\\n\:aca9\:b9ac\:d574\:c81c  \\n108  \\n25  \\n2  \\n15  \\n2  \\n3  \\n0  \
+\\n1  \\n0  \\n14  \\n3  \\n1  \\n0  \\n2  \\n0  \\n36  \\n4  \\n0\\n \\n\
+\:c0ac\:b9dd  \\n42  \\n0  \\n1  \\n30  \\n0  \\n0  \\n0  \\n0  \\n0  \\n1  \
+\\n0  \\n0  \\n0  \\n0  \\n0  \\n10  \\n0  \\n0\\n \\n\:d569\:acc4 *  \\n \
+\\n( \:c804\:c77c\:b300\:be44 )  \\n6,284  \\n105  \\n95  \\n4,693  \\n9  \
+\\n13  \\n18  \\n23  \\n1  \\n120  \\n25  \\n15  \\n90  \\n7  \\n5  \\n984  \
+\\n77  \\n4\\n \\n(518)  \\n(2)  \\n(3)  \\n(367)  \\n(-)  \\n(-1)  \\n(2)  \
+\\n(-)  \\n(-)  \\n(10)  \\n(2)  \\n(3)  \\n(4)  \\n(-)  \\n(-)  \\n(123)  \
+\\n(3)  \\n(-)\\n \\n\:203b 3 \:c6d4 5 \:c77c 0 \:c2dc\:bd80\:d130 3 \:c6d4 6 \
+\:c77c 0 \:c2dc \:c0ac\:c774\:c5d0 \:c9c8\:bcd1\:ad00\:b9ac\:bcf8\:bd80\:b85c \
+\:c2e0\:ace0 , \:ae30\:cd08\:c870\:c0ac\:c11c \:c811\:c218 , 1 \:cc28 \:bd84\
+\:b958 \:b4f1\:c774 \:b41c \:c0ac\:b840 \:ae30\:c900\:c784  \\n\:cd08\:ae30 \
+\:c2e0\:ace0 \:c774\:d6c4 \:c18c\:ad00\:c9c0\:c5ed\:c774 \:bcc0\:acbd\:b41c \
+\:acbd\:c6b0\:c5d0\:b294 \:c774\:c804 \:bc1c\:d45c\:b41c \:d1b5\:acc4\:c218\
+\:ce58\:c640 \:c0c1\:c774\:d560 \:c218 \:c788\:c74c  \\n \\n* \:ad11\:c8fc \
+\:d658\:c790 1 \:ba85\:c758 \:c18c\:ad00 \:c9c0\:c5ed \:c774\:ad00 ( \:ad11\
+\:c8fc \[RightArrow] \:b300\:ad6c ) \:c774 \:c788\:c5b4 \:c218\:c815 \:bc18\
+\:c601  \\n\\n \\n\\n \\n\\n \\n<\:bd99\:c784> 1. \:cf54\:b85c\:b09819 \:ad6d\
+\:b0b4 \:bc1c\:c0dd \:d604\:d669  \\n2. \:cf54\:b85c\:b09819 \:ad6d\:c678 \
+\:bc1c\:c0dd \:d604\:d669    \\n  \:cca8\:bd80\:d30c\:c77c  \\n \\n    [3.6.\
+\:bcf4\:b3c4\:cc38\:ace0\:c790\:b8cc] \:cf54\:b85c\:b098\:bc14\:c774\:b7ec\
+\:c2a4\:ac10\:c5fc\:c99d-19 \:ad6d\:b0b4 \:bc1c\:c0dd \:d604\:d669 (0\:c2dc \
+\:ae30\:c900).pdf    \\n\:bc14\:b85c\:bcf4\:ae30      \\n    \
+[3.6.\:bcf4\:b3c4\:cc38\:ace0\:c790\:b8cc] \:cf54\:b85c\:b098\:bc14\:c774\
+\:b7ec\:c2a4\:ac10\:c5fc\:c99d-19 \:ad6d\:b0b4 \:bc1c\:c0dd \:d604\:d669 (0\
+\:c2dc \:ae30\:c900).hwp    \\n\:bc14\:b85c\:bcf4\:ae30          \\n \:bcf8 \
+\:acf5\:acf5\:c800\:c791\:bb3c\:c740 \:acf5\:acf5\:b204\:b9ac \
+\\\"\:cd9c\:cc98\:d45c\:c2dc+\:c0c1\:c5c5\:c801\:c774\:c6a9\:ae08\:c9c0+\:bcc0\
+\:acbd\:ae08\:c9c0\\\" \:c870\:ac74\:c5d0 \:b530\:b77c \:c774\:c6a9\:d560 \
+\:c218 \:c788\:c2b5\:b2c8\:b2e4.  \\n \\n  \:baa9\:b85d      \\n      TOP    \
+\\n  \:ad00\:b828\:b9c1\:d06c  \\n \\n \
+\\n\:c784\:c0c1\:c9c4\:b8cc\:c9c0\:ce68 \:b514\:c9c0\:d138 \:ac00\:c774\:b4dc\
+\:b77c\:c778  \\nKoGES  \\n\:c9c8\:bcd1\:ad00\:b9ac\:bcf8\:bd80\:ad6d\:c81c\
+\:d559\:c220\:c9c0(Osong PHRP)  \\n\:b9cc\:c131\:c2e0\:c7a5\:bcd1\:cf54\:d638\
+\:d2b8\:c5f0\:ad6c  \\n\:ad6d\:bbfc\:ac74\:ac15\:c601\:c591\:c870\:c0ac  \\n\
+\:ad6d\:b9bd\:c758\:acfc\:d559\:c9c0\:c2dd\:c13c\:d130  \\n\:bcf4\:ac74\:bcf5\
+\:c9c0\:d1b5\:acc4  \\n\:c784\:c0c1\:c9c4\:b8cc\:c9c0\:ce68\:c815\:bcf4\:c13c\
+\:d130  \\n\:c9c8\:bcd1\:bcf4\:ac74\:d1b5\:d569\:ad00\:b9ac\:c2dc\:c2a4\:d15c \
+       \\n  \:ad00\:b828\:ae30\:ad00  \\n \\n  \:ad00\:b828\:b9c1\:d06c  \\n\
+\:c784\:c0c1\:c9c4\:b8cc\:c9c0\:ce68 \:b514\:c9c0\:d138 \:ac00\:c774\:b4dc\
+\:b77c\:c778 KoGES \:c9c8\:bcd1\:ad00\:b9ac\:bcf8\:bd80\:ad6d\:c81c\:d559\
+\:c220\:c9c0(Osong PHRP) \:b9cc\:c131\:c2e0\:c7a5\:bcd1\:cf54\:d638\:d2b8\
+\:c5f0\:ad6c \:ad6d\:bbfc\:ac74\:ac15\:c601\:c591\:c870\:c0ac \:ad6d\:b9bd\
+\:c758\:acfc\:d559\:c9c0\:c2dd\:c13c\:d130 \:bcf4\:ac74\:bcf5\:c9c0\:d1b5\
+\:acc4 \:c784\:c0c1\:c9c4\:b8cc\:c9c0\:ce68\:c815\:bcf4\:c13c\:d130 \:c9c8\
+\:bcd1\:bcf4\:ac74\:d1b5\:d569\:ad00\:b9ac\:c2dc\:c2a4\:d15c    \\n  \:c9c8\
+\:bcd1\:ad00\:b9ac\:bcf8\:bd80 \:ad00\:b828\:ae30\:ad00  \
+\\n\:bbf8\:ad6d\:c9c8\:bcd1\:d1b5\:c81c\:c608\:bc29\:c13c\:d130[CDC] \:c720\
+\:b7fd\:c9c8\:bcd1\:d1b5\:c81c\:c608\:bc29\:c13c\:d130[ECDC] \:c138\:acc4\
+\:bcf4\:ac74\:ae30\:ad6c[WHO] \
+\:c77c\:bcf8\:ac10\:c5fc\:bcd1\:c5f0\:ad6c\:c18c[NIID] \:c601\:ad6d\:acf5\
+\:acf5\:bcf4\:ac74\:ad6d[PHE]    \\n  \:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\
+\:c6d0  \\n\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \
+\:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:bd80\:c0b0\:ad11\:c5ed\:c2dc \
+\:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:b300\:ad6c\:ad11\:c5ed\:c2dc \
+\:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:c778\:cc9c\:ad11\:c5ed\:c2dc \
+\:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:ad11\:c8fc\:ad11\:c5ed\:c2dc \
+\:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:b300\:c804\:ad11\:c5ed\:c2dc \
+\:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:c6b8\:c0b0\:ad11\:c5ed\:c2dc \
+\:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:acbd\:ae30\:b3c4 \:bcf4\:ac74\
+\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:ac15\:c6d0\:b3c4 \:bcf4\:ac74\:d658\:acbd\
+\:c5f0\:ad6c\:c6d0 \:cda9\:ccad\:bd81\:b3c4 \:bcf4\:ac74\:d658\:acbd\:c5f0\
+\:ad6c\:c6d0 \:cda9\:ccad\:b0a8\:b3c4 \:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\
+\:c6d0 \:c804\:b77c\:bd81\:b3c4 \:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \
+\:c804\:b77c\:b0a8\:b3c4 \:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:acbd\
+\:c0c1\:bd81\:b3c4 \:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:acbd\:c0c1\
+\:b0a8\:b3c4 \:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:c81c\:c8fc\:d2b9\
+\:bcc4\:c790\:ce58\:b3c4 \:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0 \:c138\
+\:c885\:c2dc\:bcf4\:ac74\:d658\:acbd\:c5f0\:ad6c\:c6d0    \\n  \:bcf4\:ac74\
+\:bcf5\:c9c0\:bd80 \:bc0f \:c18c\:c18d\:ae30\:ad00  \\n\:bcf4\:ac74\:bcf5\
+\:c9c0\:bd80 \:ad6d\:b9bd\:bcf4\:ac74\:c5f0\:ad6c\:c6d0 \:ad6d\:b9bd\:ac80\
+\:c5ed\:c18c \:ad6d\:b9bd\:c815\:c2e0\:ac74\:ac15\:c13c\:d130 \:ad6d\:b9bd\
+\:b098\:c8fc\:bcd1\:c6d0 \:ad6d\:b9bd\:bd80\:ace1\:bcd1\:c6d0 \:ad6d\:b9bd\
+\:cd98\:cc9c\:bcd1\:c6d0 \:ad6d\:b9bd\:acf5\:c8fc\:bcd1\:c6d0 \:ad6d\:b9bd\
+\:c18c\:b85d\:b3c4\:bcd1\:c6d0 \:ad6d\:b9bd\:c7ac\:d65c\:c6d0 \:ad6d\:b9bd\
+\:b9c8\:c0b0\:bcd1\:c6d0 \:ad6d\:b9bd\:baa9\:d3ec\:bcd1\:c6d0 \:c624\:c1a1\
+\:c0dd\:ba85\:acfc\:d559\:b2e8\:c9c0\:c9c0\:c6d0\:c13c\:d130    \\n  \:bcf4\
+\:ac74\:bcf5\:c9c0\:bd80 \:c0b0\:d558\:ae30\:ad00  \
+\\n\:ad6d\:bbfc\:ac74\:ac15\:bcf4\:d5d8\:acf5\:b2e8 \:ac74\:ac15\:bcf4\:d5d8\
+\:c2ec\:c0ac\:d3c9\:ac00\:c6d0 \:ad6d\:bbfc\:c5f0\:ae08\:acf5\:b2e8 \:d55c\
+\:ad6d\:bcf4\:ac74\:c0b0\:c5c5\:c9c4\:d765\:c6d0 \:d55c\:ad6d\:bcf4\:ac74\
+\:bcf5\:c9c0\:c778\:b825\:ac1c\:bc1c\:c6d0 \:c0ac\:d68c\:bcf4\:c7a5\:c815\
+\:bcf4\:c6d0 \:d55c\:ad6d\:ad6d\:c81c\:bcf4\:ac74\:c758\:b8cc\:c7ac\:b2e8 \
+\:d55c\:ad6d\:c0ac\:d68c\:bcf5\:c9c0\:d611\:c758\:d68c \:ad6d\:b9bd\:c911\
+\:c559\:c758\:b8cc\:c6d0 \:d55c\:ad6d\:b178\:c778\:c778\:b825\:ac1c\:bc1c\
+\:c6d0 \:ad6d\:b9bd\:c554\:c13c\:d130 (\:c7ac)\:d55c\:ad6d\:c7a5\:c560\:c778\
+\:ac1c\:bc1c\:c6d0 \:b300\:d55c\:c801\:c2ed\:c790\:c0ac (\:c7ac)\:d55c\:ad6d\
+\:bcf4\:c721\:c9c4\:d765\:c6d0 \:d55c\:ad6d\:bcf4\:ac74\:c758\:b8cc\:c778\
+\:ad6d\:ac00\:c2dc\:d5d8\:c6d0 \:d55c\:ad6d\:ac74\:ac15\:c99d\:c9c4\:ac1c\
+\:bc1c\:c6d0 \:d55c\:ad6d\:c758\:b8cc\:bd84\:c7c1\:c870\:c815\:c911\:c7ac\
+\:c6d0 \:d55c\:ad6d\:bcf4\:ac74\:c758\:b8cc\:c5f0\:ad6c\:c6d0 \:d55c\:ad6d\
+\:bcf4\:ac74\:c0ac\:d68c\:c5f0\:ad6c\:c6d0 \:d55c\:ad6d\:c7a5\:c560\:c778\
+\:c7ac\:d65c\:d611\:d68c \:d55c\:ad6d\:c7a5\:ae30\:c870\:c9c1\:ae30\:c99d\
+\:c6d0 (\:c7ac)\:c758\:b8cc\:ae30\:ad00\:d3c9\:ac00\:c778\:c99d\:c6d0 \:d55c\
+\:ad6d\:d55c\:c758\:c57d\:c9c4\:d765\:c6d0 \:c911\:c559\:c785\:c591\:c6d0     \
+ \\n \\n   \\n\:c774\:c6a9\:c548\:b0b4 \:ac1c\:c778\:c815\:bcf4\:cc98\:b9ac\
+\:bc29\:ce68 \:c6f9 \:c811\:adfc\:c131 \:bc0f \:c800\:c791\:ad8c\:c815\:cc45  \
+ (28159) \:cda9\:bd81 \:ccad\:c8fc\:c2dc \:d765\:b355\:ad6c \
+\:c624\:c1a1\:c74d \:c624\:c1a1\:c0dd\:ba852\:b85c 187\\n\:c624\:c1a1\:bcf4\
+\:ac74\:c758\:b8cc\:d589\:c815\:d0c0\:c6b4\:b0b4 \:c9c8\:bcd1\:ad00\:b9ac\
+\:bcf8\:bd80 \:260e \:c804\:d654\:bc88\:d638 1339   COPYRIGHT \[Copyright] \
+2019 \:c9c8\:bcd1\:ad00\:b9ac\:bcf8\:bd80 ALL RIGHTS RESERVED.\"\>"], "Output",\
+
+ CellChangeTimes->{{3.792613525664543*^9, 3.792613529729226*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"edbf4608-fbc0-4785-8039-02f60c35ec8d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringCases", "[", 
+  RowBox[{"a", ",", "\"\<\:c815\:b840\:be0c\:b9ac\:d551\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.792590478583988*^9, 3.792590492096675*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"96323a7c-44b4-4004-9931-37331a92f587"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.792590492838078*^9, 3.792590522616714*^9}, 
+   3.792613482086474*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"2e97b6b0-7bdd-4c7f-a9dd-3eab42d81600"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FileNames", "[", 
+   RowBox[{"$cacheDirectory", "<>", "\"\<*.html\>\""}], "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{3.792590637102353*^9},
+ CellLabel->
+  "In[104]:=",ExpressionUUID->"78c36c69-de4a-4097-86cd-4dd84da22b53"],
+
+Cell[BoxData["\:3147"], "Input",
+ CellChangeTimes->{
+  3.7925907488619537`*^9},ExpressionUUID->"80b39dc2-acb0-406a-b213-\
+e5d5ff068734"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "@", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{
+          RowBox[{"Import", "[", "#", "]"}], ",", 
+          "\"\<\:c815\:b840\:be0c\:b9ac\:d551\>\""}], "]"}]}], ">", "0"}], 
+      ",", 
+      RowBox[{"StringTake", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "11"}], ",", 
+          RowBox[{"-", "1"}]}], "}"}]}], "]"}], ",", "\"\<a\>\""}], "]"}], 
+    ")"}], "&"}], "/@", 
+  RowBox[{"FileNames", "[", 
+   RowBox[{"$cacheDirectory", "<>", "\"\<*.html\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7925904182709007`*^9, 3.792590442991609*^9}, {
+  3.792590547553402*^9, 3.7925906222147713`*^9}, {3.792590658254685*^9, 
+  3.792590660090378*^9}, {3.792590715054358*^9, 3.7925907541098757`*^9}},
+ CellLabel->
+  "In[110]:=",ExpressionUUID->"8acd2eb5-3edb-4837-9d38-f3061e7f9a34"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "\"\<366164.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366173.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366191.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366200.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366206.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366214.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366228.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366240.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366257.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366277.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366298.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366304.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366324.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366335.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366346.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366358.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366385.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366403.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366410.html\>\"", ",", "\"\<a\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366417.html\>\"", ",", "\"\<a\>\"", ",", "\"\<366429.html\>\"", ",", 
+   "\"\<a\>\"", ",", "\"\<366438.html\>\"", ",", "\"\<a\>\"", ",", 
+   "\"\<366449.html\>\"", ",", "\"\<a\>\"", ",", "\"\<366474.html\>\"", ",", 
+   "\"\<a\>\"", ",", "\"\<366484.html\>\""}], "}"}]], "Input",
+ CellChangeTimes->{{3.79261244687705*^9, 3.792612446887033*^9}, 
+   3.792613448333302*^9},ExpressionUUID->"9af61400-5a4e-4b08-9e9b-\
+2aafbd8ffd16"]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{Automatic, 462}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 80, 0, 67, "Section",ExpressionUUID->"57089523-ec27-46cf-8774-b09f8fd2fdbd"],
+Cell[663, 24, 357, 9, 30, "Input",ExpressionUUID->"604d15c1-cb4a-4353-a5e5-7822e6da7dbf"],
+Cell[1023, 35, 215, 4, 30, "Input",ExpressionUUID->"746503e2-4089-4981-a45d-c69589a28a3d"],
+Cell[1241, 41, 211, 4, 30, "Input",ExpressionUUID->"8bc36450-7f93-4884-945b-b369caa1a5cf"],
+Cell[1455, 47, 221, 5, 30, "Input",ExpressionUUID->"077e4ee5-3c5b-44e2-b19e-2a02781de4c6"],
+Cell[1679, 54, 222, 5, 30, "Input",ExpressionUUID->"0aa503e3-1b5a-4bc1-bd7d-e29310d4eadf"],
+Cell[1904, 61, 406, 9, 30, "Input",ExpressionUUID->"8c073f54-eae9-4373-97d4-b47af44cb751"],
+Cell[CellGroupData[{
+Cell[2335, 74, 170, 2, 30, "Input",ExpressionUUID->"34c2e199-7ae0-46a7-8c1f-9374d14cb4a7"],
+Cell[2508, 78, 19338, 258, 7086, "Output",ExpressionUUID->"edbf4608-fbc0-4785-8039-02f60c35ec8d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21883, 341, 271, 5, 33, "Input",ExpressionUUID->"96323a7c-44b4-4004-9931-37331a92f587"],
+Cell[22157, 348, 215, 4, 34, "Output",ExpressionUUID->"2e97b6b0-7bdd-4c7f-a9dd-3eab42d81600"]
+}, Open  ]],
+Cell[22387, 355, 259, 7, 30, "Input",ExpressionUUID->"78c36c69-de4a-4097-86cd-4dd84da22b53"],
+Cell[22649, 364, 136, 3, 30, "Input",ExpressionUUID->"80b39dc2-acb0-406a-b213-e5d5ff068734"],
+Cell[22788, 369, 970, 26, 54, "Input",ExpressionUUID->"8acd2eb5-3edb-4837-9d38-f3061e7f9a34"],
+Cell[23761, 397, 1765, 28, 178, "Input",ExpressionUUID->"9af61400-5a4e-4b08-9e9b-2aafbd8ffd16"]
+}, Open  ]]
+}
+]
+*)
+
