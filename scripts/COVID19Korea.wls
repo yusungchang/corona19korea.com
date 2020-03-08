@@ -13,7 +13,11 @@
 
 
 (* ::Section:: *)
-(*Config*)
+(*Configuration*)
+
+
+(* ::Subsection::Closed:: *)
+(*Global*)
 
 
 $baseDirectory=If[$Notebooks, NotebookDirectory[], Directory[]<>"/"];
@@ -32,7 +36,34 @@ $outputDirectory=$baseDirectory<>"../src/output/";
 
 
 (* ::Subsection:: *)
-(*Import Output Configuration*)
+(*Province Map*)
+
+
+(* ::Text:: *)
+(*VWorkd Open API: 2D Data API 2.0 (\:ad11\:c5ed\:c2dc\:b3c4)*)
+
+
+(* http://www.vworld.kr/dev/v4dv_2ddataguide2_s002.do?svcIde=adsido *)
+
+
+$vworldAPICred=Import[$configDirectory<>"vworld.key.json","JSON"];
+
+
+$provinceNames={"\:c11c\:c6b8","\:bd80\:c0b0","\:b300\:ad6c","\:c778\:cc9c","\:ad11\:c8fc","\:b300\:c804","\:c6b8\:c0b0","\:c138\:c885","\:acbd\:ae30","\:ac15\:c6d0","\:cda9\:bd81","\:cda9\:b0a8","\:c804\:bd81","\:c804\:b0a8","\:acbd\:bd81","\:acbd\:b0a8","\:c81c\:c8fc"};
+
+
+$provinceFullNames={"\:c11c\:c6b8\:d2b9\:bcc4\:c2dc","\:bd80\:c0b0\:ad11\:c5ed\:c2dc","\:b300\:ad6c\:ad11\:c5ed\:c2dc","\:c778\:cc9c\:ad11\:c5ed\:c2dc","\:ad11\:c8fc\:ad11\:c5ed\:c2dc","\:b300\:c804\:ad11\:c5ed\:c2dc","\:c6b8\:c0b0\:ad11\:c5ed\:c2dc","\:c138\:c885\:d2b9\:bcc4\:c790\:ce58\:c2dc","\:acbd\:ae30\:b3c4",
+	"\:ac15\:c6d0\:b3c4","\:cda9\:ccad\:bd81\:b3c4","\:cda9\:ccad\:b0a8\:b3c4","\:c804\:b77c\:bd81\:b3c4","\:c804\:b77c\:b0a8\:b3c4","\:acbd\:c0c1\:bd81\:b3c4","\:acbd\:c0c1\:b0a8\:b3c4","\:c81c\:c8fc\:d2b9\:bcc4\:c790\:ce58\:b3c4"};
+
+
+$provinceRules=MapThread[#1->#2&,{$provinceNames,$provinceFullNames}];
+
+
+$centerFilName=$dataDirectory<>"korea-province-centers.json"; (* RegionCentroid \:c2dc\:ac04\:c774 \:c624\:b798\:ac78\:b9ac\:b294 \:ad00\:acc4\:b85c \:acc4\:c0b0 \:acb0\:acfc\:b97c \:c800\:c7a5\:d568 *)
+
+
+(* ::Subsection::Closed:: *)
+(*Output & Translation*)
 
 
 $outputRules=Import[$dataDirectory<>"korea-corona19.json"];
@@ -51,10 +82,15 @@ translateValue[k___]:=value[k][$translateRules]
 
 
 (* ::Section::Closed:: *)
-(*Source Config*)
+(*Source*)
 
 
-(* \:c9c8\:bcd1\:ad00\:b9ac\:bcf8\:bd80 (KCDC) \:ac8c\:c2dc\:d310 *)
+(* ::Subsection::Closed:: *)
+(*Source URL*)
+
+
+(* ::Text:: *)
+(*\:c9c8\:bcd1\:ad00\:b9ac\:bcf8\:bd80 (KCDC) \:ac8c\:c2dc\:d310*)
 
 
 apiKCDCURLBase="https://www.cdc.go.kr";
@@ -67,8 +103,8 @@ apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
 
 
-(* ::Section:: *)
-(*Cache Posts*)
+(* ::Subsection::Closed:: *)
+(*Read Boards, Import Posts and Cache*)
 
 
 Print["Read KCDC public board..."];
@@ -102,24 +138,31 @@ crawlPosts[x_]:=Module[{html},
 crawlPosts[postList];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Preprocess Data*)
 
 
 (* ::Subsection:: *)
-(*Transform*)
+(*Load All Caches*)
 
 
-Print["Process data..."];
+allCaches=Import[#,"String"]&/@FileNames[$cacheDirectory<>"*.html"];
 
 
-(* ::Subsubsection:: *)
-(*Extract and Process Table Rows*)
+(* ::Subsection:: *)
+(*National-wide Data*)
+
+
+Print["Process national-wide data..."];
+
+
+(* ::Subsubsection::Closed:: *)
+(*Transform Function*)
 
 
 dataRow[name_]:=
 Module[{data,pos,rows},
-data=Import[name,"Data"];
+data=ImportString[name,"Data"];
 pos=Position[data,
 	{" \:ad6c\:bd84"," \:cd1d\:acc4"," \:d655\:c9c4\:d658\:c790"," \:ac80\:c0ac\:d604\:d669"}|{" \:ad6c\:bd84"," \:cd1d\:acc4"," \:d655\:c9c4\:d658\:c790\:d604\:d669"," \:ac80\:c0ac\:d604\:d669"}];
 	rows=Extract[data,Most[First[pos]]][[3;;-1]];
@@ -133,10 +176,10 @@ pos=Position[data,
 ];
 
 
-dataPre1=Flatten[dataRow/@FileNames[$cacheDirectory<>"*.html"],1];
+dataPre1=Flatten[dataRow/@allCaches,1];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Convert Values to Expressions*)
 
 
@@ -150,15 +193,15 @@ dataPre2=Map[
 ];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Remove Duplicated Entries*)
 
 
 data=Sort[DeleteDuplicates[dataPre2,First[#1]==First[#2]&]];
 
 
-(* ::Subsection:: *)
-(*Define Data Functions*)
+(* ::Subsubsection::Closed:: *)
+(*Extract Functions*)
 
 
 Clear[getData];
@@ -169,8 +212,8 @@ colMapR=Reverse[colMap,1];
 getData[col_,range_:All,table_:data]:=table[[range,col/.colMap]];
 
 
-(* ::Subsection:: *)
-(*Verify Data Types*)
+(* ::Subsubsection::Closed:: *)
+(*Verify Processed Data*)
 
 
 If[And@@Flatten[Table[MatchQ[#,Blank[c/.colType]]&/@getData[c], {c, colMap[[All,1]]}]]=!=True,
@@ -178,8 +221,8 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.colType]]&/@getData[c], {c, colMap[[All,
 	Quit[]];
 
 
-(* ::Subsection:: *)
-(*Export Data as CSV*)
+(* ::Subsubsection::Closed:: *)
+(*Export Processed Data*)
 
 
 Export[$outputDirectory<>outputValue["data","filename"],
@@ -189,12 +232,154 @@ Export[$outputDirectory<>outputValue["data","filename"],
 ];
 
 
+(* ::Subsection:: *)
+(*Province Data*)
+
+
+Print["Process province data..."];
+
+
+(* ::Subsubsection::Closed:: *)
+(*Transform Function*)
+
+
+Clear[pvFilter];
+pvFilter[cache_]:=With[{title=ImportString[cache,"Title"]},
+If[Length@StringCases[title,"\:c815\:b840\:be0c\:b9ac\:d551"]>0,
+Module[{date,do,data,pos,table,header,r,c,col,values,assoc},
+date=First@StringCases[title,(x:DigitCharacter..)~~"\:c6d4"~~(" "...)~~(y:DigitCharacter..)~~"\:c77c":>x<>"-"<>y]; (* \:b0a0\:c9dc *)
+do=DateObject@date;
+(* \:d14c\:c774\:be14 *)
+data=ImportString[cache,"Data"];
+pos=Position[data,x_/;ContainsAll[{"\:d569\:acc4","\:ad6c\:bd84"}~Join~$provinceNames,StringReplace[x," ":>""]]]; (* Check horizontal table header *)
+If[pos=={},(* Try vertical *)
+pos=Position[data,x_/;ContainsAll[{"\:c9c0\:c5ed","\:d655\:c9c4\:d658\:c790","\:be44\:ace0","\:c8fc\:c694\:ae30\:d0c0\:c720\:d589"},StringReplace[x," ":>""]]];
+If[pos=={},
+None,
+(* Process vertical table *)
+pos=First@pos;
+table=Part[data,Sequence@@Most@pos];
+header=StringReplace[First@#," ":>""]&/@table;
+values=ToExpression[StringReplace[Part[#,2],{" ":>"",",":>""}]]&/@table;(* Assuming that 2nd column is the values *)
+assoc=AssociationThread[$provinceNames->Lookup[AssociationThread[header->values],$provinceNames]];
+{do,Sequence@@Values[assoc]}
+],
+(* Process horizontal table *)
+pos=First@pos;
+table=Part[data,Sequence@@Most@pos];
+header=StringReplace[Part[data,Sequence@@pos]," ":>""];
+c=First@First@Position[header,"\:d569\:acc4"];
+col=Quiet[ToExpression/@((StringReplace[Part[#,c],",":>""])&/@table)];
+r=First@First@Position[col,First@Max[col]];
+values=ToExpression[StringReplace[#,",":>""]]&/@table[[r]];
+assoc=AssociationThread[$provinceNames->Lookup[AssociationThread[header->values],$provinceNames]];
+{do,Sequence@@Values[assoc]}
+]
+],
+None]
+];
+
+
+(* ::Subsubsection::Closed:: *)
+(*Clean Up Missing Entries*)
+
+
+pvDataPre=ReplaceAll[DeleteCases[Quiet[pvFilter/@allCaches],None],_Missing:>0];
+
+
+(* ::Subsubsection::Closed:: *)
+(*Add "Total" Column*)
+
+
+pvData={First@#,Sequence@@(Rest@#),Total[Rest@#]}&/@pvDataPre;
+
+
+(* ::Subsubsection::Closed:: *)
+(*Extract Functions*)
+
+
+Clear[pvGetData];
+pvColMap={"\:c2dc\:ac04"->1,Sequence@@MapIndexed[#1->(First@#2+1)&,$provinceNames],"\:c804\:ad6d"->-1};
+pvGetData[col_,range_:All,table_:pvData]:=table[[range,col/.pvColMap]];
+
+
+(* ::Subsubsection::Closed:: *)
+(*Export Processed Data*)
+
+
+Export[$outputDirectory<>outputValue["data-province","filename"],
+	AssociationThread[
+		pvColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@pvData, (* For CSV, convert DateObject to date strings *)
+	outputValue["data-province","type"]
+];
+
+
 (* ::Section:: *)
-(*Visualization Definitions*)
+(*Visualization Functions*)
 
 
 (* ::Subsection:: *)
-(*Color*)
+(*VWorld Open API*)
+
+
+vworldAPIURL="http://api.vworld.kr/req/data";
+vworldAPIParams={"service"->"data","request"->"GetFeature","data"->"LT_C_ADSIDO_INFO"};
+
+
+(* \:c9c0\:c5ed\:ba85 \:c911\:bcf5 \:bb38\:c81c\:b85c full \:d589\:c815\:ad6c\:c5ed\:ba85 \:c0ac\:c6a9. \:adf8\:b9ac\:ace0 \:c77c\:bd80 \:d589\:c815\:ad6c\:c5ed\:c740 \:bd84\:b9ac\:b418\:c5b4 \:c788\:c73c\:bbc0\:b85c :like: \:c0ac\:c6a9 *)
+
+
+vworldAPICall[prov_]:=URLExecute[vworldAPIURL,Join[$vworldAPICred,vworldAPIParams,{"attrFilter"->"ctp_kor_nm:like:"<>prov}]];
+
+
+(* ::Subsection:: *)
+(*Province Coordinates & Centers*)
+
+
+Clear[provinceCoords];
+Clear[provinceShape];
+Clear[provinceCenter];
+Clear[provinceBBox];
+
+
+provinceCoords[prov_]:=provinceCoords[prov]=Cases[vworldAPICall[prov/.$provinceRules],HoldPattern["coordinates"->x_]:>x,Infinity];
+
+
+provinceShape[prov_]:=provinceShape[prov]=Reverse@Sort@Flatten@Table[Polygon/@x,{x,provinceCoords[prov]}];
+
+
+provinceBBox[prov_]:=provinceBBox[prov]=RegionBounds[First@provinceShape[prov]];
+
+
+provinceCenter[prov_]:=provinceCenter[prov]=With[{m=First@provinceBBox[prov],M=Last@provinceBBox[prov]},{(First@m+First@M)*.5,(Last@m+Last@M)*.5}];
+
+
+$provinceNames
+
+
+RegionBounds[First@provinceShape["\:c778\:cc9c"]]
+
+
+If[!FileExistsQ[$centerFilName],
+Export[$centerFilName,
+MapThread[Rule,{$provinceNames,(RegionCentroid@First@provinceShape[#]&)/@$provinceNames}]]
+]
+
+
+centerRules=Import[$centerFilName];
+
+
+districtCenter[dist_]:=dist/.centerRules;
+
+
+Graphics[{EdgeForm[Black],FaceForm[],(First@provinceShape[#]&)/@$provinceNames,Red,PointSize[Large],Point[provinceCenter/@$provinceNames]}]
+
+
+0
+
+
+(* ::Subsection:: *)
+(*Colors*)
 
 
 getColor["\:d655\:c9c4"]=RGBColor[{0.9411764705882353, 0.4235294117647059, 0.00784313725490196, 1.}];

@@ -13,7 +13,11 @@
 
 
 (* ::Section:: *)
-(*Config*)
+(*Configuration*)
+
+
+(* ::Subsection::Closed:: *)
+(*Global*)
 
 
 $baseDirectory=If[$Notebooks, NotebookDirectory[], Directory[]<>"/"];
@@ -31,8 +35,15 @@ $cacheDirectory=$baseDirectory<>"../data/cache/";
 $outputDirectory=$baseDirectory<>"../src/output/";
 
 
-(* ::Subsection:: *)
-(*District Map Configuration*)
+(* ::Subsection::Closed:: *)
+(*District Map*)
+
+
+(* ::Text:: *)
+(*VWorkd Open API: 2D Data API 2.0 (\:c2dc\:ad70\:ad6c)*)
+
+
+(* http://www.vworld.kr/dev/v4dv_2ddataguide2_s002.do?svcIde=adsigg *)
 
 
 $vworldAPICred=Import[$configDirectory<>"vworld.key.json","JSON"];
@@ -47,8 +58,8 @@ $districtNames={"\:ad70\:d3ec\:c2dc","\:ad6c\:b9ac\:c2dc","\:c591\:d3c9\:ad70","
 $centerFilName=$dataDirectory<>"gyunggi-district-centers.json"; (* RegionCentroid \:c2dc\:ac04\:c774 \:c624\:b798\:ac78\:b9ac\:b294 \:ad00\:acc4\:b85c \:acc4\:c0b0 \:acb0\:acfc\:b97c \:c800\:c7a5\:d568 *)
 
 
-(* ::Subsection:: *)
-(*Import Output Configuration*)
+(* ::Subsection::Closed:: *)
+(*Output & Translation*)
 
 
 $outputRules=Import[$dataDirectory<>"gyunggi-corona19.json"];
@@ -67,13 +78,21 @@ translateValue[k___]:=value[k][$translateRules]
 
 
 (* ::Section:: *)
-(*Source Config*)
+(*Source*)
+
+
+(* ::Subsection::Closed:: *)
+(*Source URL*)
+
+
+(* ::Text:: *)
+(*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:c0c1\:d669\:d310*)
 
 
 ggPageURL="https://www.gg.go.kr/bbs/boardView.do?bsIdx=464&bIdx=2296956&menuId=1535";
 
 
-(* ::Section:: *)
+(* ::Subsection::Closed:: *)
 (*Import Page*)
 
 
@@ -93,7 +112,7 @@ tableRaw=raw[[4,2,2,1,2,2]];
 Print["Process data..."];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Transform Function*)
 
 
@@ -113,15 +132,15 @@ Transpose[{dates,ages,genders,districts}]
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Process Raw Data*)
 
 
 table=ggDataProcess[tableRaw,2020]; (* \:b9ac\:d3ec\:d2b8 \:c2dc\:c810: 2020\:b144 *)
 
 
-(* ::Subsection:: *)
-(*Define Extract Functions*)
+(* ::Subsection::Closed:: *)
+(*Extract Functions*)
 
 
 Clear[getData];
@@ -131,8 +150,8 @@ dataColMapR=Reverse[dataColMap,1];
 getData[col_,range_:All,t_:table]:=t[[range,col/.dataColMap]];
 
 
-(* ::Subsection:: *)
-(*Verify Data Types*)
+(* ::Subsection::Closed:: *)
+(*Verify Processed Data*)
 
 
 If[And@@Flatten[Table[MatchQ[#,Blank[c/.dataType]]&/@getData[c], {c, dataColMap[[All,1]]}]]=!=True,
@@ -140,8 +159,8 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.dataType]]&/@getData[c], {c, dataColMap[
 	Quit[]];
 
 
-(* ::Subsection:: *)
-(*Export Data as CSV*)
+(* ::Subsection::Closed:: *)
+(*Export Processed Data*)
 
 
 Export[$outputDirectory<>outputValue["data","filename"],
@@ -152,14 +171,18 @@ Export[$outputDirectory<>outputValue["data","filename"],
 
 
 (* ::Section:: *)
-(*District Visualization Functions*)
+(*Visualization Functions*)
 
 
 Print["Process district geometry..."];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*VWorld Open API*)
+
+
+(* ::Text:: *)
+(*VWorkd Open API: 2D Data API 2.0 (\:c2dc\:ad70\:ad6c)*)
 
 
 vworldAPIURL="http://api.vworld.kr/req/data";
@@ -172,7 +195,7 @@ vworldAPIParams={"service"->"data","request"->"GetFeature","data"->"LT_C_ADSIGG_
 vworldAPICall[dist_]:=URLExecute[vworldAPIURL,Join[$vworldAPICred,vworldAPIParams,{"attrFilter"->"full_nm:like:"<>$districtMain<>" "<>dist}]];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*District Coordinates & Centers*)
 
 
@@ -199,7 +222,20 @@ centerRules=Import[$centerFilName];
 districtCenter[dist_]:=dist/.centerRules;
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
+(*Color*)
+
+
+getColor["\:d655\:c9c4"]=RGBColor[{0.9411764705882353, 0.4235294117647059, 0.00784313725490196, 1.}];
+getColor["\:aca9\:b9ac\:c911"]=getColor["\:c5ec"]=RGBColor[{0.9647058823529412, 0.7490196078431373, 0.15294117647058825`, 1.}];
+getColor["\:aca9\:b9ac\:d574\:c81c"]=getColor["\:b0a8"]=getColor["\:c99d\:ac00\:c218"]=RGBColor[{0.2627450980392157, 0.5215686274509804, 0.9607843137254902, 1.}];
+getColor["\:c0ac\:b9dd"]=RGBColor[{0.8352941176470589, 0.00784313725490196, 0.00392156862745098, 1.}];
+getColor["\:ac80\:c0ac\:cd1d\:acc4"]=RGBColor[{0.9411764705882353, 0.4235294117647059, 0.00784313725490196, 1.}];
+getColor["\:ac80\:c0ac\:c911"]=RGBColor[{0.9647058823529412, 0.7490196078431373, 0.15294117647058825`, 1.}];
+getColor["\:acb0\:acfc\:c74c\:c131"]=getColor["\:c5f0\:b839\:bd84\:d3ec"]=RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}];
+
+
+(* ::Subsection::Closed:: *)
 (*Plot Styles*)
 
 
@@ -213,7 +249,7 @@ placedLegendFrame=(Placed[#,{Left,Top},legendFrame]&);
 imageDimensions={ImageSize->{imageWidth,Automatic},AspectRatio->1/2};
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Label Function*)
 
 
@@ -234,7 +270,7 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 },Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Nanum Gothic"}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*District Heat Map*)
 
 
@@ -296,9 +332,6 @@ RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
-$locale="en";
-
-
 out1:=Magnify[Labeled[
 districtHeatmap[
 $districtNames,getData["\:ac70\:c8fc\:c9c0"],
@@ -309,7 +342,7 @@ LegendLabel->Style["\:d655 \:c9c4 \:c790",14]
 plotLabelFun[$districtMain<>" \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0"],Top],2]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
@@ -345,14 +378,14 @@ DateHistogram[getData["\:d655\:c9c4\:c77c"],"Day","CumulativeCount",
 imageDimensions,
 Frame->True,
 FrameTicksStyle->Directive[FontSize->14],
-LabelingFunction->(Placed[Style[If[#>4,#,""],12,Bold,RGBColor[{0.9411764705882353, 0.4235294117647059, 0.00784313725490196, 1.}]],Above]&),
-ChartStyle->Directive[{RGBColor[{0.9411764705882353, 0.4235294117647059, 0.00784313725490196, 1.}],EdgeForm[{White,Thick}]}],
+LabelingFunction->(Placed[Style[If[#>4,#,""],12,Bold,getColor["\:d655\:c9c4"]],Above]&),
+ChartStyle->Directive[{getColor["\:d655\:c9c4"],EdgeForm[{White,Thick}]}],
 GridLines->Automatic,
 DateTicksFormat->{"MonthShort","/","DayShort"}],
 plotLabelFun[outputValue["2","label"]],Top]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
@@ -388,14 +421,14 @@ DateHistogram[getData["\:d655\:c9c4\:c77c"],"Day",
 imageDimensions,
 Frame->True,
 FrameTicksStyle->Directive[FontSize->14],
-LabelingFunction->(Placed[Style[If[#>0,#,""],12,Bold,RGBColor[{0.2627450980392157, 0.5215686274509804, 0.9607843137254902, 1.}]],Above]&),
-ChartStyle->Directive[{RGBColor[{0.2627450980392157, 0.5215686274509804, 0.9607843137254902, 1.}],EdgeForm[{White,Thick}]}],
+LabelingFunction->(Placed[Style[If[#>0,#,""],12,Bold,getColor["\:c99d\:ac00\:c218"]],Above]&),
+ChartStyle->Directive[{getColor["\:c99d\:ac00\:c218"],EdgeForm[{White,Thick}]}],
 GridLines->Automatic,
 DateTicksFormat->{"MonthShort","/","DayShort"}],
 plotLabelFun[outputValue["3","label"]],Top]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
@@ -432,13 +465,13 @@ imageDimensions,
 Frame->True,
 FrameTicksStyle->Directive[FontSize->14],
 FrameLabel->{Style["\:c5f0 \:b839",14]},
-LabelingFunction->(Placed[Style[#,14,RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}],Bold],Above]&),
-ChartStyle->Directive[{RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}],EdgeForm[{White,Thick}]}],
+LabelingFunction->(Placed[Style[#,14,getColor["\:c5f0\:b839\:bd84\:d3ec"],Bold],Above]&),
+ChartStyle->Directive[{getColor["\:c5f0\:b839\:bd84\:d3ec"],EdgeForm[{White,Thick}]}],
 GridLines->Automatic],
 plotLabelFun[outputValue["4","label"]],Top]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
@@ -475,7 +508,7 @@ Pane[
 PieChart[data,
 ImageSize->{Automatic,400},
 LabelingFunction->(Placed[Style[Column[{#,Style[Row[{"(",Round[100*#/Plus@@Values[data],0.1],"%)"}],Plain,Smaller]},Alignment->Center],20,Bold,White],"RadialCenter"]&),
-ChartStyle->{RGBColor[{0.2627450980392157, 0.5215686274509804, 0.9607843137254902, 1.}],RGBColor[{0.9647058823529412, 0.7490196078431373, 0.15294117647058825`, 1.}]},
+ChartStyle->{getColor["\:b0a8"],getColor["\:c5ec"]},
 ChartLegends->Placed[{"\:b0a8","\:c5ec"},Right,Style[#,16,GrayLevel[.3]]&]],
 imageDimensions,Alignment->Center
 ],
@@ -483,7 +516,7 @@ plotLabelFun[outputValue["5","label"]],Top]
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 

@@ -1,6 +1,6 @@
 {
     "data": {
-		"filename": "gyunggi-corona19-data.json",
+		"filename": "gyunggi-corona19-patients.json",
         "type": "JSON"
     },
 	"1": {
@@ -9,12 +9,12 @@
 		"label": "경기도 코로나19 확진자 거주지"
     },
 	"2": {
-		"filename": "gyunggi-corona19-trend.svg",
+		"filename": "gyunggi-corona19-confirmed.svg",
 		"type": "SVG",
 		"label": "경기도 코로나19 확진자 추이"
     },
 	"3": {
-		"filename": "gyunggi-corona19-growth.svg",
+		"filename": "gyunggi-corona19-new-cases.svg",
 		"type": "SVG",
 		"label": "경기도 코로나19 확진자 증가수"
 	},

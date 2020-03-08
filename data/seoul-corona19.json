@@ -1,6 +1,6 @@
 {
     "data": {
-		"filename": "seoul-corona19-data.json",
+		"filename": "seoul-corona19-patients.json",
         "type": "JSON"
     },
 	"1": {
@@ -9,12 +9,12 @@
 		"label": "서울특별시 코로나19 확진자 거주지"
     },
 	"2": {
-		"filename": "seoul-corona19-trend.svg",
+		"filename": "seoul-corona19-confirmed.svg",
 		"type": "SVG",
 		"label": "서울특별시 코로나19 확진자 추이"
     },
 	"3": {
-		"filename": "seoul-corona19-growth.svg",
+		"filename": "seoul-corona19-new-cases.svg",
 		"type": "SVG",
 		"label": "서울특별시 코로나19 확진자 증가수"
 	},
