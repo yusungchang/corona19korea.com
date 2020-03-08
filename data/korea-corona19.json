@@ -26,5 +26,10 @@
 		"filename": "korea-corona19-new-cases.svg",
 		"type": "SVG",
 		"label": "전국 코로나19 확진자 증가수"
+	},
+	"5": {
+		"filename": "korea-corona19-by-province.png",
+		"type": "PNG",
+		"label": "전국 코로나19 지역 확진자"
     }
 }

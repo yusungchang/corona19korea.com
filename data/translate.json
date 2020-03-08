@@ -2,7 +2,6 @@
 	"en": {
 		"Nanum Gothic": "Montserrat",
 
-		"전국 코로나19 상황": "Korea COVID-19 Status",
 		"확진": "Confirmed",
 		"격리중": "Quarantined",
 		"격리해제": "Recovered", 
@@ -10,17 +9,23 @@
 		"검사총계": "Tested",
 		"검사중": "Not Determined",
 		"결과음성": "Negative",
-		"전국 코로나19 확진자 추이": "Korea COVID-19 Confirmed",
+		
 		"누적확진자": "Confirmed",
 		"누적사망자": "Deaths",
-		"전국 코로나19 확진자 분석": "Korea COVID-19 Breakdown",
-		"전국 코로나19 확진자 증가수": "Korea COVID-19 New Cases",
+		
 		"업데이트": "Update",
 		"시": "h",
 		"확 진 자": "Confirmed",
 		"연 령": "Age",
 		"남": "Male",
 		"여": "Female",
+
+		"전국 코로나19 상황": "Korea COVID-19 Status",
+		"전국 코로나19 확진자 추이": "Korea COVID-19 Confirmed",
+		"전국 코로나19 확진자 분석": "Korea COVID-19 Breakdown",
+		"전국 코로나19 확진자 증가수": "Korea COVID-19 New Cases",
+		"전국 코로나19 지역 확진자": "Korea COVID-19 Provinces",
+
 		"서울특별시 코로나19 확진자 거주지": "Seoul COVID-19 Districts",
 		"서울특별시 코로나19 확진자 추이": "Seoul COVID-19 Confirmed",
 		"서울특별시 코로나19 확진자 증가수": "Seoul COVID-19 New Cases",

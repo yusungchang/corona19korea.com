@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Configuration*)
 
 
@@ -35,7 +35,7 @@ $cacheDirectory=$baseDirectory<>"../data/cache/";
 $outputDirectory=$baseDirectory<>"../src/output/";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Map*)
 
 
@@ -57,9 +57,6 @@ $provinceFullNames={"\:c11c\:c6b8\:d2b9\:bcc4\:c2dc","\:bd80\:c0b0\:ad11\:c5ed\:
 
 
 $provinceRules=MapThread[#1->#2&,{$provinceNames,$provinceFullNames}];
-
-
-$centerFilName=$dataDirectory<>"korea-province-centers.json"; (* RegionCentroid \:c2dc\:ac04\:c774 \:c624\:b798\:ac78\:b9ac\:b294 \:ad00\:acc4\:b85c \:acc4\:c0b0 \:acb0\:acfc\:b97c \:c800\:c7a5\:d568 *)
 
 
 (* ::Subsection::Closed:: *)
@@ -351,31 +348,8 @@ provinceShape[prov_]:=provinceShape[prov]=Reverse@Sort@Flatten@Table[Polygon/@x,
 provinceBBox[prov_]:=provinceBBox[prov]=RegionBounds[First@provinceShape[prov]];
 
 
-provinceCenter[prov_]:=provinceCenter[prov]=With[{m=First@provinceBBox[prov],M=Last@provinceBBox[prov]},{(First@m+First@M)*.5,(Last@m+Last@M)*.5}];
-
-
-$provinceNames
-
-
-RegionBounds[First@provinceShape["\:c778\:cc9c"]]
-
-
-If[!FileExistsQ[$centerFilName],
-Export[$centerFilName,
-MapThread[Rule,{$provinceNames,(RegionCentroid@First@provinceShape[#]&)/@$provinceNames}]]
-]
-
-
-centerRules=Import[$centerFilName];
-
-
-districtCenter[dist_]:=dist/.centerRules;
-
-
-Graphics[{EdgeForm[Black],FaceForm[],(First@provinceShape[#]&)/@$provinceNames,Red,PointSize[Large],Point[provinceCenter/@$provinceNames]}]
-
-
-0
+provinceCenter[prov_]:=provinceCenter[prov]=.5*{Plus@@First@provinceBBox[prov],Plus@@Last@provinceBBox[prov]}+
+	Switch[prov,"\:acbd\:ae30",{0.2,-0.2},"\:cda9\:bd81",{-0.2,0.2},_,{0,0}];
 
 
 (* ::Subsection:: *)
@@ -433,7 +407,72 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 },Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Nanum Gothic"}];
 
 
-(* ::Section:: *)
+(* ::Subsection:: *)
+(*Province Heat Map*)
+
+
+Clear[provinceHeatmap]
+provinceHeatmap[col_,OptionsPattern[{
+	ScalingFunctions->Log,
+	ImageSize->480,AspectRatio->1/2,LegendLabel->"Legend",
+	LabelStyle->{FontSize->12},Min->-1,Max->-1}]]:=
+Module[{
+min=OptionValue[Min],
+max=OptionValue[Max],
+imageW=OptionValue[ImageSize],
+labelS=OptionValue[LabelStyle],
+f=OptionValue[ScalingFunctions],
+tally,
+regions,
+labels,
+others
+},
+tally=MapThread[{#1,#2}&,{$provinceNames,pvData[[col,2;;-2]]}];
+others=Complement[$provinceNames,tally[[All,1]]];
+min=If[min==-1,Min@tally[[All,2]],min];
+max=If[max==-1,Max@tally[[All,2]],max];
+
+{regions,labels}=Transpose@(
+With[{s=#[[1]],n=#[[2]]},
+With[{p=(f[n]-f[min])/(f[max]-f[min])},
+{
+(*{EdgeForm[],ColorData["CandyColors",1-p],First@provinceShape[s]},*)
+{EdgeForm[],ColorData["CandyColors",1-p],Rectangle@@Transpose@provinceBBox[s]},
+Text[Style[Column[{s,Style[n,Smaller,Plain]},Alignment->Center,Spacings->0],labelS,GrayLevel[If[p>0.8,0.7,0.2]]],provinceCenter[s]]
+}
+]
+]&/@tally);
+
+Overlay[{
+Pane[
+Graphics[{
+regions,
+(*EdgeForm[GrayLevel[0,0.1]],FaceForm[],(First@provinceShape[#]&)/@$provinceNames,*)
+EdgeForm[GrayLevel[0,0.1]],FaceForm[],(Rectangle@@Transpose@provinceBBox[#]&)/@$provinceNames,
+labels,
+Text[Style[#,labelS,GrayLevel[0.2]],provinceCenter[#]]&/@others
+},ImageSize->{Automatic,imageW*OptionValue[AspectRatio]}],
+ImageSize->imageW,Alignment->Center
+],
+
+Framed[
+Grid[{
+{min,
+Show[
+DensityPlot[1-((f[x]-f[min])/(f[max]-f[min])),{x,min,max},{y,0,1},
+	PlotRange->{{min,max},{0,1}},AspectRatio->\!\(TraditionalForm\`
+\*FractionBox[\(1\), \(10\)]\),ColorFunction->"CandyColors",MaxRecursion->0,PlotPoints->200,Frame->False],
+ImageSize->{imageW/4,imageW/40}],
+max},
+{"",OptionValue["LegendLabel"],""}
+},Alignment->{Center,Center},BaseStyle->{"Text",FontSize->12}],
+RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
+]
+},Alignment->{Right,Top}]
+]
+
+
+(* ::Section::Closed:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:c0c1\:d669*)
 
 
@@ -454,7 +493,7 @@ Row[Framed[Column[{#,Style[NumberForm[getData[#,-1],DigitBlock->3],40,Bold,Itali
 ImageSize->{imageWidth,Automatic},FrameMargins->0];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
@@ -481,7 +520,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue["en"],outputValue["1","type"]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:cd94\:c774*)
 
 
@@ -528,7 +567,7 @@ imageDimensions
 ,plotLabelFun[outputValue["2","label"],Last@getData["\:c2dc\:ac04"]],Top];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
@@ -555,7 +594,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue["en"],outputValue["2","type"]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:bd84\:c11d*)
 
 
@@ -595,7 +634,7 @@ Epilog->Inset[legendInset,Scaled[{0.025,0.975}],{Left,Top}]
 ,plotLabelFun[outputValue["3","label"],Last@getData["\:c2dc\:ac04"]],Top];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
@@ -622,7 +661,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue["en"],outputValue["3","type"]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00 \:cd94\:c774*)
 
 
@@ -667,7 +706,7 @@ Epilog->{currentInset,labelInset}
 ,plotLabelFun[outputValue["4","label"],Last@getData["\:c2dc\:ac04"]],Top]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
@@ -692,3 +731,50 @@ $locale="en";
 
 
 Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"]];
+
+
+(* ::Section:: *)
+(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c9c0\:c5ed*)
+
+
+out5:=Magnify[Labeled[
+provinceHeatmap[
+-1,
+ImageSize->imageWidth,
+LabelStyle->{FontSize->10},
+LegendLabel->Style["\:d655 \:c9c4 \:c790",14]
+],
+plotLabelFun[outputValue["5","label"],Last@pvGetData["\:c2dc\:ac04"]],Top],2]
+
+
+out5
+
+
+out5/.translateValue["en"]
+
+
+(* ::Subsection:: *)
+(*Export*)
+
+
+Print["Generate "<>outputValue["5","label"]<>"..."];
+
+
+(* ::Subsubsection:: *)
+(*Korean*)
+
+
+$locale="kr";
+
+
+Export[$outputDirectory<>"kr/"<>outputValue["5","filename"],out5,outputValue["5","type"],Background->None];
+
+
+(* ::Subsubsection:: *)
+(*English*)
+
+
+$locale="en";
+
+
+Export[$outputDirectory<>"en/"<>outputValue["5","filename"],out5/.translateValue["en"],outputValue["5","type"],Background->None];

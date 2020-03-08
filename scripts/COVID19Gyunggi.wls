@@ -339,7 +339,7 @@ ImageSize->imageWidth,
 LabelStyle->{FontSize->10},
 LegendLabel->Style["\:d655 \:c9c4 \:c790",14]
 ],
-plotLabelFun[$districtMain<>" \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0"],Top],2]
+plotLabelFun[outputValue["1","label"]],Top],2]
 
 
 (* ::Subsection::Closed:: *)
