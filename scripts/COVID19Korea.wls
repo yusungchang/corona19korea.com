@@ -315,7 +315,7 @@ Export[$outputDirectory<>outputValue["data-province","filename"],
 (*Visualization Functions*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*VWorld Open API*)
 
 
@@ -329,7 +329,7 @@ vworldAPIParams={"service"->"data","request"->"GetFeature","data"->"LT_C_ADSIDO_
 vworldAPICall[prov_]:=URLExecute[vworldAPIURL,Join[$vworldAPICred,vworldAPIParams,{"attrFilter"->"ctp_kor_nm:like:"<>prov}]];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Coordinates & Centers*)
 
 
@@ -352,7 +352,7 @@ provinceCenter[prov_]:=provinceCenter[prov]=.5*{Plus@@First@provinceBBox[prov],P
 	Switch[prov,"\:acbd\:ae30",{0.2,-0.2},"\:cda9\:bd81",{-0.2,0.2},_,{0,0}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Colors*)
 
 
@@ -365,7 +365,7 @@ getColor["\:ac80\:c0ac\:c911"]=RGBColor[{0.9647058823529412, 0.7490196078431373,
 getColor["\:acb0\:acfc\:c74c\:c131"]=RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Plot Styles*)
 
 
@@ -386,7 +386,7 @@ legendFrame=(Framed[Style[#,14],Background->GrayLevel[1,.9],FrameStyle->LightGra
 placedLegendFrame=(Placed[#,{Left,Top},legendFrame]&);
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Label Function*)
 
 
@@ -407,7 +407,7 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 },Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Nanum Gothic"}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Heat Map*)
 
 

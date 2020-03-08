@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Configuration*)
 
 
@@ -77,8 +77,11 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Source*)
+
+
+Print["Read Seoul province page..."];
 
 
 (* ::Subsection::Closed:: *)
@@ -96,16 +99,13 @@ seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do?tab=1";
 (*Import Page*)
 
 
-Print["Read Seoul district page..."];
-
-
 raw=Import[seoulPageURL,"Data"];
 
 
 tableRaw=raw[[2,2,1,2,3]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Preprocess Data*)
 
 
@@ -169,7 +169,7 @@ Export[$outputDirectory<>outputValue["data","filename"],
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Visualization Functions*)
 
 
@@ -221,7 +221,7 @@ centerRules=Import[$centerFilName];
 districtCenter[dist_]:=dist/.centerRules;
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Color*)
 
 
@@ -418,8 +418,8 @@ DateHistogram[getData["\:d655\:c9c4\:c77c"],"Day",
 imageDimensions,
 Frame->True,
 FrameTicksStyle->Directive[FontSize->14],
-LabelingFunction->(Placed[Style[If[#>0,#,""],12,Bold,getColor["\:aca9\:b9ac\:d574\:c81c"]],Above]&),
-ChartStyle->Directive[{getColor["\:aca9\:b9ac\:d574\:c81c"],EdgeForm[{White,Thick}]}],
+LabelingFunction->(Placed[Style[If[#>0,#,""],12,Bold,getColor["\:c99d\:ac00\:c218"]],Above]&),
+ChartStyle->Directive[{getColor["\:c99d\:ac00\:c218"],EdgeForm[{White,Thick}]}],
 GridLines->Automatic,
 DateTicksFormat->{"MonthShort","/","DayShort"}],
 plotLabelFun[outputValue["3","label"]],Top]
@@ -462,8 +462,8 @@ imageDimensions,
 Frame->True,
 FrameTicksStyle->Directive[FontSize->14],
 FrameLabel->{Style["\:c5f0 \:b839",14]},
-LabelingFunction->(Placed[Style[#,14,getColor["\:acb0\:acfc\:c74c\:c131"],Bold],Above]&),
-ChartStyle->Directive[{getColor["\:acb0\:acfc\:c74c\:c131"],EdgeForm[{White,Thick}]}],
+LabelingFunction->(Placed[Style[#,14,getColor["\:c5f0\:b839\:bd84\:d3ec"],Bold],Above]&),
+ChartStyle->Directive[{getColor["\:c5f0\:b839\:bd84\:d3ec"],EdgeForm[{White,Thick}]}],
 GridLines->Automatic],
 plotLabelFun[outputValue["4","label"]],Top]
 
@@ -505,7 +505,7 @@ Pane[
 PieChart[data,
 ImageSize->{Automatic,400},
 LabelingFunction->(Placed[Style[Column[{#,Style[Row[{"(",Round[100*#/Plus@@Values[data],0.1],"%)"}],Plain,Smaller]},Alignment->Center],20,Bold,White],"RadialCenter"]&),
-ChartStyle->{getColor["\:aca9\:b9ac\:d574\:c81c"],getColor["\:aca9\:b9ac\:c911"]},
+ChartStyle->{getColor["\:b0a8"],getColor["\:c5ec"]},
 ChartLegends->Placed[{"\:b0a8","\:c5ec"},Right,Style[#,16,GrayLevel[.3]]&]],
 imageDimensions,Alignment->Center
 ],

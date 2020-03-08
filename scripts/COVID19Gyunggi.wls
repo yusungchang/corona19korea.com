@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Configuration*)
 
 
@@ -77,8 +77,11 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Source*)
+
+
+Print["Read Gyunggi province page..."];
 
 
 (* ::Subsection::Closed:: *)
@@ -96,16 +99,13 @@ ggPageURL="https://www.gg.go.kr/bbs/boardView.do?bsIdx=464&bIdx=2296956&menuId=1
 (*Import Page*)
 
 
-Print["Read Gyunggi district page..."];
-
-
 raw=Import[ggPageURL,"Data"];
 
 
 tableRaw=raw[[4,2,2,1,2,2]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Preprocess Data*)
 
 
@@ -170,7 +170,7 @@ Export[$outputDirectory<>outputValue["data","filename"],
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Visualization Functions*)
 
 
