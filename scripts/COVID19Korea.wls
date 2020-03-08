@@ -436,8 +436,8 @@ max=If[max==-1,Max@tally[[All,2]],max];
 With[{s=#[[1]],n=#[[2]]},
 With[{p=(f[n]-f[min])/(f[max]-f[min])},
 {
-(*{EdgeForm[],ColorData["CandyColors",1-p],First@provinceShape[s]},*)
-{EdgeForm[],ColorData["CandyColors",1-p],Rectangle@@Transpose@provinceBBox[s]},
+{EdgeForm[],ColorData["CandyColors",1-p],First@provinceShape[s]},
+(* {EdgeForm[],ColorData["CandyColors",1-p],Rectangle@@Transpose@provinceBBox[s]}, *)(* Bounding box test *)
 Text[Style[Column[{s,Style[n,Smaller,Plain]},Alignment->Center,Spacings->0],labelS,GrayLevel[If[p>0.8,0.7,0.2]]],provinceCenter[s]]
 }
 ]
@@ -447,8 +447,8 @@ Overlay[{
 Pane[
 Graphics[{
 regions,
-(*EdgeForm[GrayLevel[0,0.1]],FaceForm[],(First@provinceShape[#]&)/@$provinceNames,*)
-EdgeForm[GrayLevel[0,0.1]],FaceForm[],(Rectangle@@Transpose@provinceBBox[#]&)/@$provinceNames,
+EdgeForm[GrayLevel[0,0.1]],FaceForm[],(First@provinceShape[#]&)/@$provinceNames,
+(* EdgeForm[GrayLevel[0,0.1]],FaceForm[],(Rectangle@@Transpose@provinceBBox[#]&)/@$provinceNames, *)(* Bounding box test *)
 labels,
 Text[Style[#,labelS,GrayLevel[0.2]],provinceCenter[#]]&/@others
 },ImageSize->{Automatic,imageW*OptionValue[AspectRatio]}],
@@ -745,12 +745,6 @@ LabelStyle->{FontSize->10},
 LegendLabel->Style["\:d655 \:c9c4 \:c790",14]
 ],
 plotLabelFun[outputValue["5","label"],Last@pvGetData["\:c2dc\:ac04"]],Top],2]
-
-
-out5
-
-
-out5/.translateValue["en"]
 
 
 (* ::Subsection:: *)
