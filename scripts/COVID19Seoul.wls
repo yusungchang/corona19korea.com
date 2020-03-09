@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Configuration*)
 
 
@@ -77,14 +77,14 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Source*)
 
 
 Print["Read Seoul province page..."];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Source URL*)
 
 
@@ -95,24 +95,24 @@ Print["Read Seoul province page..."];
 seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do?tab=1";
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import Page*)
 
 
 raw=Import[seoulPageURL,"Data"];
 
 
-tableRaw=raw[[2,2,1,2,3]];
+tableRaw=Join[raw[[2,2,1,2,1,3]],raw[[2,2,1,2,2,3]]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Preprocess Data*)
 
 
 Print["Process data..."];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Transform Function*)
 
 
@@ -131,14 +131,14 @@ Transpose[{dates,ages,genders,districts}]
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Process Raw Data*)
 
 
 table=seoulDataProcess[tableRaw,2020]; (* \:b9ac\:d3ec\:d2b8 \:c2dc\:c810: 2020\:b144 *)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Extract Functions*)
 
 
@@ -149,7 +149,7 @@ dataColMapR=Reverse[dataColMap,1];
 getData[col_,range_:All,t_:table]:=t[[range,col/.dataColMap]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Verify Processed Data*)
 
 
@@ -158,7 +158,7 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.dataType]]&/@getData[c], {c, dataColMap[
 	Quit[]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Export Processed Data*)
 
 
