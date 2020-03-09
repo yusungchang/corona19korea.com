@@ -8,12 +8,12 @@ if [[ $1 == all || $1 == 'seoul' ]]; then
     echo '------------------'
     ./COVID19Seoul.wls
 fi
-if [[ $1 == all || $1 == 'gyunggi' ]]; then
+if [[ $1 == all || $1 == 'gyeonggi' ]]; then
     echo '------------------'
-    ./COVID19Gyunggi.wls
+    ./COVID19Gyeonggi.wls
 fi
 if [[ -z $1 ]]; then
-    echo 'Usage: build (all | seoul | gyunggi)'
+    echo 'Usage: build (all | seoul | gyeonggi)'
 else
     echo '------------------'
     echo 'Done.'

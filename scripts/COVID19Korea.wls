@@ -438,7 +438,7 @@ With[{p=(f[n]-f[min])/(f[max]-f[min])},
 {
 {EdgeForm[],ColorData["CandyColors",1-p],First@provinceShape[s]},
 (* {EdgeForm[],ColorData["CandyColors",1-p],Rectangle@@Transpose@provinceBBox[s]}, *)(* Bounding box test *)
-Text[Style[Column[{s,Style[n,Smaller,Plain]},Alignment->Center,Spacings->0],labelS,GrayLevel[If[p>0.8,0.7,0.2]]],provinceCenter[s]]
+Text[Style[Column[{s,Style[n,Smaller,Plain]},Alignment->Center,Spacings->0],labelS,GrayLevel[If[p>0.4,1,0.2]]],provinceCenter[s]]
 }
 ]
 ]&/@tally);

@@ -3,7 +3,7 @@
 
 (* ::Title:: *)
 (*COVID-19 Data Visualization*)
-(*Gyunggi*)
+(*Gyeonggi*)
 
 
 (* ::Subtitle:: *)
@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Configuration*)
 
 
@@ -55,14 +55,14 @@ $districtMain="\:acbd\:ae30\:b3c4";
 $districtNames={"\:ad70\:d3ec\:c2dc","\:ad6c\:b9ac\:c2dc","\:c591\:d3c9\:ad70","\:ace0\:c591\:c2dc","\:c624\:c0b0\:c2dc","\:d558\:b0a8\:c2dc","\:c2dc\:d765\:c2dc","\:c758\:c655\:c2dc","\:c548\:c591\:c2dc","\:c5ec\:c8fc\:c2dc","\:c548\:c131\:c2dc","\:c131\:b0a8\:c2dc","\:c548\:c0b0\:c2dc","\:c6a9\:c778\:c2dc","\:b0a8\:c591\:c8fc\:c2dc","\:ae40\:d3ec\:c2dc","\:c218\:c6d0\:c2dc","\:bd80\:cc9c\:c2dc","\:acfc\:cc9c\:c2dc","\:c758\:c815\:bd80\:c2dc","\:c774\:cc9c\:c2dc","\:d3c9\:d0dd\:c2dc","\:c5f0\:cc9c\:ad70","\:ac00\:d3c9\:ad70","\:ad11\:ba85\:c2dc","\:b3d9\:b450\:cc9c\:c2dc","\:c591\:c8fc\:c2dc","\:d3ec\:cc9c\:c2dc","\:d654\:c131\:c2dc","\:d30c\:c8fc\:c2dc","\:ad11\:c8fc\:c2dc"};
 
 
-$centerFilName=$dataDirectory<>"gyunggi-district-centers.json"; (* RegionCentroid \:c2dc\:ac04\:c774 \:c624\:b798\:ac78\:b9ac\:b294 \:ad00\:acc4\:b85c \:acc4\:c0b0 \:acb0\:acfc\:b97c \:c800\:c7a5\:d568 *)
+$centerFilName=$dataDirectory<>"gyeonggi-district-centers.json"; (* RegionCentroid \:c2dc\:ac04\:c774 \:c624\:b798\:ac78\:b9ac\:b294 \:ad00\:acc4\:b85c \:acc4\:c0b0 \:acb0\:acfc\:b97c \:c800\:c7a5\:d568 *)
 
 
 (* ::Subsection::Closed:: *)
 (*Output & Translation*)
 
 
-$outputRules=Import[$dataDirectory<>"gyunggi-corona19.json"];
+$outputRules=Import[$dataDirectory<>"gyeonggi-corona19.json"];
 
 
 $translateRules=Import[$dataDirectory<>"translate.json"];
@@ -81,7 +81,7 @@ translateValue[k___]:=value[k][$translateRules]
 (*Source*)
 
 
-Print["Read Gyunggi province page..."];
+Print["Read Gyeonggi province page..."];
 
 
 (* ::Subsection::Closed:: *)
