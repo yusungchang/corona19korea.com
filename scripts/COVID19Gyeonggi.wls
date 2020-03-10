@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Configuration*)
 
 
@@ -55,7 +55,7 @@ $districtNames={"\:ad70\:d3ec\:c2dc","\:ad6c\:b9ac\:c2dc","\:c591\:d3c9\:ad70","
 $centerFilName=$dataDirectory<>"gyeonggi-district-centers.json"; (* RegionCentroid \:c2dc\:ac04\:c774 \:c624\:b798\:ac78\:b9ac\:b294 \:ad00\:acc4\:b85c \:acc4\:c0b0 \:acb0\:acfc\:b97c \:c800\:c7a5\:d568 *)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Output & Translation*)
 
 
@@ -74,7 +74,7 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Source*)
 
 
@@ -195,10 +195,6 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.dataType]]&/@getData[c], {c, dataColMap[
 (*Export Processed Data*)
 
 
-(* ::Subsubsection:: *)
-(*Korean*)
-
-
 (* For CSV, convert DateObject to date strings *)
 
 
@@ -206,7 +202,11 @@ exportData=Normal@AssociationThread[
 	dataColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@table;
 
 
-Export[$outputDirectory<>outputValue["data","filename"],
+(* ::Subsubsection:: *)
+(*Korean*)
+
+
+Export[$outputDirectory<>"kr/"<>outputValue["data","filename"],
 	exportData,
 	outputValue["data","type"]
 ];
@@ -216,7 +216,7 @@ Export[$outputDirectory<>outputValue["data","filename"],
 (*English*)
 
 
-Export[$outputDirectory<>outputValue["data","filename"],
+Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 	exportData/.translateValue["en"],
 	outputValue["data","type"]
 ];
@@ -380,7 +380,7 @@ RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
 ]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
@@ -421,7 +421,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue["en"],outputValue["1","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:d604\:d669*)
 
 
@@ -464,7 +464,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue["en"],outputValue["2","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
 
 
@@ -507,7 +507,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue["en"],outputValue["3","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c5f0\:b839 \:bd84\:d3ec*)
 
 
@@ -550,7 +550,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c131\:bcc4*)
 
 

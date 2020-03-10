@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Configuration*)
 
 
@@ -29,7 +29,7 @@ $configDirectory=$baseDirectory<>"../config/";
 $dataDirectory=$baseDirectory<>"../data/";
 
 
-$cacheDirectory=$baseDirectory<>"../data/cache/";
+$cacheDirectory=$baseDirectory<>"../data/cache-cdc-go-kr/";
 
 
 $outputDirectory=$baseDirectory<>"../src/output/";
@@ -63,7 +63,7 @@ $provinceRules=MapThread[#1->#2&,{$provinceNames,$provinceFullNames}];
 (*Output & Translation*)
 
 
-$outputRules=Import[$dataDirectory<>"korea-corona19.json"];
+$outputRules=Import[$configDirectory<>"korea-corona19.json"];
 
 
 $translateRules=Import[$dataDirectory<>"translate.json"];
@@ -135,18 +135,18 @@ crawlPosts[x_]:=Module[{html},
 crawlPosts[postList];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Preprocess Data*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Load All Caches*)
 
 
 allCaches=Import[#,"String"]&/@FileNames[$cacheDirectory<>"*.html"];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*National-wide Data*)
 
 
@@ -218,16 +218,33 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.colType]]&/@getData[c], {c, colMap[[All,
 	Quit[]];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Export Processed Data*)
 
 
-export=AssociationThread[
-	colMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@data; (* For CSV, convert DateObject to date strings *)
+(* For CSV, convert DateObject to date strings *)
 
 
-Export[$outputDirectory<>outputValue["data","filename"],
-	export,
+exportData=Normal@AssociationThread[
+	colMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@data;
+
+
+(* ::Text:: *)
+(*Korean*)
+
+
+Export[$outputDirectory<>"kr/"<>outputValue["data","filename"],
+	exportData,
+	outputValue["data","type"]
+];
+
+
+(* ::Text:: *)
+(*English*)
+
+
+Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
+	exportData/.translateValue["en"],
 	outputValue["data","type"]
 ];
 
@@ -307,14 +324,34 @@ pvGetData[col_,range_:All,table_:pvData]:=table[[range,col/.pvColMap]];
 (*Export Processed Data*)
 
 
-Export[$outputDirectory<>outputValue["data-province","filename"],
-	AssociationThread[
-		pvColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@pvData, (* For CSV, convert DateObject to date strings *)
+(* For CSV, convert DateObject to date strings *)
+
+
+exportPV=Normal@AssociationThread[
+		pvColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@pvData;
+
+
+(* ::Text:: *)
+(*Korean*)
+
+
+Export[$outputDirectory<>"kr/"<>outputValue["data-province","filename"],
+	exportPV,
 	outputValue["data-province","type"]
 ];
 
 
-(* ::Section:: *)
+(* ::Text:: *)
+(*English*)
+
+
+Export[$outputDirectory<>"en/"<>outputValue["data-province","filename"],
+	exportPV/.translateValue["en"],
+	outputValue["data-province","type"]
+];
+
+
+(* ::Section::Closed:: *)
 (*Visualization Functions*)
 
 
@@ -665,7 +702,7 @@ Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue
 
 
 (* ::Section::Closed:: *)
-(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00 \:cd94\:c774*)
+(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
 
 
 Clear[out4];
@@ -736,8 +773,8 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"]];
 
 
-(* ::Section:: *)
-(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c9c0\:c5ed*)
+(* ::Section::Closed:: *)
+(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:c9c0\:c5ed \:d655\:c9c4\:c790*)
 
 
 out5:=Magnify[Labeled[
@@ -750,14 +787,14 @@ LegendLabel->Style["\:d655 \:c9c4 \:c790",14]
 plotLabelFun[outputValue["5","label"],Last@pvGetData["\:c2dc\:ac04"]],Top],2]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export*)
 
 
 Print["Generate "<>outputValue["5","label"]<>"..."];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Korean*)
 
 
@@ -767,7 +804,7 @@ $locale="kr";
 Export[$outputDirectory<>"kr/"<>outputValue["5","filename"],out5,outputValue["5","type"],Background->None];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*English*)
 
 

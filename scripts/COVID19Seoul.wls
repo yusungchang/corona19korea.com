@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Configuration*)
 
 
@@ -27,9 +27,6 @@ $configDirectory=$baseDirectory<>"../config/";
 
 
 $dataDirectory=$baseDirectory<>"../data/";
-
-
-$cacheDirectory=$baseDirectory<>"../data/cache/";
 
 
 $outputDirectory=$baseDirectory<>"../src/output/";
@@ -62,7 +59,7 @@ $centerFilName=$dataDirectory<>"seoul-district-centers.json"; (* RegionCentroid 
 (*Output & Translation*)
 
 
-$outputRules=Import[$dataDirectory<>"seoul-corona19.json"];
+$outputRules=Import[$configDirectory<>"seoul-corona19.json"];
 
 
 $translateRules=Import[$dataDirectory<>"translate.json"];
@@ -77,14 +74,14 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Source*)
 
 
 Print["Read Seoul province page..."];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Source URL*)
 
 
@@ -95,7 +92,7 @@ Print["Read Seoul province page..."];
 seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do?tab=1";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import Page*)
 
 
@@ -105,14 +102,14 @@ raw=Import[seoulPageURL,"Data"];
 tableRaw=Join[raw[[2,2,1,2,1,3]],raw[[2,2,1,2,2,3]]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Preprocess Data*)
 
 
 Print["Process data..."];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Transform Function*)
 
 
@@ -131,14 +128,14 @@ Transpose[{dates,ages,genders,districts}]
 ]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Process Raw Data*)
 
 
 table=seoulDataProcess[tableRaw,2020]; (* \:b9ac\:d3ec\:d2b8 \:c2dc\:c810: 2020\:b144 *)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Extract Functions*)
 
 
@@ -149,7 +146,7 @@ dataColMapR=Reverse[dataColMap,1];
 getData[col_,range_:All,t_:table]:=t[[range,col/.dataColMap]];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Verify Processed Data*)
 
 
@@ -158,13 +155,33 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.dataType]]&/@getData[c], {c, dataColMap[
 	Quit[]];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Export Processed Data*)
 
 
-Export[$outputDirectory<>outputValue["data","filename"],
-	AssociationThread[
-		dataColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@table, (* For CSV, convert DateObject to date strings *)
+(* For CSV, convert DateObject to date strings *)
+
+
+exportData=Normal@AssociationThread[
+	dataColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@table;
+
+
+(* ::Subsubsection:: *)
+(*Korean*)
+
+
+Export[$outputDirectory<>"kr/"<>outputValue["data","filename"],
+	exportData,
+	outputValue["data","type"]
+];
+
+
+(* ::Subsubsection:: *)
+(*English*)
+
+
+Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
+	exportData/.translateValue["en"],
 	outputValue["data","type"]
 ];
 
@@ -221,7 +238,7 @@ centerRules=Import[$centerFilName];
 districtCenter[dist_]:=dist/.centerRules;
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Color*)
 
 
@@ -325,7 +342,7 @@ RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
 ]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
@@ -339,7 +356,7 @@ LegendLabel->Style["\:d655 \:c9c4 \:c790",14]
 plotLabelFun[outputValue["1","label"]],Top],2]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Export*)
 
 
@@ -366,7 +383,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue["en"],outputValue["1","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:d604\:d669*)
 
 
@@ -382,7 +399,7 @@ DateTicksFormat->{"MonthShort","/","DayShort"}],
 plotLabelFun[outputValue["2","label"]],Top]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Export*)
 
 
@@ -409,7 +426,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue["en"],outputValue["2","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
 
 
@@ -425,7 +442,7 @@ DateTicksFormat->{"MonthShort","/","DayShort"}],
 plotLabelFun[outputValue["3","label"]],Top]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Export*)
 
 
@@ -452,7 +469,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue["en"],outputValue["3","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c5f0\:b839 \:bd84\:d3ec*)
 
 
@@ -468,7 +485,7 @@ GridLines->Automatic],
 plotLabelFun[outputValue["4","label"]],Top]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Export*)
 
 
@@ -495,7 +512,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c131\:bcc4*)
 
 
@@ -513,7 +530,7 @@ plotLabelFun[outputValue["5","label"]],Top]
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Export*)
 
 
