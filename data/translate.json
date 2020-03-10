@@ -15,6 +15,11 @@
 
 		"시간": "Time",
 		"총계": "Total",
+
+		"확진일": "Date Confirmed",
+		"나이": "Age",
+		"성별": "Gender",
+		"거주지": "District",
 		
 		"업데이트": "Update",
 		"시": "h",

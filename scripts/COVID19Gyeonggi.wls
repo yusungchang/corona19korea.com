@@ -29,9 +29,6 @@ $configDirectory=$baseDirectory<>"../config/";
 $dataDirectory=$baseDirectory<>"../data/";
 
 
-$cacheDirectory=$baseDirectory<>"../data/cache/";
-
-
 $outputDirectory=$baseDirectory<>"../src/output/";
 
 
@@ -58,11 +55,11 @@ $districtNames={"\:ad70\:d3ec\:c2dc","\:ad6c\:b9ac\:c2dc","\:c591\:d3c9\:ad70","
 $centerFilName=$dataDirectory<>"gyeonggi-district-centers.json"; (* RegionCentroid \:c2dc\:ac04\:c774 \:c624\:b798\:ac78\:b9ac\:b294 \:ad00\:acc4\:b85c \:acc4\:c0b0 \:acb0\:acfc\:b97c \:c800\:c7a5\:d568 *)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Output & Translation*)
 
 
-$outputRules=Import[$dataDirectory<>"gyeonggi-corona19.json"];
+$outputRules=Import[$configDirectory<>"gyeonggi-corona19.json"];
 
 
 $translateRules=Import[$dataDirectory<>"translate.json"];
@@ -77,35 +74,70 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Source*)
 
 
-Print["Read Gyeonggi province page..."];
+Print["Read Gyeonggi province data..."];
 
 
 (* ::Subsection::Closed:: *)
-(*Source URL*)
+(*HTTP Request Setup*)
 
 
 (* ::Text:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:c0c1\:d669\:d310*)
 
 
-ggPageURL="https://www.gg.go.kr/bbs/boardView.do?bsIdx=464&bIdx=2296956&menuId=1535";
+ggBoardPostURL="https://www.gg.go.kr/ajax/board/getList.do";
+
+
+(* Referer URL: https://www.gg.go.kr/bbs/board.do?bsIdx=722&menuId=2903 *)
+
+
+(* Table header: {"\:c5f0\:bc88","\:c804\:ad6d\:bc88\:d638","\:c9c0\:c5ed","\:c131\:bcc4","\:cd9c\:c0dd\:c5f0\:b3c4","\:bc1c\:c0dd \:acbd\:c704","\:d655\:c9c4\:c77c","\:aca9\:b9ac\:bcd1\:c6d0"} *)
+
+
+Clear[ggReq];
+ggReq[offset_:0]:=HTTPRequest[
+ggBoardPostURL, <|
+	Method -> "POST", 
+	"Body"-> {"bsIdx"->722,"bcIdx"->0,"menuId"->2903,"offset"->offset}
+|>
+];
+
+
+ggPIDKey="ADD_COLUMN05"; (* Key value for PID (Patient ID) *)
 
 
 (* ::Subsection::Closed:: *)
-(*Import Page*)
+(*Request & Gather*)
 
 
-raw=Import[ggPageURL,"Data"];
+ggDataRaw=URLExecute[ggReq[0]];
 
 
-tableRaw=raw[[4,2,2,1,2,2]];
+ggDataRawTotal=Lookup[ggDataRaw,"total"];
+ggDataRawItems=Lookup[ggDataRaw,"items"];
+ggDataRawStep=Length[Lookup[ggDataRaw,"items"]];
 
 
-(* ::Section::Closed:: *)
+Do[
+ggDataRawItems=SortBy[Union[ggDataRawItems,Lookup[URLExecute[ggReq[off]],"items"]],ToExpression@Lookup[#,ggPIDKey]&],
+{off,ggDataRawStep,ggDataRawTotal,ggDataRawStep}]
+
+
+ggDataRaw={"total"->ggDataRawTotal,"items"->ggDataRawItems};
+
+
+(* ::Subsection::Closed:: *)
+(*Save Cache*)
+
+
+Export[$dataDirectory<>outputValue["cache","filename"],ggDataRaw];
+
+
+(* ::Section:: *)
 (*Preprocess Data*)
 
 
@@ -116,19 +148,19 @@ Print["Process data..."];
 (*Transform Function*)
 
 
-ggDataProcess[body_,eventYear_]:=Module[{
-colDate=5,colGen=3,colAge=4,colDistrict=-1,
-dates,
-genders,
-ages,
-districts
+ggDataProcess[row_,eventYear_]:=Module[{
+dateKey="ADD_COLUMN09",genKey="ADD_COLUMN03",
+ageKey="ADD_COLUMN02",districtKey="ADD_COLUMN01",
+date,
+gender,
+age,
+district
 },
-dates=Quiet@DateObject[First@StringCases[ToString[#],RegularExpression["\\d+\\.\\d+"]]]&/@body[[All,colDate]];(* \:d655\:c9c4 \:b0a0\:c790 \:cc98\:b9ac *)
-genders=body[[All,colGen]]; (* \:c131\:bcc4 \:cc98\:b9ac *)
-ages=(eventYear-With[{a=ToExpression[StringTake[#,{2,-1}]]},If[a<=20,2000+a,1900+a]])&/@body[[All,colAge]]; (* \:b098\:c774 \:cc98\:b9ac *)
-districts=(#<>"\:c2dc"&)/@(StringReplace[#,"("~~__~~")":>""]&/@body[[All,colDistrict]]); (* \:cd9c\:c0dd\:c9c0 \:cc98\:b9ac: \:ad6d\:c801\:c81c\:ac70 \:d6c4 "\:c2dc" \:cd94\:ac00 *)
-
-Transpose[{dates,ages,genders,districts}]
+date=DateObject[Lookup[row,dateKey]<>"."<>ToString[eventYear]];(* \:d655\:c9c4 \:b0a0\:c790 \:cc98\:b9ac *)
+gender=Lookup[row,genKey]; (* \:c131\:bcc4 \:cc98\:b9ac *)
+age=eventYear-With[{a=ToExpression@StringReplace[Lookup[row,ageKey],Except[DigitCharacter]->""]},If[a<=20,2000+a,1900+a]]; (* \:b098\:c774 \:cc98\:b9ac *)
+district=Lookup[row,districtKey]; (* \:ac70\:c8fc\:c9c0 \:cc98\:b9ac *)
+{date,age,gender,district}
 ]
 
 
@@ -136,7 +168,7 @@ Transpose[{dates,ages,genders,districts}]
 (*Process Raw Data*)
 
 
-table=ggDataProcess[tableRaw,2020]; (* \:b9ac\:d3ec\:d2b8 \:c2dc\:c810: 2020\:b144 *)
+table=Quiet[ggDataProcess[#,2020]&/@ggDataRawItems]; (* \:b9ac\:d3ec\:d2b8 \:c2dc\:c810: 2020\:b144 *)
 
 
 (* ::Subsection::Closed:: *)
@@ -159,13 +191,33 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.dataType]]&/@getData[c], {c, dataColMap[
 	Quit[]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Export Processed Data*)
 
 
+(* ::Subsubsection:: *)
+(*Korean*)
+
+
+(* For CSV, convert DateObject to date strings *)
+
+
+exportData=Normal@AssociationThread[
+	dataColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@table;
+
+
 Export[$outputDirectory<>outputValue["data","filename"],
-	AssociationThread[
-		dataColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@table, (* For CSV, convert DateObject to date strings *)
+	exportData,
+	outputValue["data","type"]
+];
+
+
+(* ::Subsubsection:: *)
+(*English*)
+
+
+Export[$outputDirectory<>outputValue["data","filename"],
+	exportData/.translateValue["en"],
 	outputValue["data","type"]
 ];
 
