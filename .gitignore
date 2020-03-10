@@ -1,9 +1,9 @@
 .DS_Store
-config/*.json
-config/*.config
 src/output/en/*.svg
 src/output/kr/*.svg
 src/output/en/*.png
 src/output/kr/*.png
 scripts/test
 scripts/Test.nb
+config/vworld.key.json
+config/webhost.config
