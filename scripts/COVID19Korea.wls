@@ -12,7 +12,7 @@
 (*SSG.COM*)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Configuration*)
 
 
@@ -135,7 +135,7 @@ crawlPosts[x_]:=Module[{html},
 crawlPosts[postList];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Preprocess Data*)
 
 
@@ -218,13 +218,16 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.colType]]&/@getData[c], {c, colMap[[All,
 	Quit[]];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Export Processed Data*)
 
 
+export=AssociationThread[
+	colMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@data; (* For CSV, convert DateObject to date strings *)
+
+
 Export[$outputDirectory<>outputValue["data","filename"],
-	AssociationThread[
-		colMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@data, (* For CSV, convert DateObject to date strings *)
+	export,
 	outputValue["data","type"]
 ];
 
