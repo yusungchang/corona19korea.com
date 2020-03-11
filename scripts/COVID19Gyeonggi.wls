@@ -137,7 +137,7 @@ ggDataRaw={"total"->ggDataRawTotal,"items"->ggDataRawItems};
 Export[$dataDirectory<>outputValue["cache","filename"],ggDataRaw];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Preprocess Data*)
 
 
@@ -222,7 +222,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 ];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Visualization Functions*)
 
 
@@ -287,7 +287,7 @@ getColor["\:ac80\:c0ac\:c911"]=RGBColor[{0.9647058823529412, 0.7490196078431373,
 getColor["\:acb0\:acfc\:c74c\:c131"]=getColor["\:c5f0\:b839\:bd84\:d3ec"]=RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Plot Styles*)
 
 
@@ -322,11 +322,14 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 },Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Nanum Gothic"}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*District Heat Map*)
 
 
-Clear[districtHeatmap]
+atMost[list_,n_:30]:=list[[1;;Min[n,Length[list]]]];
+
+
+Clear[districtHeatmap];
 districtHeatmap[districts_,data_,OptionsPattern[{ImageSize->480,AspectRatio->1/2,LegendLabel->"Legend",LabelStyle->{FontSize->12},Min->-1,Max->-1}]]:=
 Module[{
 min=OptionValue[Min],
@@ -347,7 +350,7 @@ max=If[max==-1,Max@tally[[All,2]],max];
 With[{s=#[[1]],n=#[[2]]},
 With[{p=(n-min)/(max-min)},
 {
-{EdgeForm[],ColorData["CandyColors",1-p],First@districtShape[s]},
+{EdgeForm[],ColorData["CandyColors",1-p],atMost@districtShape[s]},
 Text[Style[Column[{s,Style[n,Smaller,Plain]},Alignment->Center,Spacings->0],labelS,GrayLevel[If[p>0.8,0.7,0.2]]],districtCenter[s]]
 }
 ]
@@ -357,7 +360,7 @@ Overlay[{
 Pane[
 Graphics[{
 regions,
-EdgeForm[GrayLevel[0,0.1]],FaceForm[],(First@districtShape[#]&)/@districts,
+EdgeForm[GrayLevel[0,0.1]],FaceForm[],(atMost@districtShape[#]&)/@districts,
 labels,
 Text[Style[#,labelS,GrayLevel[0.2]],districtCenter[#]]&/@others
 },ImageSize->{Automatic,imageW*OptionValue[AspectRatio]}],
@@ -380,7 +383,7 @@ RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
 ]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
