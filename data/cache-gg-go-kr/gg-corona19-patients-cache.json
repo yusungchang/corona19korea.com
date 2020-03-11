@@ -1,5 +1,5 @@
 {
-	"total":162,
+	"total":174,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -895,7 +895,7 @@
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"’71",
 			"SUBJECT":"경기도37번(835번) 환자 접촉자",
-			"ADD_COLUMN01":"수원시",
+			"ADD_COLUMN01":"화성시",
 			"B_IDX":"3945974"
 		},
 		{
@@ -1116,7 +1116,7 @@
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"’74",
 			"SUBJECT":"화성 확진자의 접촉자",
-			"ADD_COLUMN01":"수원시",
+			"ADD_COLUMN01":"화성시",
 			"B_IDX":"3945991"
 		},
 		{
@@ -1298,7 +1298,7 @@
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"’98",
 			"SUBJECT":"부대 내 생활 중 발열 등 증상발현",
-			"ADD_COLUMN01":"용인시",
+			"ADD_COLUMN01":"성남시",
 			"B_IDX":"3946005"
 		},
 		{
@@ -2106,6 +2106,162 @@
 			"SUBJECT":"6212번 환자의 접촉자",
 			"ADD_COLUMN01":"성남시",
 			"B_IDX":"4114139"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.9",
+			"ADD_COLUMN08":"경기도의료원 안성병원",
+			"ADD_COLUMN05":"163",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’72",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4156227"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.9",
+			"ADD_COLUMN08":"경기도의료원 파주병원",
+			"ADD_COLUMN05":"164",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’71",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"김포시",
+			"B_IDX":"4156228"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 안성병원",
+			"ADD_COLUMN05":"165",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’66",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4156229"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 안성병원",
+			"ADD_COLUMN05":"166",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’93",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4156234"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 이천병원",
+			"ADD_COLUMN05":"167",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’76",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4156235"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 이천병원",
+			"ADD_COLUMN05":"168",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’68",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4156236"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 의정부병원",
+			"ADD_COLUMN05":"169",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’77",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"광명시",
+			"B_IDX":"4156237"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 포천병원",
+			"ADD_COLUMN05":"170",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’94",
+			"SUBJECT":"○○댄스 관련 세종 환자의 접촉자",
+			"ADD_COLUMN01":"고양시",
+			"B_IDX":"4156238"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 포천병원",
+			"ADD_COLUMN05":"171",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’69",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"의정부시",
+			"B_IDX":"4156239"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 포천병원",
+			"ADD_COLUMN05":"172",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’71",
+			"SUBJECT":"3.3일 인후통 등 증상 발현으로 보건소 선별진료",
+			"ADD_COLUMN01":"광주시",
+			"B_IDX":"4156240"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"173",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’88",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"안양시",
+			"B_IDX":"4156241"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.10",
+			"ADD_COLUMN08":"경기도의료원 파주병원",
+			"ADD_COLUMN05":"174",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’02",
+			"SUBJECT":"의료기관 선별진료 시 양성확인자의 접촉자",
+			"ADD_COLUMN01":"파주시",
+			"B_IDX":"4156242"
 		}
 	]
 }
