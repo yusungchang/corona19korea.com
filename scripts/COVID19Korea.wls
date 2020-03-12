@@ -147,10 +147,10 @@ allCaches=Import[#,"String"]&/@FileNames[$cacheDirectory<>"*.html"];
 
 
 (* ::Subsection::Closed:: *)
-(*National-wide Data*)
+(*Nationwide Data*)
 
 
-Print["Process national-wide data..."];
+Print["Process nationwide data..."];
 
 
 (* ::Subsubsection::Closed:: *)

@@ -92,14 +92,14 @@ Print["Read Seoul province page..."];
 seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do?tab=1";
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import Page*)
 
 
 raw=Import[seoulPageURL,"Data"];
 
 
-tableRaw=Join[raw[[2,2,1,2,1,3]],raw[[2,2,1,2,2,3]]];
+tableRaw=Flatten[raw[[2,2,1,2,All,3;;-1]],2];
 
 
 (* ::Section::Closed:: *)
