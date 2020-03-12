@@ -1,5 +1,5 @@
 {
-	"total":174,
+	"total":179,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -2262,6 +2262,71 @@
 			"SUBJECT":"의료기관 선별진료 시 양성확인자의 접촉자",
 			"ADD_COLUMN01":"파주시",
 			"B_IDX":"4156242"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.11",
+			"ADD_COLUMN08":"명지병원",
+			"ADD_COLUMN05":"175",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’63",
+			"SUBJECT":"3.9일 호흡곤란 증상으로 선별진료의료기관 내원",
+			"ADD_COLUMN01":"고양시",
+			"B_IDX":"4198361"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.11",
+			"ADD_COLUMN08":"경기도의료원 포천병원",
+			"ADD_COLUMN05":"176",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"’75",
+			"SUBJECT":"7265번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4198362"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.11",
+			"ADD_COLUMN08":"경기도의료원 포천병원",
+			"ADD_COLUMN05":"177",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"’68",
+			"SUBJECT":"7648번 환자의 접촉자",
+			"ADD_COLUMN01":"광주시",
+			"B_IDX":"4198363"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.11",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"178",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"’52",
+			"SUBJECT":"6212번 환자의 접촉자",
+			"ADD_COLUMN01":"성남시",
+			"B_IDX":"4198364"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.11",
+			"ADD_COLUMN08":"경기도의료원 의정부병원",
+			"ADD_COLUMN05":"179",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"’92",
+			"SUBJECT":"2.27~3.7일 유럽여행, 기침 등 증상발현으로 선별진료",
+			"ADD_COLUMN01":"의정부시",
+			"B_IDX":"4198365"
 		}
 	]
 }

@@ -1042,5 +1042,35 @@
 		"Age":18,
 		"Gender":"Female",
 		"District":"Paju"
+	},
+	{
+		"Date Confirmed":"Wed 11 Mar 2020",
+		"Age":57,
+		"Gender":"Female",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Wed 11 Mar 2020",
+		"Age":45,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 11 Mar 2020",
+		"Age":52,
+		"Gender":"Male",
+		"District":"Gwangju"
+	},
+	{
+		"Date Confirmed":"Wed 11 Mar 2020",
+		"Age":68,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Wed 11 Mar 2020",
+		"Age":28,
+		"Gender":"Male",
+		"District":"Uijeongbu"
 	}
 ]
