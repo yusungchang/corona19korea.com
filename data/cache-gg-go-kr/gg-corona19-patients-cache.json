@@ -1830,7 +1830,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"'55",
-			"SUBJECT":"6146번 환자의 접촉자",
+			"SUBJECT":"6881번 환자의 접촉자",
 			"ADD_COLUMN01":"광주시",
 			"B_IDX":"4071926"
 		},
@@ -1843,7 +1843,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"'65",
-			"SUBJECT":"6881번 환자의 접촉자",
+			"SUBJECT":"7005번 환자의 접촉자",
 			"ADD_COLUMN01":"부천시",
 			"B_IDX":"4071928"
 		},
@@ -1882,7 +1882,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"'70",
-			"SUBJECT":"7005번 환자의 접촉자",
+			"SUBJECT":"7076번 환자의 접촉자",
 			"ADD_COLUMN01":"부천시",
 			"B_IDX":"4071935"
 		},
@@ -1895,7 +1895,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"'57",
-			"SUBJECT":"7076번 환자의 접촉자",
+			"SUBJECT":"6881번 환자의 접촉자",
 			"ADD_COLUMN01":"성남시",
 			"B_IDX":"4071936"
 		},
@@ -1908,7 +1908,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"'96",
-			"SUBJECT":"6881번 환자의 접촉자",
+			"SUBJECT":"31번 환자의 접촉자",
 			"ADD_COLUMN01":"안산시",
 			"B_IDX":"4071937"
 		},
@@ -1921,7 +1921,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"'52",
-			"SUBJECT":"31번 환자의 접촉자",
+			"SUBJECT":"3375번 환자의 접촉자",
 			"ADD_COLUMN01":"안성시",
 			"B_IDX":"4071938"
 		},
@@ -1934,7 +1934,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"'97",
-			"SUBJECT":"3375번 환자의 접촉자",
+			"SUBJECT":"361번 환자의 접촉자",
 			"ADD_COLUMN01":"포천시",
 			"B_IDX":"4071939"
 		},
@@ -1947,7 +1947,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"'94",
-			"SUBJECT":"361번 환자의 접촉자",
+			"SUBJECT":"2065번 환자의 접촉자",
 			"ADD_COLUMN01":"고양시",
 			"B_IDX":"4071940"
 		},
@@ -1960,7 +1960,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"'58",
-			"SUBJECT":"2065번 환자의 접촉자",
+			"SUBJECT":"3375번 환자의 접촉자",
 			"ADD_COLUMN01":"용인시",
 			"B_IDX":"4071941"
 		},
