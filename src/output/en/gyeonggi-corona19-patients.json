@@ -1072,5 +1072,41 @@
 		"Age":28,
 		"Gender":"Male",
 		"District":"Uijeongbu"
+	},
+	{
+		"Date Confirmed":"Thu 12 Mar 2020",
+		"Age":49,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 12 Mar 2020",
+		"Age":51,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 12 Mar 2020",
+		"Age":46,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 12 Mar 2020",
+		"Age":66,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 12 Mar 2020",
+		"Age":41,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Thu 12 Mar 2020",
+		"Age":66,
+		"Gender":"Male",
+		"District":"Ansan"
 	}
 ]
