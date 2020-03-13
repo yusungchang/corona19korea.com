@@ -7,6 +7,6 @@ echo user=$user
 echo port=$port
 echo path=$path
 echo ------------------
-rsync -arvz -e "ssh -p ${port}" --progress --delete ../src/. $user@$addr:$path
+rsync -arvz -e "ssh -p ${port}" --progress --exclude=".DS_Store" --exclude=".htaccess" --delete ../src/. $user@$addr:$path 
 echo ------------------
 echo Done.
