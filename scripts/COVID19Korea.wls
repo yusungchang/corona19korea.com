@@ -78,11 +78,11 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Source*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Source URL*)
 
 
@@ -100,7 +100,7 @@ apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Read Boards, Import Posts and Cache*)
 
 
@@ -135,40 +135,51 @@ crawlPosts[x_]:=Module[{html},
 crawlPosts[postList];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Preprocess Data*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Load All Caches*)
 
 
 allCaches=Import[#,"String"]&/@FileNames[$cacheDirectory<>"*.html"];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Nationwide Data*)
 
 
 Print["Process nationwide data..."];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Transform Function*)
 
 
+numerify[x_]:=ToExpression[StringReplace[x,("*"|","|" ")->""]]
+
+
+Clear[dataRow];
 dataRow[name_]:=
-Module[{data,pos,rows},
-data=ImportString[name,"Data"];
-pos=Position[data,
-	{" \:ad6c\:bd84"," \:cd1d\:acc4"," \:d655\:c9c4\:d658\:c790"," \:ac80\:c0ac\:d604\:d669"}|{" \:ad6c\:bd84"," \:cd1d\:acc4"," \:d655\:c9c4\:d658\:c790\:d604\:d669"," \:ac80\:c0ac\:d604\:d669"}];
+Module[{data,pos,rows,newflag=False},
+	data=ImportString[name,"Data"];
+	pos=Position[data,
+	{" \:ad6c\:bd84"," \:cd1d\:acc4"," \:d655\:c9c4\:d658\:c790"," \:ac80\:c0ac\:d604\:d669"}|{" \:ad6c\:bd84"," \:cd1d\:acc4"," \:d655\:c9c4\:d658\:c790\:d604\:d669"," \:ac80\:c0ac\:d604\:d669"}];(* Two old formats *)
+	If[pos=={},pos=Position[data,{" \:ad6c\:bd84"," \:cd1d\:acc4"," \:acb0\:acfc \:c591\:c131"," \:ac80\:c0ac \:c911"," \:acb0\:acfc \:c74c\:c131"}];newflag=True];(* They changed format again starting from 3/14 *)
+	If[pos=={},Print["Data error: The data format might be changed in KCDC site.\n"];Quit[]];
 	rows=Extract[data,Most[First[pos]]][[3;;-1]];
 	If[Length[rows]==6,(* \:c0ac\:b9dd\:c790 \:c804 \:d3ec\:ba67 2 rows *)
 		{Join[rows[[1,1;;3]],rows[[2]],{"0"},rows[[1,4;;-1]]],Join[rows[[3,1;;3]],rows[[4]],{"0"},rows[[3,4;;-1]]]},
 		If[Length[rows[[1]]]==8,
-			{Join[rows[[1,1;;5]],{"0"},rows[[1,6;;-1]]],Join[rows[[2,1;;5]],{"0"},rows[[2,6;;-1]]]},
-			Most[rows] (* \:c0ac\:b9dd\:c790 \:d6c4 \:d3ec\:ba67 *)
-		]
+			If[newflag,
+				With[{sum=numerify/@Most[rows][[All,-1]]+numerify/@Most[rows][[All,-2]]}, (* Calculate total tested *)
+					MapThread[Join[#1[[1;;6]],{ToString@#2},#1[[-2;;-1]]]&,{Most[rows],sum}]]
+				,(* \:c0ac\:b9dd\:c790 \:d6c4 \:d3ec\:ba67 after 3/14 *)
+				{Join[rows[[1,1;;5]],{"0"},rows[[1,6;;-1]]],Join[rows[[2,1;;5]],{"0"},rows[[2,6;;-1]]]}(* \:c0ac\:b9dd\:c790 \:c804 \:d3ec\:ba67 3 rows *)
+			],
+			Most[rows](* \:c0ac\:b9dd\:c790 \:d6c4 \:d3ec\:ba67 *)
+		]	
 	]
 ];
 
@@ -176,28 +187,28 @@ pos=Position[data,
 dataPre1=Flatten[dataRow/@allCaches,1];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Convert Values to Expressions*)
 
 
 dataPre2=Map[
 	Function[{x},
 		Prepend[
-			ToExpression[StringReplace[#,("*"|","|" ")->""]]&/@Rest[x],
+			numerify/@Rest[x],
 			Quiet@DateObject[StringReplace[First[x],{".( "~~_~~" ) "->" "," \:c2dc \:ae30\:c900"->":00"}]]
 		]
 	], dataPre1
 ];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Remove Duplicated Entries*)
 
 
 data=Sort[DeleteDuplicates[dataPre2,First[#1]==First[#2]&]];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Extract Functions*)
 
 
@@ -209,7 +220,7 @@ colMapR=Reverse[colMap,1];
 getData[col_,range_:All,table_:data]:=table[[range,col/.colMap]];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Verify Processed Data*)
 
 
@@ -256,7 +267,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 Print["Process province data..."];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Transform Function*)
 
 
