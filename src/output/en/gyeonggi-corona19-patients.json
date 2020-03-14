@@ -1108,5 +1108,95 @@
 		"Age":66,
 		"Gender":"Male",
 		"District":"Ansan"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":32,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":21,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":59,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":46,
+		"Gender":"Female",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":51,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":34,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":61,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":29,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":67,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":2,
+		"Gender":"Male",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":31,
+		"Gender":"Male",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":63,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":58,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":49,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Fri 13 Mar 2020",
+		"Age":32,
+		"Gender":"Female",
+		"District":"Pyeongtaek"
 	}
 ]
