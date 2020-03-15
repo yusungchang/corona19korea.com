@@ -1198,5 +1198,65 @@
 		"Age":32,
 		"Gender":"Female",
 		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":64,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":57,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":61,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":53,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":74,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":48,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":53,
+		"Gender":"Female",
+		"District":"Gwangju"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":40,
+		"Gender":"Male",
+		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":28,
+		"Gender":"Female",
+		"District":"Uijeongbu"
+	},
+	{
+		"Date Confirmed":"Sat 14 Mar 2020",
+		"Age":64,
+		"Gender":"Male",
+		"District":"Gimpo"
 	}
 ]

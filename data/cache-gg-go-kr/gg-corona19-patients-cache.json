@@ -1,5 +1,5 @@
 {
-	"total":200,
+	"total":210,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -2600,6 +2600,136 @@
 			"SUBJECT":"2.11~3.4일 유럽여행, 두통 등 증상 발현으로 보건소  선별진료",
 			"ADD_COLUMN01":"평택시",
 			"B_IDX":"4282702"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"경기도의료원 안성병원",
+			"ADD_COLUMN05":"201",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′56",
+			"SUBJECT":"7663번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4282705"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"경기도의료원 안성병원",
+			"ADD_COLUMN05":"202",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′63",
+			"SUBJECT":"7663번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4282706"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"경기도의료원 파주병원",
+			"ADD_COLUMN05":"203",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′59",
+			"SUBJECT":"7663번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4282707"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"경기도의료원 파주병원",
+			"ADD_COLUMN05":"204",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′67",
+			"SUBJECT":"7663번 환자의 접촉자",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4282708"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"205",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′46",
+			"SUBJECT":"7683번 환자(서울 광진구)의 접촉자",
+			"ADD_COLUMN01":"성남시",
+			"B_IDX":"4282709"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"206",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′72",
+			"SUBJECT":"6780번 환자의 접촉자",
+			"ADD_COLUMN01":"성남시",
+			"B_IDX":"4282710"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"경기도의료원 안성병원",
+			"ADD_COLUMN05":"207",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′67",
+			"SUBJECT":"6780번 환자의 접촉자",
+			"ADD_COLUMN01":"광주시",
+			"B_IDX":"4282711"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"경기도의료원 파주병원",
+			"ADD_COLUMN05":"208",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′80",
+			"SUBJECT":"7265번(서울 구로콜) 환자의 접촉자",
+			"ADD_COLUMN01":"김포시",
+			"B_IDX":"4282712"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"경기도의료원 의정부병원",
+			"ADD_COLUMN05":"209",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′92",
+			"SUBJECT":"6780번 환자의 접촉자",
+			"ADD_COLUMN01":"의정부시",
+			"B_IDX":"4282713"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.14",
+			"ADD_COLUMN08":"경기도의료원 포천병원",
+			"ADD_COLUMN05":"210",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′56",
+			"SUBJECT":"4235번 환자의 접촉자",
+			"ADD_COLUMN01":"김포시",
+			"B_IDX":"4282714"
 		}
 	]
 }
