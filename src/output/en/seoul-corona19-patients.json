@@ -1285,12 +1285,6 @@
 	},
 	{
 		"Date Confirmed":"Tue 25 Feb 2020 00:00:00",
-		"Age":60,
-		"Gender":"Female",
-		"District":"Gwanak"
-	},
-	{
-		"Date Confirmed":"Tue 25 Feb 2020 00:00:00",
 		"Age":75,
 		"Gender":"Female",
 		"District":"Geumcheon"
@@ -1300,6 +1294,12 @@
 		"Age":67,
 		"Gender":"Male",
 		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Tue 25 Feb 2020 00:00:00",
+		"Age":60,
+		"Gender":"Female",
+		"District":"Gwanak"
 	},
 	{
 		"Date Confirmed":"Mon 24 Feb 2020 00:00:00",
