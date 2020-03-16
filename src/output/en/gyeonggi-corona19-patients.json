@@ -1258,5 +1258,125 @@
 		"Age":64,
 		"Gender":"Male",
 		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":61,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":60,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":26,
+		"Gender":"Male",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":53,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":46,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":57,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":66,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":28,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":64,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":38,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":11,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":49,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":57,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":35,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":55,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":52,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":57,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":26,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":13,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sun 15 Mar 2020",
+		"Age":48,
+		"Gender":"Male",
+		"District":"Seongnam"
 	}
 ]
