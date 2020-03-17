@@ -12,6 +12,7 @@
 		
 		"누적확진자": "Confirmed",
 		"누적사망자": "Deaths",
+		"누적퇴원자": "Recovered",
 
 		"시간": "Time",
 		"총계": "Total",

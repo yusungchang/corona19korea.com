@@ -82,7 +82,7 @@ translateValue[k___]:=value[k][$translateRules]
 (*Source*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Source URL*)
 
 
@@ -100,7 +100,7 @@ apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Read Boards, Import Posts and Cache*)
 
 
@@ -139,14 +139,14 @@ crawlPosts[postList];
 (*Preprocess Data*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Load All Caches*)
 
 
 allCaches=Import[#,"String"]&/@FileNames[$cacheDirectory<>"*.html"];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Nationwide Data*)
 
 
@@ -260,7 +260,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 ];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Data*)
 
 
@@ -362,7 +362,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data-province","filename"],
 ];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Visualization Functions*)
 
 
@@ -579,7 +579,7 @@ Clear[out2];
 out2:=Labeled[
 Module[{
 range=Span[10,-1],
-legends={"\:d655\:c9c4","\:c0ac\:b9dd"},
+legends={"\:d655\:c9c4","\:c0ac\:b9dd","\:aca9\:b9ac\:d574\:c81c"},
 labelInset,
 todayInset,
 currentInset
@@ -588,8 +588,8 @@ currentInset
 labelInset=Table[
 With[{list=getData[{"\:c2dc\:ac04",d},20;;-1]},
 (With[{x=AbsoluteTime@#[[1]],y=#[[2]]},
-Inset[Style[If[y<4,"",y],barLabelStyle,Bold,getColor[d]],Offset[{-10,12},{x,y}]]]&)/@list[[-1;;1;;-2]]
-],{d,legends}];
+Inset[Style[If[y<55,"",y],barLabelStyle,Bold,getColor[d]],Offset[{-10,12},{x,y}]]]&)/@list[[-1;;1;;-2]]
+],{d,legends}];(* Labeling cutoff increased to 55 *)
 
 {todayInset,currentInset}=
 With[{t=AbsoluteTime@getData["\:c2dc\:ac04",-1], y=getData["\:d655\:c9c4",-1]},{
@@ -609,7 +609,7 @@ DateTicksFormat->{"MonthShort","/","DayShort"},
 FrameTicks->{{Automatic,None},{Automatic,None}},
 FrameTicksStyle->frameTickStyle,
 GridLines->Automatic,
-PlotLegends->placedLegendFrame[{"\:b204\:c801\:d655\:c9c4\:c790","\:b204\:c801\:c0ac\:b9dd\:c790"}],
+PlotLegends->placedLegendFrame[{"\:b204\:c801\:d655\:c9c4\:c790","\:b204\:c801\:c0ac\:b9dd\:c790","\:b204\:c801\:d1f4\:c6d0\:c790"}],
 Prolog->todayInset,
 Epilog->{labelInset,currentInset},
 imageDimensions
