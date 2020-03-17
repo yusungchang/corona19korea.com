@@ -43,12 +43,6 @@
 	},
 	{
 		"Date Confirmed":"Mon 16 Mar 2020 00:00:00",
-		"Age":41,
-		"Gender":"Female",
-		"District":"Songpa"
-	},
-	{
-		"Date Confirmed":"Mon 16 Mar 2020 00:00:00",
 		"Age":21,
 		"Gender":"Male",
 		"District":"Seodaemun"
@@ -673,7 +667,7 @@
 	},
 	{
 		"Date Confirmed":"Mon 9 Mar 2020 00:00:00",
-		"Age":35,
+		"Age":37,
 		"Gender":"Female",
 		"District":"Guro"
 	},
@@ -740,7 +734,7 @@
 	{
 		"Date Confirmed":"Mon 9 Mar 2020 00:00:00",
 		"Age":45,
-		"Gender":"Male",
+		"Gender":"Female",
 		"District":"Guro"
 	},
 	{
