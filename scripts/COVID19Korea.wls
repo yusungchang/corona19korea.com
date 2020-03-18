@@ -260,7 +260,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 ];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Province Data*)
 
 
@@ -279,7 +279,7 @@ date=First@StringCases[title,(x:DigitCharacter..)~~"\:c6d4"~~(" "...)~~(y:DigitC
 do=DateObject@date;
 (* \:d14c\:c774\:be14 *)
 data=ImportString[cache,"Data"];
-pos=Position[data,x_/;ContainsAll[{"\:d569\:acc4","\:ad6c\:bd84"}~Join~$provinceNames,StringReplace[x," ":>""]]]; (* Check horizontal table header *)
+pos=Position[data,x_/;ContainsAll[{"\:d569\:acc4","\:ad6c\:bd84","\:ac80\:c5ed"}~Join~$provinceNames,StringReplace[x," ":>""]]]; (* Check horizontal table header *)
 If[pos=={},(* Try vertical *)
 pos=Position[data,x_/;ContainsAll[{"\:c9c0\:c5ed","\:d655\:c9c4\:d658\:c790","\:be44\:ace0","\:c8fc\:c694\:ae30\:d0c0\:c720\:d589"},StringReplace[x," ":>""]]];
 If[pos=={},
@@ -308,21 +308,21 @@ None]
 ];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Clean Up Missing Entries*)
 
 
 pvDataPre=ReplaceAll[DeleteCases[Quiet[pvFilter/@allCaches],None],_Missing:>0];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Add "Total" Column*)
 
 
 pvData={First@#,Sequence@@(Rest@#),Total[Rest@#]}&/@pvDataPre;
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Extract Functions*)
 
 
@@ -331,7 +331,7 @@ pvColMap={"\:c2dc\:ac04"->1,Sequence@@MapIndexed[#1->(First@#2+1)&,$provinceName
 pvGetData[col_,range_:All,table_:pvData]:=table[[range,col/.pvColMap]];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Export Processed Data*)
 
 

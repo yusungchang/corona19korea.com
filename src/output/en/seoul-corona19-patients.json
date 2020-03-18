@@ -1,5 +1,23 @@
 [
 	{
+		"Date Confirmed":"Tue 17 Mar 2020 00:00:00",
+		"Age":23,
+		"Gender":"Female",
+		"District":"성남"
+	},
+	{
+		"Date Confirmed":"Tue 17 Mar 2020 00:00:00",
+		"Age":21,
+		"Gender":"Female",
+		"District":"Songpa"
+	},
+	{
+		"Date Confirmed":"Tue 17 Mar 2020 00:00:00",
+		"Age":14,
+		"Gender":"Male",
+		"District":"Dongdaemun"
+	},
+	{
 		"Date Confirmed":"Mon 16 Mar 2020 00:00:00",
 		"Age":53,
 		"Gender":"Female",
@@ -40,12 +58,6 @@
 		"Age":42,
 		"Gender":"Male",
 		"District":"Gwanak"
-	},
-	{
-		"Date Confirmed":"Mon 16 Mar 2020 00:00:00",
-		"Age":41,
-		"Gender":"Female",
-		"District":"Songpa"
 	},
 	{
 		"Date Confirmed":"Mon 16 Mar 2020 00:00:00",
@@ -673,7 +685,7 @@
 	},
 	{
 		"Date Confirmed":"Mon 9 Mar 2020 00:00:00",
-		"Age":35,
+		"Age":37,
 		"Gender":"Female",
 		"District":"Guro"
 	},
@@ -740,7 +752,7 @@
 	{
 		"Date Confirmed":"Mon 9 Mar 2020 00:00:00",
 		"Age":45,
-		"Gender":"Male",
+		"Gender":"Female",
 		"District":"Guro"
 	},
 	{
