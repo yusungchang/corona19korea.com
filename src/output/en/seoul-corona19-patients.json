@@ -79,7 +79,7 @@
 	},
 	{
 		"Date Confirmed":"Mon 16 Mar 2020 00:00:00",
-		"Age":34,
+		"Age":24,
 		"Gender":"Male",
 		"District":"Guro"
 	},
@@ -361,7 +361,7 @@
 	},
 	{
 		"Date Confirmed":"Wed 11 Mar 2020 00:00:00",
-		"Age":54,
+		"Age":55,
 		"Gender":"Male",
 		"District":"Eunpyeong"
 	},
@@ -583,7 +583,7 @@
 	},
 	{
 		"Date Confirmed":"Tue 10 Mar 2020 00:00:00",
-		"Age":58,
+		"Age":57,
 		"Gender":"Female",
 		"District":"Gangseo"
 	},
@@ -1381,7 +1381,7 @@
 	},
 	{
 		"Date Confirmed":"Tue 25 Feb 2020 00:00:00",
-		"Age":75,
+		"Age":73,
 		"Gender":"Female",
 		"District":"Geumcheon"
 	},
@@ -1501,7 +1501,7 @@
 	},
 	{
 		"Date Confirmed":"Thu 20 Feb 2020 00:00:00",
-		"Age":76,
+		"Age":74,
 		"Gender":"Female",
 		"District":"Seongdong"
 	},
