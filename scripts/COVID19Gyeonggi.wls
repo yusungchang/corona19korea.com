@@ -74,14 +74,14 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Source*)
 
 
 Print["Read Gyeonggi province data..."];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*HTTP Request Setup*)
 
 
@@ -110,7 +110,7 @@ ggBoardPostURL, <|
 ggPIDKey="ADD_COLUMN05"; (* Key value for PID (Patient ID) *)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Request & Gather*)
 
 
@@ -130,21 +130,21 @@ ggDataRawItems=SortBy[Union[ggDataRawItems,Lookup[URLExecute[ggReq[off]],"items"
 ggDataRaw={"total"->ggDataRawTotal,"items"->ggDataRawItems};
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Save Cache*)
 
 
 Export[$dataDirectory<>outputValue["cache","filename"],ggDataRaw];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Preprocess Data*)
 
 
 Print["Process data..."];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Transform Function*)
 
 
@@ -156,7 +156,7 @@ gender,
 age,
 district
 },
-date=DateObject[Lookup[row,dateKey]<>"."<>ToString[eventYear]];(* \:d655\:c9c4 \:b0a0\:c790 \:cc98\:b9ac *)
+date=DateObject[First@StringSplit[Lookup[row,dateKey],"/"]<>"."<>ToString[eventYear]];(* \:d655\:c9c4 \:b0a0\:c790 \:cc98\:b9ac: \:c911\:bcf5\:b0a0\:c9dc\:c2dc \:ccab \:b0a0\:c9dc\:b9cc \:c120\:d0dd *)
 gender=Lookup[row,genKey]; (* \:c131\:bcc4 \:cc98\:b9ac *)
 age=eventYear-With[{a=ToExpression@StringReplace[Lookup[row,ageKey],Except[DigitCharacter]->""]},If[a<=20,2000+a,1900+a]]; (* \:b098\:c774 \:cc98\:b9ac *)
 district=Lookup[row,districtKey]; (* \:ac70\:c8fc\:c9c0 \:cc98\:b9ac *)
@@ -164,14 +164,14 @@ district=Lookup[row,districtKey]; (* \:ac70\:c8fc\:c9c0 \:cc98\:b9ac *)
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Process Raw Data*)
 
 
 table=Quiet[ggDataProcess[#,2020]&/@ggDataRawItems]; (* \:b9ac\:d3ec\:d2b8 \:c2dc\:c810: 2020\:b144 *)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Extract Functions*)
 
 
@@ -182,7 +182,7 @@ dataColMapR=Reverse[dataColMap,1];
 getData[col_,range_:All,t_:table]:=t[[range,col/.dataColMap]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Verify Processed Data*)
 
 
