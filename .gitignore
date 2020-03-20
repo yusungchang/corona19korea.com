@@ -7,3 +7,4 @@ scripts/test
 scripts/Test.nb
 config/vworld.key.json
 config/webhost.config
+src/images/Thumbs.db

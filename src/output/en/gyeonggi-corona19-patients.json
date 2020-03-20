@@ -1798,5 +1798,89 @@
 		"Age":31,
 		"Gender":"Male",
 		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Wed 18 Mar 2020",
+		"Age":24,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":48,
+		"Gender":"Female",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":35,
+		"Gender":"Female",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":73,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":32,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":50,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":40,
+		"Gender":"Female",
+		"District":"Gwacheon"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":53,
+		"Gender":"Female",
+		"District":"Gwangju"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":48,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":20,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":85,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":68,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":35,
+		"Gender":"Male",
+		"District":"Ansan"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":12,
+		"Gender":"Male",
+		"District":"Siheung"
 	}
 ]

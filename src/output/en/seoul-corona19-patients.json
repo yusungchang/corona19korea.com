@@ -1,5 +1,107 @@
 [
 	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":48,
+		"Gender":"Male",
+		"District":"Nowon"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":55,
+		"Gender":"Female",
+		"District":"Yeongdeungpo"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":29,
+		"Gender":"Female",
+		"District":"Yeongdeungpo"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":51,
+		"Gender":"Female",
+		"District":"Dongjak"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":36,
+		"Gender":"Female",
+		"District":"Songpa"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":61,
+		"Gender":"Female",
+		"District":"Gangnam"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":66,
+		"Gender":"Female",
+		"District":"Yangcheon"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":49,
+		"Gender":"Female",
+		"District":"Seongdong"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":56,
+		"Gender":"Female",
+		"District":"Gangseo"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":35,
+		"Gender":"Female",
+		"District":"Songpa"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":23,
+		"Gender":"Male",
+		"District":"Dongjak"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":59,
+		"Gender":"Female",
+		"District":"Nowon"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":15,
+		"Gender":"Male",
+		"District":"Mapo"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":12,
+		"Gender":"Female",
+		"District":"Mapo"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":44,
+		"Gender":"Male",
+		"District":"Mapo"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":86,
+		"Gender":"Female",
+		"District":"Yongsan"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020 00:00:00",
+		"Age":79,
+		"Gender":"Female",
+		"District":"Gwanak"
+	},
+	{
 		"Date Confirmed":"Wed 18 Mar 2020 00:00:00",
 		"Age":35,
 		"Gender":"Male",
