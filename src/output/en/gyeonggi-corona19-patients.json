@@ -303,7 +303,7 @@
 		"Date Confirmed":"Wed 26 Feb 2020",
 		"Age":78,
 		"Gender":"Male",
-		"District":"남양주"
+		"District":""
 	},
 	{
 		"Date Confirmed":"Wed 26 Feb 2020",
@@ -1711,18 +1711,6 @@
 	},
 	{
 		"Date Confirmed":"Wed 18 Mar 2020",
-		"Age":67,
-		"Gender":"Female",
-		"District":"Seongnam"
-	},
-	{
-		"Date Confirmed":"Wed 18 Mar 2020",
-		"Age":35,
-		"Gender":"Male",
-		"District":"Seongnam"
-	},
-	{
-		"Date Confirmed":"Wed 18 Mar 2020",
 		"Age":21,
 		"Gender":"Male",
 		"District":"Seongnam"
@@ -1791,7 +1779,7 @@
 		"Date Confirmed":"Wed 18 Mar 2020",
 		"Age":35,
 		"Gender":"Female",
-		"District":"Namyangju"
+		"District":"Seongnam"
 	},
 	{
 		"Date Confirmed":"Wed 18 Mar 2020",
@@ -1809,7 +1797,7 @@
 		"Date Confirmed":"Thu 19 Mar 2020",
 		"Age":48,
 		"Gender":"Female",
-		"District":"Yongin"
+		"District":"Seongnam"
 	},
 	{
 		"Date Confirmed":"Thu 19 Mar 2020",
@@ -1870,6 +1858,18 @@
 		"Age":68,
 		"Gender":"Male",
 		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":35,
+		"Gender":"Male",
+		"District":"Ansan"
+	},
+	{
+		"Date Confirmed":"Thu 19 Mar 2020",
+		"Age":12,
+		"Gender":"Male",
+		"District":"Siheung"
 	},
 	{
 		"Date Confirmed":"Fri 20 Mar 2020",

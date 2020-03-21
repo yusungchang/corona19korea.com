@@ -159,7 +159,7 @@ district
 date=DateObject[First@StringSplit[Lookup[row,dateKey],"/"]<>"."<>ToString[eventYear]];(* \:d655\:c9c4 \:b0a0\:c790 \:cc98\:b9ac: \:c911\:bcf5\:b0a0\:c9dc\:c2dc \:ccab \:b0a0\:c9dc\:b9cc \:c120\:d0dd *)
 gender=Lookup[row,genKey]; (* \:c131\:bcc4 \:cc98\:b9ac *)
 age=eventYear-With[{a=ToExpression@StringReplace[Lookup[row,ageKey],Except[DigitCharacter]->""]},If[a<=20,2000+a,1900+a]]; (* \:b098\:c774 \:cc98\:b9ac *)
-district=Lookup[row,districtKey]; (* \:ac70\:c8fc\:c9c0 \:cc98\:b9ac *)
+district=Replace[Lookup[row,districtKey],Missing[__]:>""]; (* \:ac70\:c8fc\:c9c0 \:cc98\:b9ac *)
 {date,age,gender,district}
 ]
 
