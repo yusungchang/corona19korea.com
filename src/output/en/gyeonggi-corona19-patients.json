@@ -303,7 +303,7 @@
 		"Date Confirmed":"Wed 26 Feb 2020",
 		"Age":78,
 		"Gender":"Male",
-		"District":""
+		"District":"Namyangju"
 	},
 	{
 		"Date Confirmed":"Wed 26 Feb 2020",
@@ -1779,7 +1779,7 @@
 		"Date Confirmed":"Wed 18 Mar 2020",
 		"Age":35,
 		"Gender":"Female",
-		"District":"Seongnam"
+		"District":"Namyangju"
 	},
 	{
 		"Date Confirmed":"Wed 18 Mar 2020",
@@ -1797,7 +1797,7 @@
 		"Date Confirmed":"Thu 19 Mar 2020",
 		"Age":48,
 		"Gender":"Female",
-		"District":"Seongnam"
+		"District":"Yongin"
 	},
 	{
 		"Date Confirmed":"Thu 19 Mar 2020",
