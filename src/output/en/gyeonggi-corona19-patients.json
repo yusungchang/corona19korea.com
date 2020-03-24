@@ -2118,9 +2118,63 @@
 		"District":"Bucheon"
 	},
 	{
-		"Date Confirmed":"Sun 22 Mar 2020",
+		"Date Confirmed":"Mon 23 Mar 2020",
 		"Age":44,
+		"Gender":"Female",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":25,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":51,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":20,
+		"Gender":"Female",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":50,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":14,
 		"Gender":"Male",
 		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":20,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":55,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":24,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":22,
+		"Gender":"Female",
+		"District":"Gwangmyeong"
 	}
 ]
