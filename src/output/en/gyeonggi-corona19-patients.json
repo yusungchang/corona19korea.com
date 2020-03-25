@@ -2101,12 +2101,6 @@
 	},
 	{
 		"Date Confirmed":"Sun 22 Mar 2020",
-		"Age":64,
-		"Gender":"Female",
-		"District":"Seongnam"
-	},
-	{
-		"Date Confirmed":"Sun 22 Mar 2020",
 		"Age":29,
 		"Gender":"Female",
 		"District":"Seongnam"
@@ -2114,6 +2108,12 @@
 	{
 		"Date Confirmed":"Sun 22 Mar 2020",
 		"Age":52,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sun 22 Mar 2020",
+		"Age":44,
 		"Gender":"Male",
 		"District":"Bucheon"
 	},
@@ -2176,5 +2176,149 @@
 		"Age":22,
 		"Gender":"Female",
 		"District":"Gwangmyeong"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":55,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Mon 23 Mar 2020",
+		"Age":51,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":55,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":51,
+		"Gender":"Female",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":24,
+		"Gender":"Female",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":38,
+		"Gender":"Male",
+		"District":"Uiwang"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":38,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":37,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":26,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":41,
+		"Gender":"Male",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":50,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":69,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":52,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":34,
+		"Gender":"Male",
+		"District":"Osan"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":94,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":94,
+		"Gender":"Male",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":98,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":92,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":87,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":35,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":25,
+		"Gender":"Male",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":28,
+		"Gender":"Female",
+		"District":"Ansan"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":30,
+		"Gender":"Male",
+		"District":"Hwaseong"
+	},
+	{
+		"Date Confirmed":"Tue 24 Mar 2020",
+		"Age":27,
+		"Gender":"Female",
+		"District":"Ansan"
 	}
 ]

@@ -680,5 +680,16 @@
 		"Tested":339545,
 		"Not Determined":15440,
 		"Negative":324105
+	},
+	{
+		"Time":"Wed 25 Mar 2020 00:00:00",
+		"Total":357896,
+		"Confirmed":9137,
+		"Recovered":3730,
+		"Quarantined":5281,
+		"Deaths":126,
+		"Tested":348759,
+		"Not Determined":14278,
+		"Negative":334481
 	}
 ]
