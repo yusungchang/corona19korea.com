@@ -89,10 +89,10 @@ Print["Read Seoul province page..."];
 (*\:c11c\:c6b8\:c2dc \:cf54\:b85c\:b09819 \:c0c1\:d669\:d310*)
 
 
-seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do?tab=1";
+seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do?menu_code=01";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Import Page*)
 
 
