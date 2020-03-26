@@ -78,7 +78,7 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Source*)
 
 
@@ -135,7 +135,7 @@ crawlPosts[x_]:=Module[{html},
 crawlPosts[postList];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Preprocess Data*)
 
 
@@ -260,7 +260,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 ];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Data*)
 
 
@@ -362,7 +362,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data-province","filename"],
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Visualization Functions*)
 
 
@@ -654,31 +654,40 @@ out3:=Labeled[
 Module[{
 range9=Flatten[Position[#["Hour"]&/@getData["\:c2dc\:ac04"],x_/;x<12]],(* \:c624\:c804 \:c77c\:c77c \:d604\:d669 \:b9cc \:cd94\:cd9c *)
 legends={"\:c0ac\:b9dd","\:aca9\:b9ac\:c911","\:aca9\:b9ac\:d574\:c81c"},
+data,
+even,
+dates,
 dateTicks,
+dateGrids,
 legendInset,
 labelFun
 },
-
-dateTicks=MapIndexed[{First@#2,Rotate[DateString[#1,{"MonthShort","/","DayShort"}],45Degree]}&,getData["\:c2dc\:ac04",range9]];
+data=Transpose[getData[#,range9]&/@legends];
+even=EvenQ[First@Dimensions[data]];
+dates=getData["\:c2dc\:ac04",range9];
+dateTicks=MapIndexed[{First@#2,If[DateString[#1,"DayName"]==="Monday",DateString[#1,{"MonthShort","/","DayShort"}],""]}&,dates];
+dateGrids=Flatten[Position[dates,x_/;DateString[x,"DayName"]==="Monday",{1},Heads->False]];
 legendInset=legendFrame@SwatchLegend[getColor/@legends,legends,LegendMarkers->Graphics[{EdgeForm[Opacity[.1]],Rectangle[]}],LegendMarkerSize->14];
 labelFun=(With[{i=#2[[2]]},
-If[i==2 (* \:c911\:ac04\:bc14 *),
-Placed[Style[If[#1<200,"",#1],White,barLabelStyleSmall,Bold],Top],
-Placed[Style[If[#1<4,"",#1],(getColor/@legends)[[i]],barLabelStyle,Bold],Above]
+If[EvenQ@#2[[1]]===even,
+If[i==2,(* \:c911\:ac04\:bc14 *)
+Placed[If[#1<200,"",Overlay[{Style[#1,barLabelStyleSmall,Bold,(getColor/@legends)[[2]]],Style[#1,barLabelStyleSmall,White]}]],Top],
+Placed[Style[If[#1<4,"",#1],(getColor/@legends)[[i]],barLabelStyleSmall,Bold],Above]
+],
+Placed["",Top]
 ]
 ]
 &);
 
 SetOptions[BarChart,imageDimensions];
-
-BarChart[Transpose[getData[#,range9]&/@legends],
+BarChart[data,
 ChartLayout->"Stacked",
 ChartStyle->getColor/@legends,
 LabelingFunction->labelFun,
 Frame->True,
 FrameTicks->{{Automatic,None},{dateTicks,None}},
 FrameTicksStyle->frameTickStyle,
-GridLines->Automatic,
+GridLines->{dateGrids,Automatic},
 Epilog->Inset[legendInset,Scaled[{0.025,0.975}],{Left,Top}]
 ]
 ]
@@ -692,7 +701,7 @@ Epilog->Inset[legendInset,Scaled[{0.025,0.975}],{Left,Top}]
 Print["Generate "<>outputValue["3","label"]<>"..."];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Korean*)
 
 
@@ -702,7 +711,7 @@ $locale="kr";
 Export[$outputDirectory<>"kr/"<>outputValue["3","filename"],out3,outputValue["3","type"]];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*English*)
 
 
@@ -720,7 +729,9 @@ Clear[out4];
 out4:=Labeled[
 Module[{
 range9=Flatten[Position[#["Hour"]&/@getData["\:c2dc\:ac04"],x_/;x<12]],(* \:c624\:c804 \:c77c\:c77c \:d604\:d669 \:b9cc \:cd94\:cd9c *)
+dates,
 dateTicks,
+dateGrids,
 legendInset,
 todayInset,
 currentInset,
@@ -728,8 +739,10 @@ labelInset,
 diff,
 marker=Graphics[{{GrayLevel[1],Disk[{0,0},Offset[{3,3}]]},AbsoluteThickness[1.5],Dashing[{}],Circle[{0,0},Offset[{3,3}]]}]
 },
-dateTicks=MapIndexed[{First@#2,Rotate[DateString[#1,{"MonthShort","/","DayShort"}],45Degree]}&,getData["\:c2dc\:ac04",range9]];
-dateTicks=Most@dateTicks;
+dates=getData["\:c2dc\:ac04",range9];
+dateTicks=MapIndexed[{First@#2-1,If[DateString[#1,"DayName"]==="Monday",DateString[#1,{"MonthShort","/","DayShort"}],""]}&,dates];
+dateTicks=Rest@dateTicks;
+dateGrids=Flatten[Position[dates,x_/;DateString[x,"DayName"]==="Monday",{1},Heads->False]]-1;
 diff=Differences[getData["\:d655\:c9c4",range9]];
 {todayInset,currentInset}=With[{t=Length[dateTicks],y=Last@diff},{
 {getColor["\:d655\:c9c4"],Dashed,Line[{{t,0},{t,y}}]},
@@ -746,7 +759,7 @@ PlotStyle->getColor["\:d655\:c9c4"],
 Frame->True,
 FrameTicks->{{Automatic,None},{dateTicks,None}},
 FrameTicksStyle->frameTickStyle,
-GridLines->{Automatic,Automatic},
+GridLines->{dateGrids,Automatic},
 InterpolationOrder->2,
 PlotMarkers->{marker},
 Filling->Bottom,
