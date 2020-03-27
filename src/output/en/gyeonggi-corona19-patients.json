@@ -2416,5 +2416,65 @@
 		"Age":71,
 		"Gender":"Female",
 		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":27,
+		"Gender":"Male",
+		"District":"Ansan"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":95,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":60,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":19,
+		"Gender":"Female",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":23,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":18,
+		"Gender":"Female",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":58,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":59,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":39,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":27,
+		"Gender":"Female",
+		"District":"Ansan"
 	}
 ]

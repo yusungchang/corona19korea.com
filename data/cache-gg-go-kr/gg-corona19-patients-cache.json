@@ -1,5 +1,5 @@
 {
-	"total":403,
+	"total":413,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -660,7 +660,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"’42",
-			"SUBJECT":"1251번 환자 접촉자(배우자)",
+			"SUBJECT":"1250번 환자의 배우자",
 			"ADD_COLUMN01":"남양주시",
 			"B_IDX":"3945955"
 		},
@@ -732,7 +732,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"2.26",
-			"ADD_COLUMN08":"경기도의료원 수원병원",
+			"ADD_COLUMN08":"수원병원 생활치료센터",
 			"ADD_COLUMN05":"57",
 			"ADD_COLUMN04":"환자4944",
 			"NOTICE_YN":"N",
@@ -2396,7 +2396,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.12",
-			"ADD_COLUMN08":"경기도의료원 안성병원",
+			"ADD_COLUMN08":"분당서울대병원",
 			"ADD_COLUMN05":"185",
 			"ADD_COLUMN04":"환자7936",
 			"NOTICE_YN":"N",
@@ -4749,13 +4749,13 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.24",
-			"ADD_COLUMN08":"경기도의료원  수원병원",
+			"ADD_COLUMN08":"분당서울대병원",
 			"ADD_COLUMN05":"366",
 			"ADD_COLUMN04":"환자9103",
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"′65",
-			"SUBJECT":"9304번 환자의 접촉자 (해외방문 수원 확진자)",
+			"SUBJECT":"9034번 환자의 접촉자(해외방문 수원 확진자)",
 			"ADD_COLUMN01":"수원시",
 			"B_IDX":"4664290"
 		},
@@ -4768,7 +4768,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"′69",
-			"SUBJECT":"9304번 환자의 접촉자 (해외방문 수원 확진자)",
+			"SUBJECT":"9034번 환자의 접촉자(해외방문 수원 확진자)",
 			"ADD_COLUMN01":"수원시",
 			"B_IDX":"4664291"
 		},
@@ -4781,7 +4781,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"′96",
-			"SUBJECT":"9304번 환자의 접촉자 (해외방문 수원 확진자)",
+			"SUBJECT":"9034번 환자의 접촉자(해외방문 수원 확진자)",
 			"ADD_COLUMN01":"수원시",
 			"B_IDX":"4664292"
 		},
@@ -5239,6 +5239,136 @@
 			"SUBJECT":"’20.3.23일 발열 및 근육통 등 증상발현, 보건소  선별진료",
 			"ADD_COLUMN01":"성남시",
 			"B_IDX":"4706958"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"404",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′93",
+			"SUBJECT":"9080번 환자의 접촉자 (시흥 어린이집 확진자 친구)",
+			"ADD_COLUMN01":"안산시",
+			"B_IDX":"4749732"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"경기도의료원  수원병원",
+			"ADD_COLUMN05":"405",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′25",
+			"SUBJECT":"8632번 환자의 접촉자 (효사랑 요양원)",
+			"ADD_COLUMN01":"군포시",
+			"B_IDX":"4749733"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"경기도의료원  파주병원",
+			"ADD_COLUMN05":"406",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′60",
+			"SUBJECT":"7663번 환자의 접촉자 (생명수교회)",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4749734"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"경기도의료원  의정부병원",
+			"ADD_COLUMN05":"407",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′01",
+			"SUBJECT":"8957번 환자의 접촉자 (용인 확진자)",
+			"ADD_COLUMN01":"용인시",
+			"B_IDX":"4749735"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"경기도의료원  파주병원",
+			"ADD_COLUMN05":"408",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′97",
+			"SUBJECT":"7663번 환자의 접촉자 (생명수교회)",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4749736"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"경기도의료원  이천병원",
+			"ADD_COLUMN05":"409",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′02",
+			"SUBJECT":"’20.3.24일까지 해외방문(미국), 기침 및 가래 등 증상 발현 으로 의료기관 선별진료",
+			"ADD_COLUMN01":"용인시",
+			"B_IDX":"4749737"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"경기도의료원  파주병원",
+			"ADD_COLUMN05":"410",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′62",
+			"SUBJECT":"8019번 환자의 접촉자 (생명수교회)",
+			"ADD_COLUMN01":"부천시",
+			"B_IDX":"4749738"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"경기도의료원  안성병원",
+			"ADD_COLUMN05":"411",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′61",
+			"SUBJECT":"8985번 환자의 접촉자 (해외유입 용인 확진자)",
+			"ADD_COLUMN01":"용인시",
+			"B_IDX":"4749739"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"412",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′81",
+			"SUBJECT":"8473번 환자의 접촉자 (분당구보건소 확진자)",
+			"ADD_COLUMN01":"성남시",
+			"B_IDX":"4749740"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"3.26",
+			"ADD_COLUMN08":"경기도의료원  이천병원",
+			"ADD_COLUMN05":"413",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′93",
+			"SUBJECT":"9080번 환자의 접촉자 (시흥 어린이집 확진자 친구)",
+			"ADD_COLUMN01":"안산시",
+			"B_IDX":"4749741"
 		}
 	]
 }
