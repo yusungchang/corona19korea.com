@@ -2554,5 +2554,53 @@
 		"Age":10,
 		"Gender":"Male",
 		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":35,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":29,
+		"Gender":"Male",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":61,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":35,
+		"Gender":"Male",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":60,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":93,
+		"Gender":"Male",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":45,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":56,
+		"Gender":"Male",
+		"District":"Ansan"
 	}
 ]

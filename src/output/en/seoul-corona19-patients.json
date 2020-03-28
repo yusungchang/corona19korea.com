@@ -1,78 +1,96 @@
 [
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
-		"Age":17,
-		"Gender":"Female",
-		"District":"Gangnam"
-	},
-	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
-		"Age":51,
-		"Gender":"Male",
-		"District":"광명"
-	},
-	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":55,
 		"Gender":"Male",
 		"District":"Geumcheon"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Wed 25 Mar 2020 00:00:00",
+		"Age":18,
+		"Gender":"Female",
+		"District":"Gangnam"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
+		"Age":57,
+		"Gender":"Male",
+		"District":"Gangnam"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
+		"Age":25,
+		"Gender":"Male",
+		"District":"Guro"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
+		"Age":17,
+		"Gender":"Female",
+		"District":"Gangnam"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
+		"Age":51,
+		"Gender":"Male",
+		"District":"광명"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":44,
 		"Gender":"Male",
 		"District":"Yeongdeungpo"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":24,
 		"Gender":"Male",
 		"District":"Songpa"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":22,
 		"Gender":"Female",
 		"District":"Seongbuk"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":31,
 		"Gender":"Female",
 		"District":"Jung"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":52,
 		"Gender":"Female",
 		"District":"Jungnang"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":44,
 		"Gender":"Male",
 		"District":"Jungnang"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":39,
 		"Gender":"Male",
 		"District":"Seodaemun"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":57,
 		"Gender":"Female",
 		"District":"Dobong"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":35,
 		"Gender":"Female",
 		"District":"Gwanak"
 	},
 	{
-		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
+		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":25,
 		"Gender":"Female",
 		"District":"Mapo"
@@ -90,14 +108,8 @@
 		"District":"Gangnam"
 	},
 	{
-		"Date Confirmed":"Wed 25 Mar 2020 00:00:00",
-		"Age":53,
-		"Gender":"Female",
-		"District":"Gangnam"
-	},
-	{
 		"Date Confirmed":"Thu 26 Mar 2020 00:00:00",
-		"Age":18,
+		"Age":53,
 		"Gender":"Female",
 		"District":"Gangnam"
 	},
