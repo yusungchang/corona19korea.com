@@ -2476,5 +2476,83 @@
 		"Age":27,
 		"Gender":"Female",
 		"District":"Ansan"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":24,
+		"Gender":"Female",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":27,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 26 Mar 2020",
+		"Age":87,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":38,
+		"Gender":"Male",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":29,
+		"Gender":"Female",
+		"District":"Gwacheon"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":91,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":85,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":28,
+		"Gender":"Male",
+		"District":"Ansan"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":49,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":26,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":27,
+		"Gender":"Female",
+		"District":"Ansan"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":53,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Fri 27 Mar 2020",
+		"Age":10,
+		"Gender":"Male",
+		"District":"Bucheon"
 	}
 ]
