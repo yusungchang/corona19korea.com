@@ -13,7 +13,7 @@
 	},
 	{
 		"Date Confirmed":"Sat 28 Mar 2020 00:00:00",
-		"Age":24,
+		"Age":25,
 		"Gender":"Female",
 		"District":"Yangcheon"
 	},
@@ -43,7 +43,7 @@
 	},
 	{
 		"Date Confirmed":"Sat 28 Mar 2020 00:00:00",
-		"Age":39,
+		"Age":40,
 		"Gender":"Female",
 		"District":"Dongjak"
 	},
@@ -93,7 +93,7 @@
 		"Date Confirmed":"Sat 28 Mar 2020 00:00:00",
 		"Age":47,
 		"Gender":"Male",
-		"District":"Yongsan"
+		"District":"기타"
 	},
 	{
 		"Date Confirmed":"Sat 28 Mar 2020 00:00:00",
@@ -207,7 +207,7 @@
 		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",
 		"Age":39,
 		"Gender":"Male",
-		"District":"Seodaemun"
+		"District":"기타"
 	},
 	{
 		"Date Confirmed":"Fri 27 Mar 2020 00:00:00",

@@ -186,7 +186,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 ];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Visualization Functions*)
 
 
@@ -258,14 +258,10 @@ getColor["\:acb0\:acfc\:c74c\:c131"]=getColor["\:c5f0\:b839\:bd84\:d3ec"]=RGBCol
 imageWidth=860;
 
 
-legendFrame=(Framed[Style[#,14],Background->GrayLevel[1,.9],FrameStyle->LightGray,RoundingRadius->3]&);
-placedLegendFrame=(Placed[#,{Left,Top},legendFrame]&);
-
-
 imageDimensions={ImageSize->{imageWidth,Automatic},AspectRatio->1/2};
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Label Function*)
 
 
@@ -273,20 +269,20 @@ $locale="kr";
 
 
 plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
-	Style[title,32,GrayLevel[.4]],
+	Style[title,32,GrayLevel[.6]],
 	Style[Row[{
 		StringReplace[DateString[time,{"MonthShort","/","DayShort"," (","DayNameShort",") ","Hour24Short"}],
 			Switch[$locale,
 				"en", {},
 				"kr", {"Mon"->"\:c6d4","Tue"->"\:d654","Wed"->"\:c218","Thu"->"\:baa9","Fri"->"\:ae08","Sat"->"\:d1a0","Sun"->"\:c77c"}]
 			],"\:c2dc"," ","\:c5c5\:b370\:c774\:d2b8"}],
-		20,GrayLevel[.6]
+		20,GrayLevel[.8]
 	],
 	Spacer[{0,16}]
-},Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Nanum Gothic"}];
+},Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Gothic A1",FontWeight->"Light"}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*District Heat Map*)
 
 
@@ -326,7 +322,7 @@ labels,
 Text[Style[#,labelS,GrayLevel[0.2]],districtCenter[#]]&/@others
 },ImageSize->imageW
 ],
-Framed[
+
 Grid[{
 {min,
 Graphics[
@@ -335,14 +331,12 @@ ImageSize->{imageW/4,imageW/40},AspectRatio->\!\(TraditionalForm\`
 \*FractionBox[\(1\), \(10\)]\),PlotRange->{{0,100},{0,1}}],
 max},
 {"",OptionValue["LegendLabel"],""}
-},Alignment->{Center,Center},BaseStyle->{"Text",FontSize->12}],
-RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
-]
+},Alignment->{Center,Center},BaseStyle->{"Text",FontColor->GrayLevel[.6],FontSize->12}]
 },Alignment->{Left,Top}]
 ]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
@@ -383,19 +377,24 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue["en"],outputValue["1","type"],Background->None];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:d604\:d669*)
+
+
+dates=DateRange[Min@getData["\:d655\:c9c4\:c77c"],Max@getData["\:d655\:c9c4\:c77c"]];
+evenQ=EvenQ[Length[dates]];
+dateTicks={AbsoluteTime[#],DateString[#,{"MonthShort","/","DayShort"}]}&/@Cases[dates,x_/;(DateString[x,"DayName"]==="Monday")];
 
 
 out2:=Labeled[
 DateHistogram[getData["\:d655\:c9c4\:c77c"],"Day","CumulativeCount",
 imageDimensions,
 Frame->True,
+FrameTicks->{{Automatic,None},{dateTicks,None}},
 FrameTicksStyle->Directive[FontSize->14],
-LabelingFunction->(Placed[Style[If[#>4,#,""],12,Bold,getColor["\:d655\:c9c4"]],Above]&),
+LabelingFunction->(Placed[If[#>4 && EvenQ[#2[[2]]]===evenQ,Overlay[{Style[#,14,Bold,Black],Style[#,14,getColor["\:d655\:c9c4"]]}],""],Above]&),
 ChartStyle->Directive[{getColor["\:d655\:c9c4"],EdgeForm[{White,Thick}]}],
-GridLines->Automatic,
-DateTicksFormat->{"MonthShort","/","DayShort"}],
+GridLines->Automatic],
 plotLabelFun[outputValue["2","label"]],Top]
 
 
@@ -426,7 +425,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue["en"],outputValue["2","type"],Background->None];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
 
 
@@ -434,6 +433,7 @@ out3:=Labeled[
 DateHistogram[getData["\:d655\:c9c4\:c77c"],"Day",
 imageDimensions,
 Frame->True,
+FrameTicks->{{Automatic,None},{dateTicks,None}},
 FrameTicksStyle->Directive[FontSize->14],
 LabelingFunction->(Placed[Style[If[#>0,#,""],12,Bold,getColor["\:c99d\:ac00\:c218"]],Above]&),
 ChartStyle->Directive[{getColor["\:c99d\:ac00\:c218"],EdgeForm[{White,Thick}]}],
@@ -512,7 +512,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"],Background->None];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c131\:bcc4*)
 
 
@@ -523,7 +523,7 @@ PieChart[data,
 ImageSize->{Automatic,400},
 LabelingFunction->(Placed[Style[Column[{#,Style[Row[{"(",Round[100*#/Plus@@Values[data],0.1],"%)"}],Plain,Smaller]},Alignment->Center],20,Bold,White],"RadialCenter"]&),
 ChartStyle->{getColor["\:b0a8"],getColor["\:c5ec"]},
-ChartLegends->Placed[{"\:b0a8","\:c5ec"},Right,Style[#,16,GrayLevel[.3]]&]],
+ChartLegends->Placed[{"\:b0a8","\:c5ec"},Right,Style[#,18,GrayLevel[.6]]&]],
 imageDimensions,Alignment->Center
 ],
 plotLabelFun[outputValue["5","label"]],Top]
