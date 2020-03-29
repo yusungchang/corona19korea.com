@@ -12,11 +12,11 @@
 (*SSG.COM*)
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Configuration*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Global*)
 
 
@@ -35,7 +35,7 @@ $cacheDirectory=$baseDirectory<>"../data/cache-cdc-go-kr/";
 $outputDirectory=$baseDirectory<>"../src/output/";
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Province Map*)
 
 
@@ -59,6 +59,9 @@ $provinceFullNames={"\:c11c\:c6b8\:d2b9\:bcc4\:c2dc","\:bd80\:c0b0\:ad11\:c5ed\:
 $provinceRules=MapThread[#1->#2&,{$provinceNames,$provinceFullNames}];
 
 
+$centerFilName=$dataDirectory<>"korea-province-centers.json"; (* RegionCentroid \:c2dc\:ac04\:c774 \:c624\:b798\:ac78\:b9ac\:b294 \:ad00\:acc4\:b85c \:acc4\:c0b0 \:acb0\:acfc\:b97c \:c800\:c7a5\:d568 *)
+
+
 (* ::Subsection::Closed:: *)
 (*Output & Translation*)
 
@@ -78,11 +81,11 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Source*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Source URL*)
 
 
@@ -100,11 +103,15 @@ apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Read Boards, Import Posts and Cache*)
 
 
 Print["Read KCDC public board..."];
+
+
+newFileAdded=False;
+newFileNames={};
 
 
 raw=URLExecute[
@@ -125,28 +132,38 @@ postList=Flatten[
 Print["Read posts and cache..."];
 
 
-crawlPosts[x_]:=Module[{html},
-	If[!FileExistsQ[$cacheDirectory<>#<>".html"],
-	html=URLExecute[apiKCDCURL,Join[apiKCDCParamsCommon,apiKCDCParamsPost[#]],"Source"];
-	Export[$cacheDirectory<>#<>".html",html,"Text",CharacterEncoding-> "UTF8"]]&/@x
-];
+crawlPosts[x_]:=Module[{html},(If[!FileExistsQ[$cacheDirectory<>#1<>".html"],newFileAdded=True;Print["New file added: "<>#1<>".html"];AppendTo[newFileNames,$cacheDirectory<>#1<>".html"];html=URLExecute[apiKCDCURL,Join[apiKCDCParamsCommon,apiKCDCParamsPost[#1]],"Source"];Export[$cacheDirectory<>#1<>".html",html,"Text",CharacterEncoding->"UTF8"]]&)/@x];
 
 
 crawlPosts[postList];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Preprocess Data*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Load All Caches*)
 
 
-allCaches=Import[#,"String"]&/@FileNames[$cacheDirectory<>"*.html"];
+newCaches=Import[#,"String"]&/@newFileNames;
 
 
-(* ::Subsection::Closed:: *)
+dataOldRaw=Import[$outputDirectory<>"kr/"<>outputValue["data","filename"],
+	outputValue["data","type"]
+];
+dataOld=MapThread[{#1,Sequence@@#2}&,
+	{DateObject/@dataOldRaw[[All,1,2]],dataOldRaw[[All,2;;-1,2]]}];
+
+
+pvDataOldRaw=Import[$outputDirectory<>"kr/"<>outputValue["data-province","filename"],
+	outputValue["data-province","type"]
+];
+pvDataOld=MapThread[{#1,Sequence@@#2}&,
+	{DateObject/@pvDataOldRaw[[All,1,2]],pvDataOldRaw[[All,2;;-1,2]]}];
+
+
+(* ::Subsection:: *)
 (*Nationwide Data*)
 
 
@@ -184,28 +201,26 @@ Module[{data,pos,rows,newflag=False},
 ];
 
 
-dataPre1=Flatten[dataRow/@allCaches,1];
-
-
 (* ::Subsubsection:: *)
-(*Convert Values to Expressions*)
+(*Transform new cache data*)
 
 
-dataPre2=Map[
+If[newFileAdded,
+	dataPre1=Flatten[dataRow/@newCaches,1];
+	(* Convert values to expressions *)
+	dataPre2=Map[
 	Function[{x},
 		Prepend[
 			numerify/@Rest[x],
 			Quiet@DateObject[StringReplace[First[x],{".( "~~_~~" ) "->" "," \:c2dc \:ae30\:c900"->":00"}]]
 		]
 	], dataPre1
+	];
+	(* Merge & remove duplicated entries *)
+	data=Sort[DeleteDuplicates[Join[dataOld,dataPre2],First[#1]==First[#2]&]],
+	(* No new data *)
+	data=dataOld
 ];
-
-
-(* ::Subsubsection:: *)
-(*Remove Duplicated Entries*)
-
-
-data=Sort[DeleteDuplicates[dataPre2,First[#1]==First[#2]&]];
 
 
 (* ::Subsubsection:: *)
@@ -229,38 +244,24 @@ If[And@@Flatten[Table[MatchQ[#,Blank[c/.colType]]&/@getData[c], {c, colMap[[All,
 	Quit[]];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Export Processed Data*)
 
 
-(* For CSV, convert DateObject to date strings *)
-
-
-exportData=Normal@AssociationThread[
-	colMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@data;
-
-
-(* ::Text:: *)
-(*Korean*)
-
-
-Export[$outputDirectory<>"kr/"<>outputValue["data","filename"],
-	exportData,
-	outputValue["data","type"]
+If[newFileAdded,
+	(* For CSV, convert DateObject to date strings *)
+	exportData=Normal@AssociationThread[
+		colMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@data;
+	(* Korean *)
+	Export[$outputDirectory<>"kr/"<>outputValue["data","filename"],
+		exportData, outputValue["data","type"]];
+	(* English *)
+	Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
+		exportData/.translateValue["en"],outputValue["data","type"]];
 ];
 
 
-(* ::Text:: *)
-(*English*)
-
-
-Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
-	exportData/.translateValue["en"],
-	outputValue["data","type"]
-];
-
-
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Province Data*)
 
 
@@ -273,7 +274,7 @@ Print["Process province data..."];
 
 Clear[pvFilter];
 pvFilter[cache_]:=With[{title=ImportString[cache,"Title"]},
-If[Length@StringCases[title,"\:c815\:b840\:be0c\:b9ac\:d551"]>0,
+If[Length@StringCases[title,"\:c815\:b840\:be0c\:b9ac\:d551"]>0 || Length@StringCases[title,"0\:c2dc \:ae30\:c900"]>0,
 Module[{date,do,data,pos,table,header,r,c,col,values,assoc},
 date=First@StringCases[title,(x:DigitCharacter..)~~"\:c6d4"~~(" "...)~~(y:DigitCharacter..)~~"\:c77c":>x<>"-"<>y]; (* \:b0a0\:c9dc *)
 do=DateObject@date;
@@ -309,17 +310,19 @@ None]
 
 
 (* ::Subsubsection:: *)
-(*Clean Up Missing Entries*)
+(*Transform new cache data*)
 
 
-pvDataPre=ReplaceAll[DeleteCases[Quiet[pvFilter/@allCaches],None],_Missing:>0];
-
-
-(* ::Subsubsection:: *)
-(*Add "Total" Column*)
-
-
-pvData={First@#,Sequence@@(Rest@#),Total[Rest@#]}&/@pvDataPre;
+If[newFileAdded,
+	(* Clean up missing entries *)
+	pvDataPre=DeleteDuplicates@ReplaceAll[DeleteCases[Quiet[pvFilter/@newCaches],None],_Missing:>0];
+	(* Add "Total" column *)
+	pvDataNew={First@#,Sequence@@(Rest@#),Total[Rest@#]}&/@pvDataPre;
+	(* Merge old & new *)
+	pvData=Join[pvDataOld,pvDataNew],
+	(* No new data *)
+	pvData=pvDataOld
+];
 
 
 (* ::Subsubsection:: *)
@@ -335,38 +338,24 @@ pvGetData[col_,range_:All,table_:pvData]:=table[[range,col/.pvColMap]];
 (*Export Processed Data*)
 
 
-(* For CSV, convert DateObject to date strings *)
-
-
-exportPV=Normal@AssociationThread[
+If[newFileAdded,
+	(* For CSV, convert DateObject to date strings *)
+	exportPV=Normal@AssociationThread[
 		pvColMap[[All,1]]->Prepend[Rest[#],DateString@First[#]]]&/@pvData;
-
-
-(* ::Text:: *)
-(*Korean*)
-
-
-Export[$outputDirectory<>"kr/"<>outputValue["data-province","filename"],
-	exportPV,
-	outputValue["data-province","type"]
+	(* Korean *)
+	Export[$outputDirectory<>"kr/"<>outputValue["data-province","filename"],
+		exportPV,outputValue["data-province","type"]];
+	(* English *)
+	Export[$outputDirectory<>"en/"<>outputValue["data-province","filename"],
+	exportPV/.translateValue["en"], outputValue["data-province","type"]]
 ];
 
 
-(* ::Text:: *)
-(*English*)
-
-
-Export[$outputDirectory<>"en/"<>outputValue["data-province","filename"],
-	exportPV/.translateValue["en"],
-	outputValue["data-province","type"]
-];
-
-
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Visualization Functions*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*VWorld Open API*)
 
 
@@ -380,7 +369,7 @@ vworldAPIParams={"service"->"data","request"->"GetFeature","data"->"LT_C_ADSIDO_
 vworldAPICall[prov_]:=URLExecute[vworldAPIURL,Join[$vworldAPICred,vworldAPIParams,{"attrFilter"->"ctp_kor_nm:like:"<>prov}]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Province Coordinates & Centers*)
 
 
@@ -399,11 +388,20 @@ provinceShape[prov_]:=provinceShape[prov]=Reverse@Sort@Flatten@Table[Polygon/@x,
 provinceBBox[prov_]:=provinceBBox[prov]=RegionBounds[First@provinceShape[prov]];
 
 
-provinceCenter[prov_]:=provinceCenter[prov]=.5*{Plus@@First@provinceBBox[prov],Plus@@Last@provinceBBox[prov]}+
-	Switch[prov,"\:acbd\:ae30",{0.2,-0.2},"\:cda9\:bd81",{-0.2,0.2},_,{0,0}];
+If[!FileExistsQ[$centerFilName],
+	provinceCenter[prov_]:=provinceCenter[prov]=.5*{Plus@@First@provinceBBox[prov],Plus@@Last@provinceBBox[prov]}+
+		Switch[prov,"\:acbd\:ae30",{0.2,-0.2},"\:cda9\:bd81",{-0.2,0.2},_,{0,0}];
+	Export[$centerFilName,MapThread[Rule,{$provinceNames,provinceCenter/@$provinceNames}]]
+];
 
 
-(* ::Subsection::Closed:: *)
+centerRules=Import[$centerFilName];
+
+
+provinceCenter[dist_]:=dist/.centerRules;
+
+
+(* ::Subsection:: *)
 (*Colors*)
 
 
@@ -416,7 +414,7 @@ getColor["\:ac80\:c0ac\:c911"]=RGBColor[{0.9647058823529412, 0.7490196078431373,
 getColor["\:acb0\:acfc\:c74c\:c131"]=RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Plot Styles*)
 
 
@@ -434,10 +432,10 @@ barLabelStyleSmall={FontSize->10};
 
 
 legendFrame=(Framed[Style[#,14],Background->GrayLevel[1,.9],FrameStyle->LightGray,RoundingRadius->3]&);
-placedLegendFrame=(Placed[#,{Left,Top},legendFrame]&);
+placedLegendFrame=(Placed[LineLegend[#,LegendFunction->legendFrame],{Left,Top}]&);
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Label Function*)
 
 
@@ -458,7 +456,7 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 },Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Nanum Gothic"}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Province Heat Map*)
 
 
@@ -523,7 +521,7 @@ RoundingRadius->4,FrameStyle->LightGray,FrameMargins->{{5,5},{5,10}}
 ]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:c0c1\:d669*)
 
 
@@ -571,7 +569,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue["en"],outputValue["1","type"]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:cd94\:c774*)
 
 
@@ -645,7 +643,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue["en"],outputValue["2","type"]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:bd84\:c11d*)
 
 
@@ -721,7 +719,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue["en"],outputValue["3","type"]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
 
 
@@ -797,7 +795,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:c9c0\:c5ed \:d655\:c9c4\:c790*)
 
 
@@ -811,7 +809,7 @@ LegendLabel->Style["\:d655 \:c9c4 \:c790",14]
 plotLabelFun[outputValue["5","label"],Last@pvGetData["\:c2dc\:ac04"]],Top],2]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Export*)
 
 
