@@ -137,7 +137,7 @@ ggDataRaw={"total"->ggDataRawTotal,"items"->ggDataRawItems};
 Export[$dataDirectory<>outputValue["cache","filename"],ggDataRaw];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Preprocess Data*)
 
 
@@ -222,7 +222,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Visualization Functions*)
 
 
@@ -287,7 +287,7 @@ getColor["\:ac80\:c0ac\:c911"]=RGBColor[{0.9647058823529412, 0.7490196078431373,
 getColor["\:acb0\:acfc\:c74c\:c131"]=getColor["\:c5f0\:b839\:bd84\:d3ec"]=RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Plot Styles*)
 
 
@@ -297,7 +297,7 @@ imageWidth=860;
 imageDimensions={ImageSize->{imageWidth,Automatic},AspectRatio->1/2};
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Label Function*)
 
 
@@ -318,7 +318,7 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 },Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Gothic A1",FontWeight->"Light"}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*District Heat Map*)
 
 
@@ -380,7 +380,7 @@ max},
 ]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
@@ -421,7 +421,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue["en"],outputValue["1","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:d604\:d669*)
 
 
@@ -470,7 +470,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue["en"],outputValue["2","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
 
 
@@ -514,7 +514,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue["en"],outputValue["3","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c5f0\:b839 \:bd84\:d3ec*)
 
 
@@ -557,7 +557,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:acbd\:ae30\:b3c4 \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c131\:bcc4*)
 
 

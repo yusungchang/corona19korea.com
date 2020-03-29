@@ -186,7 +186,7 @@ Export[$outputDirectory<>"en/"<>outputValue["data","filename"],
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Visualization Functions*)
 
 
@@ -261,7 +261,7 @@ imageWidth=860;
 imageDimensions={ImageSize->{imageWidth,Automatic},AspectRatio->1/2};
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Label Function*)
 
 
@@ -282,7 +282,7 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 },Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Gothic A1",FontWeight->"Light"}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*District Heat Map*)
 
 
@@ -336,7 +336,7 @@ max},
 ]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:ac70\:c8fc\:c9c0*)
 
 
@@ -377,7 +377,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue["en"],outputValue["1","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:d604\:d669*)
 
 
@@ -425,7 +425,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue["en"],outputValue["2","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
 
 
@@ -512,7 +512,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"],Background->None];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c131\:bcc4*)
 
 

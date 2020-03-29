@@ -351,7 +351,7 @@ If[newFileAdded,
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Visualization Functions*)
 
 
@@ -456,7 +456,7 @@ plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 },Alignment->Center,Spacings->{0,2},BaseStyle->{FontFamily->"Gothic A1",FontWeight->"Light"}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Heat Map*)
 
 
@@ -532,7 +532,7 @@ max},
 ]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:c0c1\:d669*)
 
 
@@ -580,7 +580,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue["en"],outputValue["1","type"]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:cd94\:c774*)
 
 
@@ -660,7 +660,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue["en"],outputValue["2","type"]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:bd84\:c11d*)
 
 
@@ -737,7 +737,7 @@ $locale="en";
 Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue["en"],outputValue["3","type"]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
 
 
