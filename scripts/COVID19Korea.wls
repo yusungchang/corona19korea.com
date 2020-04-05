@@ -16,7 +16,7 @@
 (*Configuration*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Global*)
 
 
@@ -35,7 +35,7 @@ $cacheDirectory=$baseDirectory<>"../data/cache-cdc-go-kr/";
 $outputDirectory=$baseDirectory<>"../src/output/";
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Map*)
 
 
@@ -85,7 +85,7 @@ translateValue[k___]:=value[k][$translateRules]
 (*Source*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Source URL*)
 
 
@@ -103,7 +103,7 @@ apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Read Boards, Import Posts and Cache*)
 
 
@@ -117,7 +117,7 @@ newFileNames={};
 raw=URLExecute[
 	apiKCDCURL,
 	Join[apiKCDCParamsCommon, apiKCDCParamKeyWord, apiKCDCParamPage[#]
-],"Source"]& /@ Range[apiKCDCMaxLookback];
+],"Source",CharacterEncoding->"UTF8"]& /@ Range[apiKCDCMaxLookback];
 
 
 postList=Flatten[
@@ -142,7 +142,7 @@ crawlPosts[postList];
 (*Preprocess Data*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Load All Caches*)
 
 
@@ -163,7 +163,7 @@ pvDataOld=MapThread[{#1,Sequence@@#2}&,
 	{DateObject/@pvDataOldRaw[[All,1,2]],pvDataOldRaw[[All,2;;-1,2]]}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Nationwide Data*)
 
 
@@ -261,7 +261,7 @@ If[newFileAdded,
 ];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Data*)
 
 
