@@ -3370,5 +3370,83 @@
 		"Age":56,
 		"Gender":"Female",
 		"District":"Uijeongbu"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":53,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":22,
+		"Gender":"Female",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":42,
+		"Gender":"Female",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":38,
+		"Gender":"Male",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":27,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":25,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":31,
+		"Gender":"Female",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":30,
+		"Gender":"Male",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":56,
+		"Gender":"Male",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":73,
+		"Gender":"Male",
+		"District":"Uijeongbu"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":25,
+		"Gender":"Female",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":26,
+		"Gender":"Male",
+		"District":"Siheung"
+	},
+	{
+		"Date Confirmed":"Sat 4 Apr 2020",
+		"Age":25,
+		"Gender":"Female",
+		"District":"Uijeongbu"
 	}
 ]
