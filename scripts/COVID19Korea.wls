@@ -97,7 +97,7 @@ apiKCDCURLBase="https://www.cdc.go.kr";
 apiKCDCURLBoard="/board/board.es";
 apiKCDCURL=apiKCDCURLBase<>apiKCDCURLBoard;
 apiKCDCParamsCommon={"mid"->"a20501000000","bid"->"0015"};
-apiKCDCParamKeyWord={"keyWord"->"\:cf54\:b85c\:b098\:bc14\:c774\:b7ec\:c2a4\:ac10\:c5fc\:c99d-19 \:ad6d\:b0b4 \:bc1c\:c0dd \:d604\:d669"};
+apiKCDCParamKeyWord={"keyWord"->"\:cf54\:b85c\:b098\:bc14\:c774\:b7ec\:c2a4\:ac10\:c5fc\:c99d-19 \:ad6d\:b0b4 \:bc1c\:c0dd \:d604\:d669","keyField"->"TITLE"};
 apiKCDCParamPage[n_]:={"nPage"->n};
 apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
@@ -144,6 +144,15 @@ crawlPosts[postList];
 
 (* ::Subsection::Closed:: *)
 (*Load All Caches*)
+
+
+(* To manually process files already caches, add file names to newFineNames *)
+
+
+(* And set newFileAdded to True *)
+
+
+(* Eg: newFileNames=FileNames[All,$cacheDirectory][[-n;;-1]]; newFileAdded=True; *)
 
 
 newCaches=Import[#,"String"]&/@newFileNames;

@@ -812,5 +812,60 @@
 		"Tested":450996,
 		"Not Determined":19571,
 		"Negative":431425
+	},
+	{
+		"Time":"Mon 6 Apr 2020 00:00:00",
+		"Total":466804,
+		"Confirmed":10284,
+		"Recovered":6598,
+		"Quarantined":3500,
+		"Deaths":186,
+		"Tested":456520,
+		"Not Determined":19295,
+		"Negative":437225
+	},
+	{
+		"Time":"Tue 7 Apr 2020 00:00:00",
+		"Total":477304,
+		"Confirmed":10331,
+		"Recovered":6694,
+		"Quarantined":3445,
+		"Deaths":192,
+		"Tested":466973,
+		"Not Determined":20650,
+		"Negative":446323
+	},
+	{
+		"Time":"Wed 8 Apr 2020 00:00:00",
+		"Total":486003,
+		"Confirmed":10384,
+		"Recovered":6776,
+		"Quarantined":3408,
+		"Deaths":200,
+		"Tested":475619,
+		"Not Determined":17858,
+		"Negative":457761
+	},
+	{
+		"Time":"Thu 9 Apr 2020 00:00:00",
+		"Total":494711,
+		"Confirmed":10423,
+		"Recovered":6973,
+		"Quarantined":3246,
+		"Deaths":204,
+		"Tested":484288,
+		"Not Determined":15509,
+		"Negative":468779
+	},
+	{
+		"Time":"Fri 10 Apr 2020 00:00:00",
+		"Total":503051,
+		"Confirmed":10450,
+		"Recovered":7117,
+		"Quarantined":3125,
+		"Deaths":208,
+		"Tested":492601,
+		"Not Determined":15298,
+		"Negative":477303
 	}
 ]
