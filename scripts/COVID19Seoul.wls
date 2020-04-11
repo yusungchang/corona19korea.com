@@ -12,7 +12,11 @@
 (*SSG.COM*)
 
 
-(* ::Section::Closed:: *)
+(* ::Text:: *)
+(*Starting from 4/6, Seoul Metropolitan Government no longer provides date of birth and gender information.*)
+
+
+(* ::Section:: *)
 (*Configuration*)
 
 
@@ -74,14 +78,18 @@ outputValue[k___]:=value[k][$outputRules]
 translateValue[k___]:=value[k][$translateRules]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Source*)
+
+
+(* ::Text:: *)
+(*Starting from 4/6, Seoul Metropolitan Government no longer provides date of birth and gender information.*)
 
 
 Print["Read Seoul province page..."];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Source URL*)
 
 
@@ -89,27 +97,31 @@ Print["Read Seoul province page..."];
 (*\:c11c\:c6b8\:c2dc \:cf54\:b85c\:b09819 \:c0c1\:d669\:d310*)
 
 
-seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do?menu_code=01";
+seoulPageURL="http://www.seoul.go.kr/coronaV/coronaStatus.do";
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Import Page*)
 
 
 raw=Import[seoulPageURL,"Data"];
 
 
-tableRaw=Flatten[raw[[2,2,1,2,All,3;;-1]],2];
+tableRaw=Flatten[raw[[2,2,3,All,3;;-1]],2];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Preprocess Data*)
+
+
+(* ::Text:: *)
+(*Starting from 4/6, Seoul Metropolitan Government no longer provides date of birth and gender information.*)
 
 
 Print["Process data..."];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Transform Function*)
 
 
@@ -121,8 +133,10 @@ ages,
 districts
 },
 dates=Quiet@DateObject[First@StringCases[ToString[#],RegularExpression["\\d+\\.\\d+"]]]&/@body[[All,colDate]];(* \:d655\:c9c4 \:b0a0\:c790 \:cc98\:b9ac *)
+(*
 genders=StringPart[#,1]&/@body[[All,colGen]]; (* \:c131\:bcc4 \:cc98\:b9ac *)
 ages=(eventYear-With[{a=ToExpression[First@StringCases[#,x:DigitCharacter..:>x]]},If[a<=20,2000+a,1900+a]])&/@body[[All,colAge]]; (* \:b098\:c774 \:cc98\:b9ac *)
+*)
 districts=body[[All,colDistrict]]; (* \:cd9c\:c0dd\:c9c0 \:cc98\:b9ac *)
 Transpose[{dates,ages,genders,districts}]
 ]
@@ -473,7 +487,11 @@ Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c5f0\:b839 \:bd84\:d3ec*)
 
 
-out4:=Labeled[
+(* ::Text:: *)
+(*Starting from 4/6, Seoul Metropolitan Government no longer provides date of birth and gender information.*)
+
+
+(*out4:=Labeled[
 Histogram[getData["\:b098\:c774"],{0,100,5},
 imageDimensions,
 Frame->True,
@@ -482,41 +500,45 @@ FrameLabel->{Style["\:c5f0 \:b839",14]},
 LabelingFunction->(Placed[Style[#,14,getColor["\:c5f0\:b839\:bd84\:d3ec"],Bold],Above]&),
 ChartStyle->Directive[{getColor["\:c5f0\:b839\:bd84\:d3ec"],EdgeForm[{White,Thick}]}],
 GridLines->Automatic],
-plotLabelFun[outputValue["4","label"]],Top]
+plotLabelFun[outputValue["4","label"]],Top]*)
 
 
 (* ::Subsection:: *)
 (*Export*)
 
 
-Print["Generate "<>outputValue["4","label"]<>"..."];
+(*Print["Generate "<>outputValue["4","label"]<>"..."];*)
 
 
 (* ::Subsubsection:: *)
 (*Korean*)
 
 
-$locale="kr";
+(*$locale="kr";*)
 
 
-Export[$outputDirectory<>"kr/"<>outputValue["4","filename"],out4,outputValue["4","type"],Background->None];
+(*Export[$outputDirectory<>"kr/"<>outputValue["4","filename"],out4,outputValue["4","type"],Background->None];*)
 
 
 (* ::Subsubsection:: *)
 (*English*)
 
 
-$locale="en";
+(*$locale="en";*)
 
 
-Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"],Background->None];
+(*Export[$outputDirectory<>"en/"<>outputValue["4","filename"],out4/.translateValue["en"],outputValue["4","type"],Background->None];*)
 
 
 (* ::Section::Closed:: *)
 (*\:c11c\:c6b8\:d2b9\:bcc4\:c2dc \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c131\:bcc4*)
 
 
-out5:=With[{data=Association[Rule@@#&/@(Sort@Tally[getData["\:c131\:bcc4"]])]},
+(* ::Text:: *)
+(*Starting from 4/6, Seoul Metropolitan Government no longer provides date of birth and gender information.*)
+
+
+(*out5:=With[{data=Association[Rule@@#&/@(Sort@Tally[getData["\:c131\:bcc4"]])]},
 Labeled[
 Pane[
 PieChart[data,
@@ -527,31 +549,31 @@ ChartLegends->Placed[{"\:b0a8","\:c5ec"},Right,Style[#,18,GrayLevel[.6]]&]],
 imageDimensions,Alignment->Center
 ],
 plotLabelFun[outputValue["5","label"]],Top]
-]
+]*)
 
 
 (* ::Subsection:: *)
 (*Export*)
 
 
-Print["Generate "<>outputValue["5","label"]<>"..."];
+(*Print["Generate "<>outputValue["5","label"]<>"..."];*)
 
 
 (* ::Subsubsection:: *)
 (*Korean*)
 
 
-$locale="kr";
+(*$locale="kr";*)
 
 
-Export[$outputDirectory<>"kr/"<>outputValue["5","filename"],out5,outputValue["5","type"],Background->None];
+(*Export[$outputDirectory<>"kr/"<>outputValue["5","filename"],out5,outputValue["5","type"],Background->None];*)
 
 
 (* ::Subsubsection:: *)
 (*English*)
 
 
-$locale="en";
+(*$locale="en";*)
 
 
-Export[$outputDirectory<>"en/"<>outputValue["5","filename"],out5/.translateValue["en"],outputValue["5","type"],Background->None];
+(*Export[$outputDirectory<>"en/"<>outputValue["5","filename"],out5/.translateValue["en"],outputValue["5","type"],Background->None];*)
