@@ -3694,5 +3694,53 @@
 		"Age":60,
 		"Gender":"Female",
 		"District":"Uijeongbu"
+	},
+	{
+		"Date Confirmed":"Fri 10 Apr 2020",
+		"Age":30,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 10 Apr 2020",
+		"Age":56,
+		"Gender":"Female",
+		"District":"Gwangju"
+	},
+	{
+		"Date Confirmed":"Fri 10 Apr 2020",
+		"Age":60,
+		"Gender":"Male",
+		"District":"Gwangju"
+	},
+	{
+		"Date Confirmed":"Fri 10 Apr 2020",
+		"Age":56,
+		"Gender":"Male",
+		"District":"Yangju"
+	},
+	{
+		"Date Confirmed":"Fri 10 Apr 2020",
+		"Age":28,
+		"Gender":"Female",
+		"District":"Hwaseong"
+	},
+	{
+		"Date Confirmed":"Fri 10 Apr 2020",
+		"Age":53,
+		"Gender":"Female",
+		"District":"Hwaseong"
+	},
+	{
+		"Date Confirmed":"Fri 10 Apr 2020",
+		"Age":70,
+		"Gender":"Female",
+		"District":"Uijeongbu"
+	},
+	{
+		"Date Confirmed":"Fri 10 Apr 2020",
+		"Age":51,
+		"Gender":"Female",
+		"District":"Uijeongbu"
 	}
 ]

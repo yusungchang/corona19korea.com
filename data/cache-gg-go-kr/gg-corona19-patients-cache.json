@@ -1,5 +1,5 @@
 {
-	"total":616,
+	"total":624,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -8008,6 +8008,110 @@
 			"SUBJECT":"9742번 환자의 접촉자(의정부 성모병원)",
 			"ADD_COLUMN01":"의정부시",
 			"B_IDX":"5264550"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"4.10",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"617",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′90",
+			"SUBJECT":"’20.3.31일까지 해외방문(미국), 발열 등 증상발현,  보건소 선별진료",
+			"ADD_COLUMN01":"성남시",
+			"B_IDX":"5307769"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"4.10",
+			"ADD_COLUMN08":"이천병원",
+			"ADD_COLUMN05":"618",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′64",
+			"SUBJECT":"10439번 환자의 접촉자 (의정부 확진자)",
+			"ADD_COLUMN01":"광주시",
+			"B_IDX":"5307770"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"4.10",
+			"ADD_COLUMN08":"이천병원",
+			"ADD_COLUMN05":"619",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′60",
+			"SUBJECT":"10439번 환자의 접촉자 (의정부 확진자)",
+			"ADD_COLUMN01":"광주시",
+			"B_IDX":"5307771"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"4.10",
+			"ADD_COLUMN08":"국군수도병원",
+			"ADD_COLUMN05":"620",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′64",
+			"SUBJECT":"9742번 환자의 접촉자 (의정부 성모병원)",
+			"ADD_COLUMN01":"양주시",
+			"B_IDX":"5307772"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"4.10",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"621",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′92",
+			"SUBJECT":"’20.4.9일까지 해외방문(영국), 발열, 두통 등  증상발현, 보건소 선별진료",
+			"ADD_COLUMN01":"화성시",
+			"B_IDX":"5307773"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"4.10",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"622",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′67",
+			"SUBJECT":"9412번 환자의 접촉자 (시흥 어린이집)",
+			"ADD_COLUMN01":"화성시",
+			"B_IDX":"5307774"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"4.10",
+			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN05":"623",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′50",
+			"SUBJECT":"9742번 환자의 접촉자 (의정부 성모병원)",
+			"ADD_COLUMN01":"의정부시",
+			"B_IDX":"5307775"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"4.10",
+			"ADD_COLUMN08":"분당서울대병원",
+			"ADD_COLUMN05":"624",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′69",
+			"SUBJECT":"9954번 환자의 접촉자 (의정부 성모병원)",
+			"ADD_COLUMN01":"의정부시",
+			"B_IDX":"5307776"
 		}
 	]
 }
