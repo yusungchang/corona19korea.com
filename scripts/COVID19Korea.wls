@@ -85,7 +85,7 @@ translateValue[k___]:=value[k][$translateRules]
 (*Source*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Source URL*)
 
 
@@ -103,7 +103,7 @@ apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Read Boards, Import Posts and Cache*)
 
 
@@ -142,7 +142,7 @@ crawlPosts[postList];
 (*Preprocess Data*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Load All Caches*)
 
 
@@ -172,7 +172,7 @@ pvDataOld=MapThread[{#1,Sequence@@#2}&,
 	{DateObject/@pvDataOldRaw[[All,1,2]],pvDataOldRaw[[All,2;;-1,2]]}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Nationwide Data*)
 
 
@@ -270,7 +270,7 @@ If[newFileAdded,
 ];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Province Data*)
 
 
@@ -332,6 +332,9 @@ If[newFileAdded,
 	(* No new data *)
 	pvData=pvDataOld
 ];
+
+
+pvData=Sort[pvData];
 
 
 (* ::Subsubsection:: *)

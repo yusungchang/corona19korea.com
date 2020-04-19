@@ -878,5 +878,93 @@
 		"Tested":499999,
 		"Not Determined":14070,
 		"Negative":485929
+	},
+	{
+		"Time":"Sun 12 Apr 2020 00:00:00",
+		"Total":514621,
+		"Confirmed":10512,
+		"Recovered":7368,
+		"Quarantined":2930,
+		"Deaths":214,
+		"Tested":504109,
+		"Not Determined":13788,
+		"Negative":490321
+	},
+	{
+		"Time":"Mon 13 Apr 2020 00:00:00",
+		"Total":518743,
+		"Confirmed":10537,
+		"Recovered":7447,
+		"Quarantined":2873,
+		"Deaths":217,
+		"Tested":508206,
+		"Not Determined":13391,
+		"Negative":494815
+	},
+	{
+		"Time":"Tue 14 Apr 2020 00:00:00",
+		"Total":527438,
+		"Confirmed":10564,
+		"Recovered":7534,
+		"Quarantined":2808,
+		"Deaths":222,
+		"Tested":516874,
+		"Not Determined":14651,
+		"Negative":502223
+	},
+	{
+		"Time":"Wed 15 Apr 2020 00:00:00",
+		"Total":534552,
+		"Confirmed":10591,
+		"Recovered":7616,
+		"Quarantined":2750,
+		"Deaths":225,
+		"Tested":523961,
+		"Not Determined":15026,
+		"Negative":508935
+	},
+	{
+		"Time":"Thu 16 Apr 2020 00:00:00",
+		"Total":538775,
+		"Confirmed":10613,
+		"Recovered":7757,
+		"Quarantined":2627,
+		"Deaths":229,
+		"Tested":528162,
+		"Not Determined":14268,
+		"Negative":513894
+	},
+	{
+		"Time":"Fri 17 Apr 2020 00:00:00",
+		"Total":546463,
+		"Confirmed":10635,
+		"Recovered":7829,
+		"Quarantined":2576,
+		"Deaths":230,
+		"Tested":535828,
+		"Not Determined":14186,
+		"Negative":521642
+	},
+	{
+		"Time":"Sat 18 Apr 2020 00:00:00",
+		"Total":554834,
+		"Confirmed":10653,
+		"Recovered":7937,
+		"Quarantined":2484,
+		"Deaths":232,
+		"Tested":544181,
+		"Not Determined":13550,
+		"Negative":530631
+	},
+	{
+		"Time":"Sun 19 Apr 2020 00:00:00",
+		"Total":559109,
+		"Confirmed":10661,
+		"Recovered":8042,
+		"Quarantined":2385,
+		"Deaths":234,
+		"Tested":548448,
+		"Not Determined":12243,
+		"Negative":536205
 	}
 ]
