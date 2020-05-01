@@ -85,7 +85,7 @@ translateValue[k___]:=value[k][$translateRules]
 (*Source*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Source URL*)
 
 
@@ -103,7 +103,7 @@ apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Read Boards, Import Posts and Cache*)
 
 
@@ -142,7 +142,7 @@ crawlPosts[postList];
 (*Preprocess Data*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Load All Caches*)
 
 
@@ -172,7 +172,7 @@ pvDataOld=MapThread[{#1,Sequence@@#2}&,
 	{DateObject/@pvDataOldRaw[[All,1,2]],pvDataOldRaw[[All,2;;-1,2]]}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Nationwide Data*)
 
 
@@ -270,7 +270,7 @@ If[newFileAdded,
 ];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Province Data*)
 
 
@@ -318,7 +318,7 @@ None]
 ];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Transform new cache data*)
 
 
@@ -337,7 +337,7 @@ If[newFileAdded,
 pvData=Sort[pvData];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Extract Functions*)
 
 
@@ -346,7 +346,7 @@ pvColMap={"\:c2dc\:ac04"->1,Sequence@@MapIndexed[#1->(First@#2+1)&,$provinceName
 pvGetData[col_,range_:All,table_:pvData]:=table[[range,col/.pvColMap]];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Export Processed Data*)
 
 
@@ -363,7 +363,7 @@ If[newFileAdded,
 ];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Visualization Functions*)
 
 
@@ -417,12 +417,12 @@ provinceCenter[dist_]:=dist/.centerRules;
 (*Colors*)
 
 
-getColor["\:d655\:c9c4"]=RGBColor[{0.9411764705882353, 0.4235294117647059, 0.00784313725490196, 1.}];
-getColor["\:aca9\:b9ac\:c911"]=RGBColor[{0.9647058823529412, 0.7490196078431373, 0.15294117647058825`, 1.}];
+getColor["\:d655\:c9c4"]=RGBColor[{0.9647058823529412, 0.7490196078431373, 0.15294117647058825`, 1.}];
+getColor["\:aca9\:b9ac\:c911"]=RGBColor[{0.9411764705882353, 0.4235294117647059, 0.00784313725490196, 1.}];
 getColor["\:aca9\:b9ac\:d574\:c81c"]=RGBColor[{0.2627450980392157, 0.5215686274509804, 0.9607843137254902, 1.}];
 getColor["\:c0ac\:b9dd"]=RGBColor[{0.8352941176470589, 0.00784313725490196, 0.00392156862745098, 1.}];
-getColor["\:ac80\:c0ac\:cd1d\:acc4"]=RGBColor[{0.9411764705882353, 0.4235294117647059, 0.00784313725490196, 1.}];
-getColor["\:ac80\:c0ac\:c911"]=RGBColor[{0.9647058823529412, 0.7490196078431373, 0.15294117647058825`, 1.}];
+getColor["\:ac80\:c0ac\:cd1d\:acc4"]=getColor["\:aca9\:b9ac\:d574\:c81c"];
+getColor["\:ac80\:c0ac\:c911"]=getColor["\:d655\:c9c4"];
 getColor["\:acb0\:acfc\:c74c\:c131"]=RGBColor[{0.19607843137254902`, 0.7137254901960784, 0.4745098039215686, 1.}];
 
 
@@ -457,11 +457,11 @@ $locale="kr";
 plotLabelFun[title_,time_:CurrentDate[]]:=Column[{
 	Style[title,32,GrayLevel[.6]],
 	Style[Row[{
-		StringReplace[DateString[time,{"MonthShort","/","DayShort"," (","DayNameShort",") ","Hour24Short"}],
+		StringReplace[DateString[time,{"MonthShort","/","DayShort"," (","DayNameShort",") "}],
 			Switch[$locale,
 				"en", {},
 				"kr", {"Mon"->"\:c6d4","Tue"->"\:d654","Wed"->"\:c218","Thu"->"\:baa9","Fri"->"\:ae08","Sat"->"\:d1a0","Sun"->"\:c77c"}]
-			],"\:c2dc"," ","\:c5c5\:b370\:c774\:d2b8"}],
+			],"\:c5c5\:b370\:c774\:d2b8"}],
 		20,GrayLevel[.8]
 	],
 	Spacer[{0,16}]
@@ -593,14 +593,14 @@ Export[$outputDirectory<>"en/"<>outputValue["1","filename"],out1/.translateValue
 
 
 (* ::Section::Closed:: *)
-(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:cd94\:c774*)
+(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:ac80\:c0ac*)
 
 
 Clear[out2];
 out2:=Labeled[
 Module[{
 range=Flatten[Position[#["Hour"]&/@getData["\:c2dc\:ac04"],x_/;x<12]],(* \:c624\:c804 \:c77c\:c77c \:d604\:d669 \:b9cc \:cd94\:cd9c *)
-legends={"\:d655\:c9c4","\:c0ac\:b9dd","\:aca9\:b9ac\:d574\:c81c"},
+legends={"\:ac80\:c0ac\:cd1d\:acc4","\:ac80\:c0ac\:c911"},
 labelInset,
 todayInset,
 currentInset,
@@ -609,36 +609,37 @@ dateTicks
 dateTicks=Cases[getData["\:c2dc\:ac04",range],x_/;(DateString[x,"DayName"]==="Monday")];
 
 labelInset=Table[
-With[{list=getData[{"\:c2dc\:ac04",d},20;;-1]},
+With[{list=getData[{"\:c2dc\:ac04",d},range]},
 (With[{x=AbsoluteTime@#[[1]],y=#[[2]]},
-Inset[Style[If[y<55,"",y],barLabelStyle,Bold,getColor[d]],Offset[{-10,12},{x,y}]]]&)/@list[[-1;;1;;-2]]
+{Inset[Style[If[y<55,"",y],Bold,barLabelStyle,getColor[d]],Offset[{-10,15},{x,y}]],
+AbsolutePointSize[4],getColor[d],Point[{x,y}]}
+]&)/@list[[-1;;-50;;-4]]
 ],{d,legends}];(* Labeling cutoff increased to 55 *)
 
 {todayInset,currentInset}=
-With[{t=AbsoluteTime@getData["\:c2dc\:ac04",-1], y=getData["\:d655\:c9c4",-1],yr=getData["\:aca9\:b9ac\:d574\:c81c",-1]},{
-	{getColor["\:d655\:c9c4"],Dashed,Line[{{t,0},{t,y}}]},
-	Text[Framed[Style[Row[{DateString[getData["\:c2dc\:ac04",-1],{"MonthShort","/","DayShort"," ","Hour24Short"}],"\:c2dc"}],White,Bold,14],
-		FrameStyle->None,Background->getColor["\:d655\:c9c4"],
+With[{t=AbsoluteTime@getData["\:c2dc\:ac04",-1], y=getData[legends[[1]],-1],yr=getData[legends[[2]],-1]},{
+	{getColor[legends[[1]]],Dashed,Line[{{t,0},{t,y}}]},
+	Text[Framed[Style[DateString[getData["\:c2dc\:ac04",-1],{"MonthShort","/","DayShort"}],White,Bold,14],
+		FrameStyle->None,Background->GrayLevel[.1],
 		FrameMargins->{{8,8},{4,4}},
-		RoundingRadius->4],Offset[{-10,0},{t,(y+yr)/2}],Scaled[{1,0.5}]]
+		RoundingRadius->4],Offset[{-5,0},{t,(y+yr)/2}],Scaled[{1,0.5}]]
 }];
 
 DateListPlot[
 getData[{"\:c2dc\:ac04",#},range]&/@legends,
 InterpolationOrder->2,
 PlotStyle->getColor/@legends,
-PlotMarkers->Automatic,
 PlotRange->{Automatic,All},
 PlotRangePadding->{Scaled[0.01],{Automatic,Scaled[0.08]}},
 PlotRangeClipping->False,
-Filling->Bottom,
 DateTicksFormat->{"MonthShort","/","DayShort"},
 FrameTicks->{{Automatic,None},{dateTicks,None}},
 FrameTicksStyle->frameTickStyle,
 GridLines->Automatic,
-PlotLegends->placedLegendFrame[{"\:b204\:c801\:d655\:c9c4\:c790","\:b204\:c801\:c0ac\:b9dd\:c790","\:b204\:c801\:d1f4\:c6d0\:c790"}],
+PlotLegends->placedLegendFrame[legends],
 Prolog->todayInset,
 Epilog->{labelInset,currentInset},
+Filling->{1->{2},2->Bottom},
 imageDimensions
 ]
 ]
@@ -673,50 +674,54 @@ Export[$outputDirectory<>"en/"<>outputValue["2","filename"],out2/.translateValue
 
 
 (* ::Section::Closed:: *)
-(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:bd84\:c11d*)
+(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4*)
 
 
 Clear[out3];
 out3:=Labeled[
 Module[{
 range=Flatten[Position[#["Hour"]&/@getData["\:c2dc\:ac04"],x_/;x<12]],(* \:c624\:c804 \:c77c\:c77c \:d604\:d669 \:b9cc \:cd94\:cd9c *)
-legends={"\:c0ac\:b9dd","\:aca9\:b9ac\:c911","\:aca9\:b9ac\:d574\:c81c"},
-data,
-evenQ,
-dates,
-dateTicks,
-dateGrids,
-legendInset,
-labelFun
+legends={"\:d655\:c9c4","\:aca9\:b9ac\:c911","\:c0ac\:b9dd"},
+labelInset,
+todayInset,
+currentInset,
+dateTicks
 },
-data=Transpose[getData[#,range]&/@legends];
-evenQ=EvenQ[First@Dimensions[data]];
-dates=getData["\:c2dc\:ac04",range];
-dateTicks=MapIndexed[{First@#2,If[DateString[#1,"DayName"]==="Monday",DateString[#1,{"MonthShort","/","DayShort"}],""]}&,dates];
-dateGrids=Flatten[Position[dates,x_/;DateString[x,"DayName"]==="Monday",{1},Heads->False]];
-legendInset=legendFrame@SwatchLegend[getColor/@legends,legends,LegendMarkers->Graphics[{EdgeForm[Opacity[.1]],Rectangle[]}],LegendMarkerSize->14];
-labelFun=(With[{i=#2[[2]]},
-If[EvenQ@#2[[1]]===evenQ,
-If[i==2,(* \:c911\:ac04\:bc14 *)
-Placed[If[#1<200,"",Overlay[{Style[#1,barLabelStyleSmall,Bold,(getColor/@legends)[[2]]],Style[#1,barLabelStyleSmall,White]}]],Top],
-Placed[Style[If[#1<4,"",#1],(getColor/@legends)[[i]],barLabelStyleSmall,Bold],Above]
-],
-Placed["",Top]
-]
-]
-&);
+dateTicks=Cases[getData["\:c2dc\:ac04",range],x_/;(DateString[x,"DayName"]==="Monday")];
 
-SetOptions[BarChart,imageDimensions];
+labelInset=Table[
+With[{list=getData[{"\:c2dc\:ac04",d},range]},
+(With[{x=AbsoluteTime@#[[1]],y=#[[2]]},
+{Inset[Style[If[y<55,"",y],Bold,barLabelStyle,getColor[d]],Offset[{-10,15},{x,y}]],
+AbsolutePointSize[4],getColor[d],Point[{x,y}]}
+]&)/@list[[-1;;-40;;-4]]
+],{d,legends}];(* Labeling cutoff increased to 55 *)
 
-BarChart[data,
-ChartLayout->"Stacked",
-ChartStyle->getColor/@legends,
-LabelingFunction->labelFun,
-Frame->True,
+{todayInset,currentInset}=
+With[{t=AbsoluteTime@getData["\:c2dc\:ac04",-1], y=getData[legends[[1]],-1],yr=getData[legends[[2]],-1]},{
+	{getColor[legends[[1]]],Dashed,Line[{{t,0},{t,y}}]},
+	Text[Framed[Style[DateString[getData["\:c2dc\:ac04",-1],{"MonthShort","/","DayShort"}],White,Bold,14],
+		FrameStyle->None,Background->GrayLevel[.1],
+		FrameMargins->{{8,8},{4,4}},
+		RoundingRadius->4],Offset[{-5,0},{t,(y+yr)/2}],Scaled[{1,0.5}]]
+}];
+
+DateListPlot[
+getData[{"\:c2dc\:ac04",#},range]&/@legends,
+InterpolationOrder->2,
+PlotStyle->getColor/@legends,
+PlotRange->{Automatic,All},
+PlotRangePadding->{Scaled[0.01],{Automatic,Scaled[0.08]}},
+PlotRangeClipping->False,
+DateTicksFormat->{"MonthShort","/","DayShort"},
 FrameTicks->{{Automatic,None},{dateTicks,None}},
 FrameTicksStyle->frameTickStyle,
-GridLines->{dateGrids,Automatic},
-Epilog->Inset[legendInset,Scaled[{0.025,0.975}],{Left,Top}]
+GridLines->Automatic,
+PlotLegends->placedLegendFrame[legends],
+Prolog->todayInset,
+Epilog->{labelInset,currentInset},
+Filling->{1->{2},2->{3},3->Bottom},
+imageDimensions
 ]
 ]
 ,plotLabelFun[outputValue["3","label"],Last@getData["\:c2dc\:ac04"]],Top];
@@ -729,7 +734,7 @@ Epilog->Inset[legendInset,Scaled[{0.025,0.975}],{Left,Top}]
 Print["Generate "<>outputValue["3","label"]<>"..."];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Korean*)
 
 
@@ -739,7 +744,7 @@ $locale="kr";
 Export[$outputDirectory<>"kr/"<>outputValue["3","filename"],out3,outputValue["3","type"]];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*English*)
 
 
@@ -750,52 +755,56 @@ Export[$outputDirectory<>"en/"<>outputValue["3","filename"],out3/.translateValue
 
 
 (* ::Section::Closed:: *)
-(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00\:c218*)
+(*\:c804\:ad6d \:cf54\:b85c\:b09819 \:d655\:c9c4\:c790 \:c99d\:ac00*)
 
 
 Clear[out4];
 out4:=Labeled[
 Module[{
 range=Flatten[Position[#["Hour"]&/@getData["\:c2dc\:ac04"],x_/;x<12]],(* \:c624\:c804 \:c77c\:c77c \:d604\:d669 \:b9cc \:cd94\:cd9c *)
-dates,
-dateTicks,
-dateGrids,
-legendInset,
+legend="\:d655\:c9c4",
+labelInset,
 todayInset,
 currentInset,
-labelInset,
-diff
-(*marker=Graphics[{{GrayLevel[1],Disk[{0,0},Offset[{3,3}]]},AbsoluteThickness[1.5],Dashing[{}],Circle[{0,0},Offset[{3,3}]]}]*)
+dateTicks,
+data
 },
-dates=getData["\:c2dc\:ac04",range];
-dateTicks=MapIndexed[{First@#2-1,If[DateString[#1,"DayName"]==="Monday",DateString[#1,{"MonthShort","/","DayShort"}],""]}&,dates];
-dateTicks=Rest@dateTicks;
-dateGrids=Flatten[Position[dates,x_/;DateString[x,"DayName"]==="Monday",{1},Heads->False]]-1;
-diff=Differences[getData["\:d655\:c9c4",range]];
-{todayInset,currentInset}=With[{t=Length[dateTicks],y=Last@diff},{
-{getColor["\:d655\:c9c4"],Dashed,Line[{{t,0},{t,y}}]},
-Text[Framed[Style[Row[{DateString[getData["\:c2dc\:ac04",-1],{"MonthShort","/","DayShort"," ","Hour24Short"}],"\:c2dc"}],White,Bold,14],FrameStyle->None,Background->getColor["\:d655\:c9c4"],FrameMargins->{{8,8},{4,4}},RoundingRadius->4],Offset[{-10,0},{t,y/2}],Scaled[{1,0.5}]]
+data=Transpose@{getData["\:c2dc\:ac04",range],Prepend[Differences[getData[legend,range]],0]};
+dateTicks=Cases[getData["\:c2dc\:ac04",range],x_/;(DateString[x,"DayName"]==="Monday")];
+
+labelInset=
+(With[{x=AbsoluteTime@data[[All,1]][[#[[1]]]],y=#[[2]]},
+{Inset[Style[y,Bold,barLabelStyle,getColor[legend]],Offset[{0,15},{x,y}]],
+AbsolutePointSize[4],getColor[legend],Point[{x,y}]}
+]&)/@Cases[FindPeaks[data[[All,2]],0,0,-Infinity],{i_,y_}/;IntegerQ[i]==True];
+
+{todayInset,currentInset}=
+With[{t=AbsoluteTime@getData["\:c2dc\:ac04",-1], y=data[[-1,2]],yr=data[[-1,2]]+500},{
+	{GrayLevel[.7],Dashed,Line[{{t,0},Scaled[{0,1},{t,0}]}]},
+	Text[Framed[Style[DateString[getData["\:c2dc\:ac04",-1],{"MonthShort","/","DayShort"}],White,Bold,14],
+		FrameStyle->None,Background->GrayLevel[.1],
+		FrameMargins->{{8,8},{4,4}},
+		RoundingRadius->4],Offset[{-5,0},Scaled[{0,0.5},{t,0}]],Scaled[{1,0.5}]]
 }];
-labelInset=Table[With[{y=diff[[x]]},
-Inset[Style[If[y<4,"",y],barLabelStyle,Bold,getColor["\:d655\:c9c4"]],Offset[{0,15},{x,y}]]],
-{x,Range[Length[dateTicks]]}];
 
-SetOptions[ListLinePlot,imageDimensions];
-
-ListLinePlot[diff,
-PlotStyle->getColor["\:d655\:c9c4"],
-Frame->True,
+DateListPlot[
+Transpose@{getData["\:c2dc\:ac04",range],Prepend[Differences[getData[legend,range]],0]},
+InterpolationOrder->2,
+PlotStyle->getColor[legend],
+PlotRange->{Automatic,All},
+PlotRangePadding->{Scaled[0.01],{Automatic,Scaled[0.08]}},
+PlotRangeClipping->False,
+DateTicksFormat->{"MonthShort","/","DayShort"},
 FrameTicks->{{Automatic,None},{dateTicks,None}},
 FrameTicksStyle->frameTickStyle,
-GridLines->{dateGrids,Automatic},
-InterpolationOrder->2,
-PlotMarkers->Automatic,
-Filling->Bottom,
+GridLines->Automatic,
 Prolog->todayInset,
-Epilog->{currentInset,labelInset}
+Epilog->{labelInset,currentInset},
+Filling->{1->Bottom},
+imageDimensions
 ]
 ]
-,plotLabelFun[outputValue["4","label"],Last@getData["\:c2dc\:ac04"]],Top]
+,plotLabelFun[outputValue["4","label"],Last@getData["\:c2dc\:ac04"]],Top];
 
 
 (* ::Subsection::Closed:: *)

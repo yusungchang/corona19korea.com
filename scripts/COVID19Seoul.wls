@@ -126,30 +126,25 @@ Print["Process data..."];
 
 
 seoulDataProcess[body_,eventYear_]:=Module[{
-colNum=1,colDate=3,colGen=4,colAge=4,colDistrict=5,
+colNum=1,colDate=3,colDistrict=4,colEntry=5,colType=7,
 dates,
-genders,
-ages,
 districts
 },
 dates=Quiet@DateObject[First@StringCases[ToString[#],RegularExpression["\\d+\\.\\d+"]]]&/@body[[All,colDate]];(* \:d655\:c9c4 \:b0a0\:c790 \:cc98\:b9ac *)
-(*
-genders=StringPart[#,1]&/@body[[All,colGen]]; (* \:c131\:bcc4 \:cc98\:b9ac *)
-ages=(eventYear-With[{a=ToExpression[First@StringCases[#,x:DigitCharacter..:>x]]},If[a<=20,2000+a,1900+a]])&/@body[[All,colAge]]; (* \:b098\:c774 \:cc98\:b9ac *)
-*)
-districts=body[[All,colDistrict]]; (* \:cd9c\:c0dd\:c9c0 \:cc98\:b9ac *)
-Transpose[{dates,ages,genders,districts}]
+districts=body[[All,colDistrict]]; (* \:ac70\:c8fc\:c9c0 \:cc98\:b9ac *)
+
+Transpose[{dates,districts}]
 ]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Process Raw Data*)
 
 
 table=seoulDataProcess[tableRaw,2020]; (* \:b9ac\:d3ec\:d2b8 \:c2dc\:c810: 2020\:b144 *)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Extract Functions*)
 
 

@@ -13,19 +13,19 @@
 		"label": "전국 코로나19 상황"
     },
 	"2": {
-		"filename": "korea-corona19-confirmed.svg",
+		"filename": "korea-corona19-test.svg",
 		"type": "SVG",
-		"label": "전국 코로나19 확진자 추이"
+		"label": "전국 코로나19 검사"
     },
 	"3": {
-		"filename": "korea-corona19-breakdown.svg",
+		"filename": "korea-corona19-confirmed.svg",
 		"type": "SVG",
-		"label": "전국 코로나19 확진자 분석"
+		"label": "전국 코로나19 확진"
 	},
 	"4": {
 		"filename": "korea-corona19-new-cases.svg",
 		"type": "SVG",
-		"label": "전국 코로나19 확진자 증가수"
+		"label": "전국 코로나19 확진자 증가"
 	},
 	"5": {
 		"filename": "korea-corona19-by-province.png",

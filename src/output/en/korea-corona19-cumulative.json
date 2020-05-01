@@ -966,5 +966,126 @@
 		"Tested":548448,
 		"Not Determined":12243,
 		"Negative":536205
+	},
+	{
+		"Time":"Mon 20 Apr 2020 00:00:00",
+		"Total":563035,
+		"Confirmed":10674,
+		"Recovered":8114,
+		"Quarantined":2324,
+		"Deaths":236,
+		"Tested":552361,
+		"Not Determined":11981,
+		"Negative":540380
+	},
+	{
+		"Time":"Tue 21 Apr 2020 00:00:00",
+		"Total":571014,
+		"Confirmed":10683,
+		"Recovered":8213,
+		"Quarantined":2233,
+		"Deaths":237,
+		"Tested":560331,
+		"Not Determined":12721,
+		"Negative":547610
+	},
+	{
+		"Time":"Wed 22 Apr 2020 00:00:00",
+		"Total":577959,
+		"Confirmed":10694,
+		"Recovered":8277,
+		"Quarantined":2179,
+		"Deaths":238,
+		"Tested":567265,
+		"Not Determined":12121,
+		"Negative":555144
+	},
+	{
+		"Time":"Thu 23 Apr 2020 00:00:00",
+		"Total":583971,
+		"Confirmed":10702,
+		"Recovered":8411,
+		"Quarantined":2051,
+		"Deaths":240,
+		"Tested":573269,
+		"Not Determined":10139,
+		"Negative":563130
+	},
+	{
+		"Time":"Fri 24 Apr 2020 00:00:00",
+		"Total":589520,
+		"Confirmed":10708,
+		"Recovered":8501,
+		"Quarantined":1967,
+		"Deaths":240,
+		"Tested":578812,
+		"Not Determined":9600,
+		"Negative":569212
+	},
+	{
+		"Time":"Sat 25 Apr 2020 00:00:00",
+		"Total":595161,
+		"Confirmed":10718,
+		"Recovered":8635,
+		"Quarantined":1843,
+		"Deaths":240,
+		"Tested":584443,
+		"Not Determined":9259,
+		"Negative":575184
+	},
+	{
+		"Time":"Sun 26 Apr 2020 00:00:00",
+		"Total":598285,
+		"Confirmed":10728,
+		"Recovered":8717,
+		"Quarantined":1769,
+		"Deaths":242,
+		"Tested":587557,
+		"Not Determined":8999,
+		"Negative":578558
+	},
+	{
+		"Time":"Mon 27 Apr 2020 00:00:00",
+		"Total":601660,
+		"Confirmed":10738,
+		"Recovered":8764,
+		"Quarantined":1731,
+		"Deaths":243,
+		"Tested":590922,
+		"Not Determined":8895,
+		"Negative":582027
+	},
+	{
+		"Time":"Tue 28 Apr 2020 00:00:00",
+		"Total":608514,
+		"Confirmed":10752,
+		"Recovered":8854,
+		"Quarantined":1654,
+		"Deaths":244,
+		"Tested":597762,
+		"Not Determined":9203,
+		"Negative":588559
+	},
+	{
+		"Time":"Wed 29 Apr 2020 00:00:00",
+		"Total":614197,
+		"Confirmed":10761,
+		"Recovered":8922,
+		"Quarantined":1593,
+		"Deaths":246,
+		"Tested":603436,
+		"Not Determined":8307,
+		"Negative":595129
+	},
+	{
+		"Time":"Thu 30 Apr 2020 00:00:00",
+		"Total":619881,
+		"Confirmed":10765,
+		"Recovered":9059,
+		"Quarantined":1459,
+		"Deaths":247,
+		"Tested":609116,
+		"Not Determined":8634,
+		"Negative":600482
 	}
 ]
