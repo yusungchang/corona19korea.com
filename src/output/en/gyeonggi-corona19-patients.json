@@ -4060,5 +4060,11 @@
 		"Age":21,
 		"Gender":"Female",
 		"District":"Gwangmyeong"
+	},
+	{
+		"Date Confirmed":"Fri 1 May 2020",
+		"Age":26,
+		"Gender":"Male",
+		"District":"Hanam"
 	}
 ]
