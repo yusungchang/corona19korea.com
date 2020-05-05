@@ -1131,5 +1131,16 @@
 		"Tested":623120,
 		"Not Determined":8176,
 		"Negative":614944
+	},
+	{
+		"Time":"Tue 5 May 2020 00:00:00",
+		"Total":640237,
+		"Confirmed":10804,
+		"Recovered":9283,
+		"Quarantined":1267,
+		"Deaths":254,
+		"Tested":629433,
+		"Not Determined":8858,
+		"Negative":620575
 	}
 ]
