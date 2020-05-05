@@ -1,5 +1,5 @@
 {
-	"total":678,
+	"total":681,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -2175,7 +2175,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.10\/4.4",
-			"ADD_COLUMN08":"이천병원 생활치료센터\/이천병원",
+			"ADD_COLUMN08":"이천병원 생활치료센터\/이천병원\/수원병원",
 			"ADD_COLUMN05":"168",
 			"ADD_COLUMN04":"환자7557",
 			"NOTICE_YN":"N",
@@ -2499,8 +2499,8 @@
 		},
 		{
 			"BS_IDX":"722",
-			"ADD_COLUMN09":"3.13",
-			"ADD_COLUMN08":"포천병원 생활치료센터",
+			"ADD_COLUMN09":"3.13\/4.29",
+			"ADD_COLUMN08":"포천병원 생활치료센터\/수원병원",
 			"ADD_COLUMN05":"193",
 			"ADD_COLUMN04":"환자7987",
 			"NOTICE_YN":"N",
@@ -3500,7 +3500,7 @@
 		},
 		{
 			"BS_IDX":"722",
-			"ADD_COLUMN09":"3.17",
+			"ADD_COLUMN09":"3.17\/4.28",
 			"ADD_COLUMN08":"포천병원 생활치료센터\/자가격리",
 			"ADD_COLUMN05":"270",
 			"ADD_COLUMN04":"환자8391",
@@ -3800,7 +3800,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.18",
-			"ADD_COLUMN08":"경기도의료원 의정부병원",
+			"ADD_COLUMN08":"의정부병원\/수원병원",
 			"ADD_COLUMN05":"293",
 			"ADD_COLUMN04":"환자8493",
 			"NOTICE_YN":"N",
@@ -4814,7 +4814,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.24",
-			"ADD_COLUMN08":"경기도의료원  이천병원",
+			"ADD_COLUMN08":"이천병원\/수원병원",
 			"ADD_COLUMN05":"371",
 			"ADD_COLUMN04":"환자9133",
 			"NOTICE_YN":"N",
@@ -5021,7 +5021,7 @@
 		},
 		{
 			"BS_IDX":"722",
-			"ADD_COLUMN09":"3.24",
+			"ADD_COLUMN09":"3.24\/4.28",
 			"ADD_COLUMN08":"이천병원\/부천세종병원",
 			"ADD_COLUMN05":"387",
 			"ADD_COLUMN04":"환자9080",
@@ -5282,7 +5282,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.26",
-			"ADD_COLUMN08":"경기도의료원  의정부병원",
+			"ADD_COLUMN08":"의정부병원 생활치료센터",
 			"ADD_COLUMN05":"407",
 			"ADD_COLUMN04":"환자9331",
 			"NOTICE_YN":"N",
@@ -5698,7 +5698,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.28",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원\/안성병원",
 			"ADD_COLUMN05":"439",
 			"ADD_COLUMN04":"환자9542",
 			"NOTICE_YN":"N",
@@ -6127,7 +6127,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.30",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원\/국군수도병원",
 			"ADD_COLUMN05":"472",
 			"ADD_COLUMN04":"환자9745",
 			"NOTICE_YN":"N",
@@ -6282,8 +6282,8 @@
 		},
 		{
 			"BS_IDX":"722",
-			"ADD_COLUMN09":"3.31",
-			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN09":"3.31\/4.29",
+			"ADD_COLUMN08":"성남의료원\/수원병원",
 			"ADD_COLUMN05":"484",
 			"ADD_COLUMN04":"환자9878",
 			"NOTICE_YN":"N",
@@ -6347,8 +6347,8 @@
 		},
 		{
 			"BS_IDX":"722",
-			"ADD_COLUMN09":"3.31",
-			"ADD_COLUMN08":"파주병원",
+			"ADD_COLUMN09":"3.31\/4.28",
+			"ADD_COLUMN08":"파주병원\/자가격리",
 			"ADD_COLUMN05":"489",
 			"ADD_COLUMN04":"환자9881",
 			"NOTICE_YN":"N",
@@ -6400,7 +6400,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.31",
-			"ADD_COLUMN08":"파주병원",
+			"ADD_COLUMN08":"파주병원 생활치료센터",
 			"ADD_COLUMN05":"493",
 			"ADD_COLUMN04":"환자9811",
 			"NOTICE_YN":"N",
@@ -6737,8 +6737,8 @@
 		},
 		{
 			"BS_IDX":"722",
-			"ADD_COLUMN09":"4.1",
-			"ADD_COLUMN08":"의정부병원 생활치료센터",
+			"ADD_COLUMN09":"4.1\/4.30",
+			"ADD_COLUMN08":"의정부병원 생활치료센터\/자가격리",
 			"ADD_COLUMN05":"519",
 			"ADD_COLUMN04":"환자9964",
 			"NOTICE_YN":"N",
@@ -6842,7 +6842,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.2",
-			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN08":"안성병원 생활치료센터",
 			"ADD_COLUMN05":"527",
 			"ADD_COLUMN04":"환자10014",
 			"NOTICE_YN":"N",
@@ -7089,7 +7089,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.2",
-			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN08":"수원병원 생활치료센터",
 			"ADD_COLUMN05":"546",
 			"ADD_COLUMN04":"환자10126",
 			"NOTICE_YN":"N",
@@ -7400,8 +7400,8 @@
 		},
 		{
 			"BS_IDX":"722",
-			"ADD_COLUMN09":"4.4",
-			"ADD_COLUMN08":"안성병원 생활치료센터",
+			"ADD_COLUMN09":"4.4\/4.29",
+			"ADD_COLUMN08":"안성병원 생활치료센터\/안성병원",
 			"ADD_COLUMN05":"570",
 			"ADD_COLUMN04":"환자10218",
 			"NOTICE_YN":"N",
@@ -7830,7 +7830,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.8",
-			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN08":"수원병원 생활치료센터",
 			"ADD_COLUMN05":"603",
 			"ADD_COLUMN04":"환자10414",
 			"NOTICE_YN":"N",
@@ -7960,7 +7960,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.9",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원 생활치료센터",
 			"ADD_COLUMN05":"613",
 			"ADD_COLUMN04":"환자10444",
 			"NOTICE_YN":"N",
@@ -7973,7 +7973,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.9",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원 생활치료센터",
 			"ADD_COLUMN05":"614",
 			"ADD_COLUMN04":"환자10439",
 			"NOTICE_YN":"N",
@@ -8090,7 +8090,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.10",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원\/안성병원",
 			"ADD_COLUMN05":"623",
 			"ADD_COLUMN04":"환자10466",
 			"NOTICE_YN":"N",
@@ -8194,7 +8194,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.12",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원 생활치료센터",
 			"ADD_COLUMN05":"631",
 			"ADD_COLUMN04":"환자10555",
 			"NOTICE_YN":"N",
@@ -8207,7 +8207,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.12",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원\/안성병원",
 			"ADD_COLUMN05":"632",
 			"ADD_COLUMN04":"환자10554",
 			"NOTICE_YN":"N",
@@ -8389,7 +8389,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.14",
-			"ADD_COLUMN08":"파주병원",
+			"ADD_COLUMN08":"파주병원 생활치료센터",
 			"ADD_COLUMN05":"646",
 			"ADD_COLUMN04":"환자10596",
 			"NOTICE_YN":"N",
@@ -8480,7 +8480,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.17",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원 생활치료센터",
 			"ADD_COLUMN05":"653",
 			"ADD_COLUMN04":"환자10652",
 			"NOTICE_YN":"N",
@@ -8794,7 +8794,7 @@
 			"ADD_COLUMN09":"4.29",
 			"ADD_COLUMN08":"수원병원",
 			"ADD_COLUMN05":"677",
-			"ADD_COLUMN04":"확인중",
+			"ADD_COLUMN04":"환자10770",
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"′97",
@@ -8807,13 +8807,52 @@
 			"ADD_COLUMN09":"4.30",
 			"ADD_COLUMN08":"수원병원",
 			"ADD_COLUMN05":"678",
-			"ADD_COLUMN04":"확인중",
+			"ADD_COLUMN04":"환자10773",
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"′94",
 			"SUBJECT":"’20.4.28.까지 해외유학(미국),  특별한 증상발현 없음, 보건소 선별진료",
 			"ADD_COLUMN01":"하남시",
 			"B_IDX":"6047259"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.2",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"679",
+			"ADD_COLUMN04":"환자10792",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′00",
+			"SUBJECT":"’20.5.1일까지 해외방문(필리핀), 입국 시 증상 발현 없음, 보건소 선별진료",
+			"ADD_COLUMN01":"파주시",
+			"B_IDX":"6091037"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.2",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"680",
+			"ADD_COLUMN04":"환자10787",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′73",
+			"SUBJECT":"’20.4.30일까지 해외방문(멕시코), 특별한 증상 발현 없음, 보건소 선별진료",
+			"ADD_COLUMN01":"파주시",
+			"B_IDX":"6091038"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.3",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"681",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′59",
+			"SUBJECT":"’19.5월~’20.5.2일 해외방문(타자키스탄), 기침 등 증상발현(입국 시 무증상자 분류), 보건소 선별진료",
+			"ADD_COLUMN01":"김포시",
+			"B_IDX":"6134760"
 		}
 	]
 }

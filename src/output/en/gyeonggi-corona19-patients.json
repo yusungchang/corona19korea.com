@@ -4066,5 +4066,23 @@
 		"Age":26,
 		"Gender":"Male",
 		"District":"Hanam"
+	},
+	{
+		"Date Confirmed":"Sat 2 May 2020",
+		"Age":20,
+		"Gender":"Male",
+		"District":"Paju"
+	},
+	{
+		"Date Confirmed":"Sat 2 May 2020",
+		"Age":47,
+		"Gender":"Male",
+		"District":"Paju"
+	},
+	{
+		"Date Confirmed":"Sun 3 May 2020",
+		"Age":61,
+		"Gender":"Male",
+		"District":"Gimpo"
 	}
 ]
