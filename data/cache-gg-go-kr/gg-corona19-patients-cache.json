@@ -953,13 +953,13 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"2.28",
-			"ADD_COLUMN08":"경기도의료원 수원병원",
+			"ADD_COLUMN08":"수원병원\/아주대병원",
 			"ADD_COLUMN05":"74",
 			"ADD_COLUMN04":"환자2286",
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"’32",
-			"SUBJECT":"대구거주자, 2.24일 아들집 (평택) 방문, 최종확진 ",
+			"SUBJECT":"대구거주자, 2.24일 아들집 (평택) 방문, 최종확진",
 			"ADD_COLUMN01":"평택시",
 			"B_IDX":"3945979"
 		},
@@ -3995,7 +3995,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.19",
-			"ADD_COLUMN08":"경기도의료원  파주병원",
+			"ADD_COLUMN08":"파주병원 생활치료센터",
 			"ADD_COLUMN05":"308",
 			"ADD_COLUMN04":"환자8618",
 			"NOTICE_YN":"N",
@@ -4658,7 +4658,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.23",
-			"ADD_COLUMN08":"경기도의료원  의정부병원",
+			"ADD_COLUMN08":"의정부병원\/수원병원",
 			"ADD_COLUMN05":"359",
 			"ADD_COLUMN04":"환자9013",
 			"NOTICE_YN":"N",
@@ -5503,7 +5503,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.27",
-			"ADD_COLUMN08":"경기도의료원  파주병원",
+			"ADD_COLUMN08":"파주병원 생활치료센터",
 			"ADD_COLUMN05":"424",
 			"ADD_COLUMN04":"환자9544",
 			"NOTICE_YN":"N",
@@ -6426,7 +6426,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"3.31",
-			"ADD_COLUMN08":"의정부병원",
+			"ADD_COLUMN08":"의정부병원\/안성병원",
 			"ADD_COLUMN05":"495",
 			"ADD_COLUMN04":"환자9796",
 			"NOTICE_YN":"N",
@@ -6738,7 +6738,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.1\/4.30",
-			"ADD_COLUMN08":"의정부병원 생활치료센터\/자가격리",
+			"ADD_COLUMN08":"의정부병원 생활치료센터\/자가격리\/수원병원",
 			"ADD_COLUMN05":"519",
 			"ADD_COLUMN04":"환자9964",
 			"NOTICE_YN":"N",
@@ -7349,7 +7349,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.4",
-			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN08":"안성병원\/분당서울대병원",
 			"ADD_COLUMN05":"566",
 			"ADD_COLUMN04":"환자10184",
 			"NOTICE_YN":"N",
@@ -8584,7 +8584,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.24",
-			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN08":"안성병원 생활치료센터",
 			"ADD_COLUMN05":"661",
 			"ADD_COLUMN04":"환자10714",
 			"NOTICE_YN":"N",
@@ -8597,7 +8597,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.24",
-			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN08":"안성병원 생활치료센터",
 			"ADD_COLUMN05":"662",
 			"ADD_COLUMN04":"환자10715",
 			"NOTICE_YN":"N",
