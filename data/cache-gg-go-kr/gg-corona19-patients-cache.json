@@ -1,5 +1,5 @@
 {
-	"total":681,
+	"total":684,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -7128,7 +7128,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.3",
-			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN08":"안성병원 생활치료센터",
 			"ADD_COLUMN05":"549",
 			"ADD_COLUMN04":"환자10108",
 			"NOTICE_YN":"N",
@@ -7557,7 +7557,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.3",
-			"ADD_COLUMN08":"서울의료원",
+			"ADD_COLUMN08":"서울의료원 생활치료센터",
 			"ADD_COLUMN05":"582",
 			"ADD_COLUMN04":"환자10264",
 			"NOTICE_YN":"N",
@@ -8623,7 +8623,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.25",
-			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN08":"안성병원 생활치료센터",
 			"ADD_COLUMN05":"664",
 			"ADD_COLUMN04":"환자10726",
 			"NOTICE_YN":"N",
@@ -8636,7 +8636,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.25",
-			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN08":"안성병원\/국군수도병원",
 			"ADD_COLUMN05":"665",
 			"ADD_COLUMN04":"환자10722",
 			"NOTICE_YN":"N",
@@ -8753,7 +8753,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"4.27",
-			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN08":"안성병원 생활치료센터",
 			"ADD_COLUMN05":"674",
 			"ADD_COLUMN04":"환자10742",
 			"NOTICE_YN":"N",
@@ -8846,13 +8846,52 @@
 			"ADD_COLUMN09":"5.3",
 			"ADD_COLUMN08":"수원병원",
 			"ADD_COLUMN05":"681",
-			"ADD_COLUMN04":"확인중",
+			"ADD_COLUMN04":"환자10798",
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"′59",
 			"SUBJECT":"’19.5월~’20.5.2일 해외방문(타자키스탄), 기침 등 증상발현(입국 시 무증상자 분류), 보건소 선별진료",
 			"ADD_COLUMN01":"김포시",
 			"B_IDX":"6134760"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.6",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"682",
+			"ADD_COLUMN04":"환자10809",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′91",
+			"SUBJECT":"’20.5.2. 발열 및 오한 등 증상발현,  보건소 선별진료",
+			"ADD_COLUMN01":"용인시",
+			"B_IDX":"6266148"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.7",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"683",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′89",
+			"SUBJECT":"10809번 환자(용인 확진자)의 접촉자",
+			"ADD_COLUMN01":"안양시",
+			"B_IDX":"6310025"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.7",
+			"ADD_COLUMN08":"자가격리",
+			"ADD_COLUMN05":"684",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′81",
+			"SUBJECT":"’20.4.24일까지 해외방문(카타르),  특별한 증상발현 없음, 보건소 선별진료",
+			"ADD_COLUMN01":"광명시",
+			"B_IDX":"6310026"
 		}
 	]
 }

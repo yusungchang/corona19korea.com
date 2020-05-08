@@ -4084,5 +4084,23 @@
 		"Age":61,
 		"Gender":"Male",
 		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Wed 6 May 2020",
+		"Age":29,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 7 May 2020",
+		"Age":31,
+		"Gender":"Male",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Thu 7 May 2020",
+		"Age":39,
+		"Gender":"Male",
+		"District":"Gwangmyeong"
 	}
 ]
