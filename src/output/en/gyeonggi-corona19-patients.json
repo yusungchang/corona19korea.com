@@ -4102,5 +4102,29 @@
 		"Age":39,
 		"Gender":"Male",
 		"District":"Gwangmyeong"
+	},
+	{
+		"Date Confirmed":"Fri 8 May 2020",
+		"Age":32,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Fri 8 May 2020",
+		"Age":26,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Fri 8 May 2020",
+		"Age":52,
+		"Gender":"Male",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Fri 8 May 2020",
+		"Age":29,
+		"Gender":"Male",
+		"District":"Yongin"
 	}
 ]
