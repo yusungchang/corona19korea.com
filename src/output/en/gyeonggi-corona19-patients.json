@@ -4126,5 +4126,41 @@
 		"Age":29,
 		"Gender":"Male",
 		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Sat 9 May 2020",
+		"Age":29,
+		"Gender":"Male",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sat 9 May 2020",
+		"Age":20,
+		"Gender":"Male",
+		"District":"Namyangju"
+	},
+	{
+		"Date Confirmed":"Sat 9 May 2020",
+		"Age":24,
+		"Gender":"Male",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Sat 9 May 2020",
+		"Age":58,
+		"Gender":"Female",
+		"District":"Seongnam"
+	},
+	{
+		"Date Confirmed":"Sat 9 May 2020",
+		"Age":46,
+		"Gender":"Male",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Sat 9 May 2020",
+		"Age":27,
+		"Gender":"Male",
+		"District":"Goyang"
 	}
 ]

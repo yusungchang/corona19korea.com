@@ -1,5 +1,5 @@
 {
-	"total":688,
+	"total":694,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -8944,6 +8944,84 @@
 			"SUBJECT":"서울 이태원 클럽 확진자의 접촉자",
 			"ADD_COLUMN01":"용인시",
 			"B_IDX":"6353912"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.9",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"689",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′91",
+			"SUBJECT":"10825번 환자의 접촉자 (서울 이태원 클럽 관련)",
+			"ADD_COLUMN01":"성남시",
+			"B_IDX":"6353918"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.9",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"690",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′00",
+			"SUBJECT":"10809번 환자의 접촉자 (서울 이태원 클럽 관련)",
+			"ADD_COLUMN01":"남양주시",
+			"B_IDX":"6353919"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.9",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"691",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′96",
+			"SUBJECT":"10830번 환자의 접촉자 (서울 이태원 클럽 관련)",
+			"ADD_COLUMN01":"안양시",
+			"B_IDX":"6353920"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.9",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"692",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′62",
+			"SUBJECT":"10825번 환자의 접촉자 (서울 이태원 클럽 관련)",
+			"ADD_COLUMN01":"성남시",
+			"B_IDX":"6353921"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.9",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"693",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′74",
+			"SUBJECT":"서울 이태원 클럽 확진자의 접촉자로 추정,  미각둔화 등 증상발현, 보건소 선별진료",
+			"ADD_COLUMN01":"고양시",
+			"B_IDX":"6353922"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.9",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"694",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′93",
+			"SUBJECT":"10809번 환자의 접촉자 (서울 이태원 클럽 관련)",
+			"ADD_COLUMN01":"고양시",
+			"B_IDX":"6353923"
 		}
 	]
 }
