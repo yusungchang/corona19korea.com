@@ -4162,5 +4162,29 @@
 		"Age":27,
 		"Gender":"Male",
 		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Sun 10 May 2020",
+		"Age":24,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sun 10 May 2020",
+		"Age":45,
+		"Gender":"Male",
+		"District":"Uiwang"
+	},
+	{
+		"Date Confirmed":"Sun 10 May 2020",
+		"Age":38,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Sun 10 May 2020",
+		"Age":38,
+		"Gender":"Male",
+		"District":"Goyang"
 	}
 ]
