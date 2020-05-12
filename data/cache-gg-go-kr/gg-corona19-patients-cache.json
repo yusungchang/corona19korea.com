@@ -1,5 +1,5 @@
 {
-	"total":705,
+	"total":706,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -9084,7 +9084,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"'94",
-			"SUBJECT":"서울 이태원 클럽 확진자 (송ㅇ근)의 접촉자",
+			"SUBJECT":"10884번 환자의 접촉자(이태원 클럽 관련)",
 			"ADD_COLUMN01":"용인시",
 			"B_IDX":"6397839"
 		},
@@ -9097,7 +9097,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"'95",
-			"SUBJECT":"10809번 환자(용인 금ㅇ빈) 의 접촉자",
+			"SUBJECT":"10809번 환자의 접촉자(이태원 클럽 관련)",
 			"ADD_COLUMN01":"남양주시",
 			"B_IDX":"6397840"
 		},
@@ -9123,7 +9123,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"'66",
-			"SUBJECT":"부천 확진자(김ㅇ돈)의 접촉자",
+			"SUBJECT":"부천 확진자의 접촉자(이태원 클럽 관련)",
 			"ADD_COLUMN01":"부천시",
 			"B_IDX":"6397842"
 		},
@@ -9136,7 +9136,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"여",
 			"ADD_COLUMN02":"'92",
-			"SUBJECT":"서울 이태원 클럽 확진자 (송ㅇ근)의 접촉자",
+			"SUBJECT":"10884번 환자의 접촉자(이태원 클럽 관련)",
 			"ADD_COLUMN01":"수원시",
 			"B_IDX":"6397843"
 		},
@@ -9149,7 +9149,7 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"'95",
-			"SUBJECT":"10823번 환자(용인 정ㅇ호)의  접촉자",
+			"SUBJECT":"10823번 환자의 접촉자(이태원 클럽 관련)",
 			"ADD_COLUMN01":"용인시",
 			"B_IDX":"6397844"
 		},
@@ -9162,9 +9162,22 @@
 			"NOTICE_YN":"N",
 			"ADD_COLUMN03":"남",
 			"ADD_COLUMN02":"'92",
-			"SUBJECT":"서울 이태원 클럽 확진자 (박ㅇ서)의 접촉자",
+			"SUBJECT":"10885번 환자의 접촉자(이태원 클럽 관련)",
 			"ADD_COLUMN01":"고양시",
 			"B_IDX":"6397845"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.11",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"706",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′99",
+			"SUBJECT":"서울 이태원 클럽 방문 인후통 등 증상발현",
+			"ADD_COLUMN01":"의정부시",
+			"B_IDX":"6441811"
 		}
 	]
 }
