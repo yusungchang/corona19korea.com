@@ -4234,5 +4234,17 @@
 		"Age":21,
 		"Gender":"Male",
 		"District":"Uijeongbu"
+	},
+	{
+		"Date Confirmed":"Tue 12 May 2020",
+		"Age":28,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Tue 12 May 2020",
+		"Age":37,
+		"Gender":"Male",
+		"District":"Pyeongtaek"
 	}
 ]
