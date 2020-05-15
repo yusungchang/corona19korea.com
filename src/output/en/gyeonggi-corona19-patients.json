@@ -4282,5 +4282,29 @@
 		"Age":33,
 		"Gender":"Male",
 		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Thu 14 May 2020",
+		"Age":39,
+		"Gender":"Female",
+		"District":"Yangju"
+	},
+	{
+		"Date Confirmed":"Thu 14 May 2020",
+		"Age":14,
+		"Gender":"Male",
+		"District":"Yangju"
+	},
+	{
+		"Date Confirmed":"Thu 14 May 2020",
+		"Age":24,
+		"Gender":"Female",
+		"District":"Gwangmyeong"
+	},
+	{
+		"Date Confirmed":"Thu 14 May 2020",
+		"Age":28,
+		"Gender":"Male",
+		"District":"Anyang"
 	}
 ]
