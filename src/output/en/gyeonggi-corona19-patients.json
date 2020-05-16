@@ -4306,5 +4306,23 @@
 		"Age":28,
 		"Gender":"Male",
 		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Fri 15 May 2020",
+		"Age":62,
+		"Gender":"Female",
+		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Fri 15 May 2020",
+		"Age":29,
+		"Gender":"Male",
+		"District":"Hanam"
+	},
+	{
+		"Date Confirmed":"Fri 15 May 2020",
+		"Age":64,
+		"Gender":"Female",
+		"District":"Goyang"
 	}
 ]

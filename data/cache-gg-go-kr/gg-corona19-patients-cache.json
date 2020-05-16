@@ -1,5 +1,5 @@
 {
-	"total":718,
+	"total":721,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -9334,6 +9334,45 @@
 			"SUBJECT":"서울 이태원클럽 확진자의 접촉자, 인후통 등 증상발현, 의료기관 선별진료",
 			"ADD_COLUMN01":"안양시",
 			"B_IDX":"6617928"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.15",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"719",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′58",
+			"SUBJECT":"’20.5.12일까지 해외방문(미국), 미각손실 등  증상발현, 보건소 선별진료",
+			"ADD_COLUMN01":"김포시",
+			"B_IDX":"6662024"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.15",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"720",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′91",
+			"SUBJECT":"’20.5.11일까지 해외방문(미국), 특별한 증상 발현 없음, 보건소 선별진료",
+			"ADD_COLUMN01":"하남시",
+			"B_IDX":"6662025"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.15",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"721",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′56",
+			"SUBJECT":"’20.5.12일 발열 등 증상발현, 보건소 선별진료",
+			"ADD_COLUMN01":"고양시",
+			"B_IDX":"6662026"
 		}
 	]
 }
