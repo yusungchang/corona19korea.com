@@ -4324,5 +4324,29 @@
 		"Age":64,
 		"Gender":"Female",
 		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Sat 16 May 2020",
+		"Age":32,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sun 17 May 2020",
+		"Age":25,
+		"Gender":"Male",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Sun 17 May 2020",
+		"Age":43,
+		"Gender":"Male",
+		"District":"Gwangju"
+	},
+	{
+		"Date Confirmed":"Mon 18 May 2020",
+		"Age":5,
+		"Gender":"Male",
+		"District":"Yongin"
 	}
 ]
