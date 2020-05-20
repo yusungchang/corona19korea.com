@@ -1,5 +1,5 @@
 {
-	"total":725,
+	"total":734,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -9013,7 +9013,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"5.9",
-			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN08":"성남의료원 생활치료센터",
 			"ADD_COLUMN05":"694",
 			"ADD_COLUMN04":"환자10864",
 			"NOTICE_YN":"N",
@@ -9065,7 +9065,7 @@
 		{
 			"BS_IDX":"722",
 			"ADD_COLUMN09":"5.10",
-			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN08":"성남의료원 생활치료센터",
 			"ADD_COLUMN05":"698",
 			"ADD_COLUMN04":"환자10903",
 			"NOTICE_YN":"N",
@@ -9425,6 +9425,123 @@
 			"SUBJECT":"서울 이태원 클럽 관련 확진자의 접촉자,  기침 등 증상발현,  보건소 선별진료",
 			"ADD_COLUMN01":"용인시",
 			"B_IDX":"6750352"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.18",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"726",
+			"ADD_COLUMN04":"환자11104",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′94",
+			"SUBJECT":"서울 이태원 클럽 방문 확진자의 접촉자",
+			"ADD_COLUMN01":"용인시",
+			"B_IDX":"6794603"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.19",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"727",
+			"ADD_COLUMN04":"환자11086",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′00",
+			"SUBJECT":"서울 이태원 클럽 방문, 콧물 및 재채기 등  증상발현, 보건소 선별진료",
+			"ADD_COLUMN01":"군포시",
+			"B_IDX":"6794604"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.19",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"728",
+			"ADD_COLUMN04":"환자11105",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′98",
+			"SUBJECT":"서울 이태원 클럽 방문, 오한 및 인후통 등  증상발현, 보건소 선별진료",
+			"ADD_COLUMN01":"안양시",
+			"B_IDX":"6794605"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.19",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"729",
+			"ADD_COLUMN04":"환자11190",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′08",
+			"SUBJECT":"’20.5.5일까지 해외방문(미국), 특별한 증상발현  없음, 보건소 선별진료",
+			"ADD_COLUMN01":"군포시",
+			"B_IDX":"6794606"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.19",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"730",
+			"ADD_COLUMN04":"환자11089",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′74",
+			"SUBJECT":"’20.5.5일까지 해외방문(미국), 특별한 증상발현  없음, 보건소 선별진료",
+			"ADD_COLUMN01":"군포시",
+			"B_IDX":"6794607"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.19",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"731",
+			"ADD_COLUMN04":"환자11109",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′92",
+			"SUBJECT":"서울 이태원 클럽 관련 확진자의 접촉자",
+			"ADD_COLUMN01":"안양시",
+			"B_IDX":"6794608"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.19",
+			"ADD_COLUMN08":"수원병원",
+			"ADD_COLUMN05":"732",
+			"ADD_COLUMN04":"환자11108",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′95",
+			"SUBJECT":"서울 이태원 클럽 관련 확진자의 접촉자",
+			"ADD_COLUMN01":"안양시",
+			"B_IDX":"6794609"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.19",
+			"ADD_COLUMN08":"성남의료원",
+			"ADD_COLUMN05":"733",
+			"ADD_COLUMN04":"환자11106",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′97",
+			"SUBJECT":"서울 이태원 클럽 방문 확진자의 접촉자",
+			"ADD_COLUMN01":"수원시",
+			"B_IDX":"6794610"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.19",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"734",
+			"ADD_COLUMN04":"환자11107",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′91",
+			"SUBJECT":"서울 이태원 클럽 방문 확진자의 접촉자",
+			"ADD_COLUMN01":"안성시",
+			"B_IDX":"6794611"
 		}
 	]
 }

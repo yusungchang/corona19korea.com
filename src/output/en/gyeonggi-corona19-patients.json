@@ -4348,5 +4348,59 @@
 		"Age":5,
 		"Gender":"Male",
 		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Mon 18 May 2020",
+		"Age":26,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Tue 19 May 2020",
+		"Age":20,
+		"Gender":"Male",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 19 May 2020",
+		"Age":22,
+		"Gender":"Female",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Tue 19 May 2020",
+		"Age":12,
+		"Gender":"Male",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 19 May 2020",
+		"Age":46,
+		"Gender":"Female",
+		"District":"Gunpo"
+	},
+	{
+		"Date Confirmed":"Tue 19 May 2020",
+		"Age":28,
+		"Gender":"Male",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Tue 19 May 2020",
+		"Age":25,
+		"Gender":"Male",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Tue 19 May 2020",
+		"Age":23,
+		"Gender":"Male",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Tue 19 May 2020",
+		"Age":29,
+		"Gender":"Male",
+		"District":"Anseong"
 	}
 ]
