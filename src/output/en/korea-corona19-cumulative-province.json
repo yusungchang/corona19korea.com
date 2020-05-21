@@ -2371,5 +2371,26 @@
 		"Gyeongnam":121,
 		"Jeju":14,
 		"Total":10607
+	},
+	{
+		"Time":"Thu 21 May 2020 00:00:00",
+		"Seoul":756,
+		"Busan":144,
+		"Daegu":6872,
+		"Incheon":140,
+		"Gwangju":30,
+		"Daejeon":44,
+		"Ulsan":49,
+		"Sejong":47,
+		"Gyeonggi":735,
+		"Gangwon":55,
+		"Chungbuk":59,
+		"Chungnam":145,
+		"Jeonbuk":21,
+		"Jeonnam":18,
+		"Gyeongbuk":1368,
+		"Gyeongnam":121,
+		"Jeju":14,
+		"Total":10618
 	}
 ]

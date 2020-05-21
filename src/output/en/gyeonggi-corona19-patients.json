@@ -4402,5 +4402,11 @@
 		"Age":29,
 		"Gender":"Male",
 		"District":"Anseong"
+	},
+	{
+		"Date Confirmed":"Wed 20 May 2020",
+		"Age":76,
+		"Gender":"Male",
+		"District":"Guri"
 	}
 ]
