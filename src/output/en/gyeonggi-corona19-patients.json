@@ -4564,5 +4564,41 @@
 		"Age":53,
 		"Gender":"Male",
 		"District":"Hwaseong"
+	},
+	{
+		"Date Confirmed":"Sun 24 May 2020",
+		"Age":31,
+		"Gender":"Male",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Sun 24 May 2020",
+		"Age":33,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Sun 24 May 2020",
+		"Age":40,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Sun 24 May 2020",
+		"Age":30,
+		"Gender":"Male",
+		"District":"Anyang"
+	},
+	{
+		"Date Confirmed":"Sun 24 May 2020",
+		"Age":53,
+		"Gender":"Female",
+		"District":"Uijeongbu"
+	},
+	{
+		"Date Confirmed":"Sun 24 May 2020",
+		"Age":44,
+		"Gender":"Male",
+		"District":"Goyang"
 	}
 ]
