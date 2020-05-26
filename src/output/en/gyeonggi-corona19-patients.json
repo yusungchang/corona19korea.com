@@ -4600,5 +4600,17 @@
 		"Age":44,
 		"Gender":"Male",
 		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Mon 25 May 2020",
+		"Age":45,
+		"Gender":"Male",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Mon 25 May 2020",
+		"Age":34,
+		"Gender":"Female",
+		"District":"Bucheon"
 	}
 ]
