@@ -1,5 +1,5 @@
 {
-	"total":769,
+	"total":774,
 	"items":[
 		{
 			"BS_IDX":"722",
@@ -9997,6 +9997,71 @@
 			"SUBJECT":"쿠팡 신선물류센터 부천점 근무, 근무지 내  확진자 접촉자 추정, 5.24일 발열 및 오한 등  증상발현, 의료기관 선별진료",
 			"ADD_COLUMN01":"부천시",
 			"B_IDX":"7016386"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.26",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"770",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′64",
+			"SUBJECT":"11225번 환자(부천 확진자)의 접촉자 쿠팡 신선물류센터 관련",
+			"ADD_COLUMN01":"파주시",
+			"B_IDX":"7060823"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.26",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"771",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′12",
+			"SUBJECT":"서울 중랑구 확진자의 접촉자",
+			"ADD_COLUMN01":"구리시",
+			"B_IDX":"7060824"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.26",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"772",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′81",
+			"SUBJECT":"서울 중랑구 확진자의 접촉자",
+			"ADD_COLUMN01":"구리시",
+			"B_IDX":"7060825"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.26",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"773",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"남",
+			"ADD_COLUMN02":"′48",
+			"SUBJECT":"서울 중랑구 확진자의 접촉자",
+			"ADD_COLUMN01":"구리시",
+			"B_IDX":"7060826"
+		},
+		{
+			"BS_IDX":"722",
+			"ADD_COLUMN09":"5.26",
+			"ADD_COLUMN08":"안성병원",
+			"ADD_COLUMN05":"774",
+			"ADD_COLUMN04":"확인중",
+			"NOTICE_YN":"N",
+			"ADD_COLUMN03":"여",
+			"ADD_COLUMN02":"′55",
+			"SUBJECT":"서울 중랑구 확진자의 접촉자",
+			"ADD_COLUMN01":"구리시",
+			"B_IDX":"7060827"
 		}
 	]
 }

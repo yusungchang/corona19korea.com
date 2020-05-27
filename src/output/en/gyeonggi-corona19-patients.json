@@ -4612,5 +4612,35 @@
 		"Age":34,
 		"Gender":"Female",
 		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Tue 26 May 2020",
+		"Age":56,
+		"Gender":"Female",
+		"District":"Paju"
+	},
+	{
+		"Date Confirmed":"Tue 26 May 2020",
+		"Age":8,
+		"Gender":"Female",
+		"District":"Guri"
+	},
+	{
+		"Date Confirmed":"Tue 26 May 2020",
+		"Age":39,
+		"Gender":"Female",
+		"District":"Guri"
+	},
+	{
+		"Date Confirmed":"Tue 26 May 2020",
+		"Age":72,
+		"Gender":"Male",
+		"District":"Guri"
+	},
+	{
+		"Date Confirmed":"Tue 26 May 2020",
+		"Age":65,
+		"Gender":"Female",
+		"District":"Guri"
 	}
 ]
