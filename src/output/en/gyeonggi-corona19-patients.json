@@ -4642,5 +4642,131 @@
 		"Age":65,
 		"Gender":"Female",
 		"District":"Guri"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":37,
+		"Gender":"Male",
+		"District":"Gwangmyeong"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":37,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":32,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":32,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":37,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":31,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":47,
+		"Gender":"Female",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":46,
+		"Gender":"Female",
+		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":36,
+		"Gender":"Male",
+		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":19,
+		"Gender":"Male",
+		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":34,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":47,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":33,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":36,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":63,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":31,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":29,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":27,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":48,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":25,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Wed 27 May 2020",
+		"Age":48,
+		"Gender":"Male",
+		"District":"Gwangmyeong"
 	}
 ]
