@@ -4768,5 +4768,125 @@
 		"Age":48,
 		"Gender":"Male",
 		"District":"Gwangmyeong"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":45,
+		"Gender":"Male",
+		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":14,
+		"Gender":"Female",
+		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":52,
+		"Gender":"Female",
+		"District":"Gimpo"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":37,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":29,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":31,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":50,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":11,
+		"Gender":"Male",
+		"District":"Yangju"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":45,
+		"Gender":"Female",
+		"District":"Suwon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":24,
+		"Gender":"Male",
+		"District":"Pyeongtaek"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":69,
+		"Gender":"Female",
+		"District":"Yongin"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":63,
+		"Gender":"Male",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":19,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":59,
+		"Gender":"Female",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":26,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":90,
+		"Gender":"Female",
+		"District":"Gwangmyeong"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":88,
+		"Gender":"Male",
+		"District":"Gwangmyeong"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":37,
+		"Gender":"Male",
+		"District":"Bucheon"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":36,
+		"Gender":"Male",
+		"District":"Goyang"
+	},
+	{
+		"Date Confirmed":"Thu 28 May 2020",
+		"Age":88,
+		"Gender":"Female",
+		"District":"Yangpyeong"
 	}
 ]
