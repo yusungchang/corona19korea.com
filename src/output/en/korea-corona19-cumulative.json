@@ -1428,5 +1428,27 @@
 		"Tested":899354,
 		"Not Determined":23294,
 		"Negative":876060
+	},
+	{
+		"Time":"Mon 1 Jun 2020 00:00:00",
+		"Total":921391,
+		"Confirmed":11503,
+		"Recovered":10422,
+		"Quarantined":810,
+		"Deaths":271,
+		"Tested":909888,
+		"Not Determined":24058,
+		"Negative":885830
+	},
+	{
+		"Time":"Tue 2 Jun 2020 00:00:00",
+		"Total":939851,
+		"Confirmed":11541,
+		"Recovered":10446,
+		"Quarantined":823,
+		"Deaths":272,
+		"Tested":928310,
+		"Not Determined":28922,
+		"Negative":899388
 	}
 ]
