@@ -85,7 +85,7 @@ translateValue[k___]:=value[k][$translateRules]
 (*Source*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Source URL*)
 
 
@@ -97,13 +97,13 @@ apiKCDCURLBase="https://www.cdc.go.kr";
 apiKCDCURLBoard="/board/board.es";
 apiKCDCURL=apiKCDCURLBase<>apiKCDCURLBoard;
 apiKCDCParamsCommon={"mid"->"a20501000000","bid"->"0015"};
-apiKCDCParamKeyWord={"keyWord"->"\:cf54\:b85c\:b098\:bc14\:c774\:b7ec\:c2a4\:ac10\:c5fc\:c99d-19 \:ad6d\:b0b4 \:bc1c\:c0dd \:d604\:d669","keyField"->"TITLE"};
+apiKCDCParamKeyWord={"keyWord"->"\:cf54\:b85c\:b098\:bc14\:c774\:b7ec\:c2a4\:ac10\:c5fc\:c99d-19","keyField"->"TITLE"};
 apiKCDCParamPage[n_]:={"nPage"->n};
 apiKCDCParamsPost[n_]:={"act"->"view","list_no"->n,"nPage"->1};
 apiKCDCMaxLookback:=5
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Read Boards, Import Posts and Cache*)
 
 
@@ -142,7 +142,7 @@ crawlPosts[postList];
 (*Preprocess Data*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Load All Caches*)
 
 
@@ -172,7 +172,7 @@ pvDataOld=MapThread[{#1,Sequence@@#2}&,
 	{DateObject/@pvDataOldRaw[[All,1,2]],pvDataOldRaw[[All,2;;-1,2]]}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Nationwide Data*)
 
 
@@ -270,7 +270,7 @@ If[newFileAdded,
 ];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Province Data*)
 
 
@@ -318,7 +318,7 @@ None]
 ];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Transform new cache data*)
 
 
@@ -337,7 +337,7 @@ If[newFileAdded,
 pvData=Sort[pvData];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Extract Functions*)
 
 
@@ -346,7 +346,7 @@ pvColMap={"\:c2dc\:ac04"->1,Sequence@@MapIndexed[#1->(First@#2+1)&,$provinceName
 pvGetData[col_,range_:All,table_:pvData]:=table[[range,col/.pvColMap]];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Export Processed Data*)
 
 
@@ -363,7 +363,7 @@ If[newFileAdded,
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Visualization Functions*)
 
 

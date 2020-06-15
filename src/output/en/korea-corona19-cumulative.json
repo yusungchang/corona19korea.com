@@ -1450,5 +1450,148 @@
 		"Tested":928310,
 		"Not Determined":28922,
 		"Negative":899388
+	},
+	{
+		"Time":"Wed 3 Jun 2020 00:00:00",
+		"Total":956852,
+		"Confirmed":11590,
+		"Recovered":10467,
+		"Quarantined":850,
+		"Deaths":273,
+		"Tested":945262,
+		"Not Determined":27865,
+		"Negative":917397
+	},
+	{
+		"Time":"Thu 4 Jun 2020 00:00:00",
+		"Total":973858,
+		"Confirmed":11629,
+		"Recovered":10499,
+		"Quarantined":857,
+		"Deaths":273,
+		"Tested":962229,
+		"Not Determined":28199,
+		"Negative":934030
+	},
+	{
+		"Time":"Fri 5 Jun 2020 00:00:00",
+		"Total":990960,
+		"Confirmed":11668,
+		"Recovered":10506,
+		"Quarantined":889,
+		"Deaths":273,
+		"Tested":979292,
+		"Not Determined":28766,
+		"Negative":950526
+	},
+	{
+		"Time":"Sat 6 Jun 2020 00:00:00",
+		"Total":1005305,
+		"Confirmed":11719,
+		"Recovered":10531,
+		"Quarantined":915,
+		"Deaths":273,
+		"Tested":993586,
+		"Not Determined":27954,
+		"Negative":965632
+	},
+	{
+		"Time":"Sun 7 Jun 2020 00:00:00",
+		"Total":1012769,
+		"Confirmed":11776,
+		"Recovered":10552,
+		"Quarantined":951,
+		"Deaths":273,
+		"Tested":1000993,
+		"Not Determined":26481,
+		"Negative":974512
+	},
+	{
+		"Time":"Mon 8 Jun 2020 00:00:00",
+		"Total":1018214,
+		"Confirmed":11814,
+		"Recovered":10563,
+		"Quarantined":978,
+		"Deaths":273,
+		"Tested":1006400,
+		"Not Determined":24374,
+		"Negative":982026
+	},
+	{
+		"Time":"Tue 9 Jun 2020 00:00:00",
+		"Total":1035997,
+		"Confirmed":11852,
+		"Recovered":10589,
+		"Quarantined":989,
+		"Deaths":274,
+		"Tested":1024145,
+		"Not Determined":27459,
+		"Negative":996686
+	},
+	{
+		"Time":"Wed 10 Jun 2020 00:00:00",
+		"Total":1051972,
+		"Confirmed":11902,
+		"Recovered":10611,
+		"Quarantined":1015,
+		"Deaths":276,
+		"Tested":1040070,
+		"Not Determined":26223,
+		"Negative":1013847
+	},
+	{
+		"Time":"Thu 11 Jun 2020 00:00:00",
+		"Total":1066888,
+		"Confirmed":11947,
+		"Recovered":10654,
+		"Quarantined":1017,
+		"Deaths":276,
+		"Tested":1054941,
+		"Not Determined":25494,
+		"Negative":1029447
+	},
+	{
+		"Time":"Fri 12 Jun 2020 00:00:00",
+		"Total":1081486,
+		"Confirmed":12002,
+		"Recovered":10669,
+		"Quarantined":1056,
+		"Deaths":277,
+		"Tested":1069484,
+		"Not Determined":24244,
+		"Negative":1045240
+	},
+	{
+		"Time":"Sat 13 Jun 2020 00:00:00",
+		"Total":1094704,
+		"Confirmed":12051,
+		"Recovered":10691,
+		"Quarantined":1083,
+		"Deaths":277,
+		"Tested":1082653,
+		"Not Determined":23352,
+		"Negative":1059301
+	},
+	{
+		"Time":"Sun 14 Jun 2020 00:00:00",
+		"Total":1100327,
+		"Confirmed":12084,
+		"Recovered":10718,
+		"Quarantined":1089,
+		"Deaths":277,
+		"Tested":1088243,
+		"Not Determined":21356,
+		"Negative":1066887
+	},
+	{
+		"Time":"Mon 15 Jun 2020 00:00:00",
+		"Total":1105719,
+		"Confirmed":12121,
+		"Recovered":10730,
+		"Quarantined":1114,
+		"Deaths":277,
+		"Tested":1093598,
+		"Not Determined":20793,
+		"Negative":1072805
 	}
 ]
