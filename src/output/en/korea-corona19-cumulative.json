@@ -1593,5 +1593,38 @@
 		"Tested":1093598,
 		"Not Determined":20793,
 		"Negative":1072805
+	},
+	{
+		"Time":"Tue 16 Jun 2020 00:00:00",
+		"Total":1119767,
+		"Confirmed":12155,
+		"Recovered":10760,
+		"Quarantined":1117,
+		"Deaths":278,
+		"Tested":1107612,
+		"Not Determined":22632,
+		"Negative":1084980
+	},
+	{
+		"Time":"Wed 17 Jun 2020 00:00:00",
+		"Total":1132823,
+		"Confirmed":12198,
+		"Recovered":10774,
+		"Quarantined":1145,
+		"Deaths":279,
+		"Tested":1120625,
+		"Not Determined":21489,
+		"Negative":1099136
+	},
+	{
+		"Time":"Thu 18 Jun 2020 00:00:00",
+		"Total":1145712,
+		"Confirmed":12257,
+		"Recovered":10800,
+		"Quarantined":1177,
+		"Deaths":280,
+		"Tested":1133455,
+		"Not Determined":21714,
+		"Negative":1111741
 	}
 ]
